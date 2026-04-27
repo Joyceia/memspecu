@@ -158,6 +158,13 @@ class Metrics:
 
     @staticmethod
     def recalculate_metrics(base_traj_path):
+        """(Re)generate per-trajectory metrics.json files.
+
+        In addition to the legacy any-match metrics (k=None), this writes top-1 and top-3
+        action accuracies (k=1 and k=3) so downstream aggregation can report them.
+        """
+        metric_names = ["general", "Search", "Lookup", "Finish"]
+
         for folder_name in os.listdir(base_traj_path):
             save_dir = os.path.join(base_traj_path, str(folder_name))
             normal_observations_dict = Utils.read_json(os.path.join(save_dir, "normalobs.json"))
@@ -165,8 +172,26 @@ class Metrics:
             metrics_file_path = os.path.join(save_dir, "metrics.json")
             if os.path.exists(metrics_file_path):
                 os.remove(metrics_file_path)
-            metric_dict = Metrics.get_action_metrics(normal_observations_dict, sim_observations_dict, sparse=False)
-            Utils.save_json(metric_dict, metrics_file_path)
+
+            # Legacy (any-match) metrics
+            metric_dict_any = Metrics.get_action_metrics(
+                normal_observations_dict, sim_observations_dict, k=None, sparse=False
+            )
+
+            # Top-k metrics
+            metric_dict_top1 = Metrics.get_action_metrics(
+                normal_observations_dict, sim_observations_dict, k=1, sparse=False
+            )
+            metric_dict_top3 = Metrics.get_action_metrics(
+                normal_observations_dict, sim_observations_dict, k=3, sparse=False
+            )
+
+            out = dict(metric_dict_any)
+            for m in metric_names:
+                out[f"{m}_top1"] = metric_dict_top1.get(m, 0)
+                out[f"{m}_top3"] = metric_dict_top3.get(m, 0)
+
+            Utils.save_json(out, metrics_file_path)
 
     @staticmethod
     def cum_metrics(base_traj_path):
