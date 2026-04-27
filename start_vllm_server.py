@@ -11,6 +11,18 @@ Usage:
 import argparse
 import sys
 import subprocess
+import json
+
+
+def get_api_server_help_text():
+    """Return vLLM api_server help text for feature detection."""
+    result = subprocess.run(
+        [sys.executable, "-m", "vllm.entrypoints.openai.api_server", "--help"],
+        capture_output=True,
+        text=True,
+        check=False,
+    )
+    return (result.stdout or "") + (result.stderr or "")
 
 
 def main():
@@ -22,6 +34,30 @@ def main():
         type=str,
         default="meta-llama/Llama-2-7b-chat-hf",
         help="Model name from Hugging Face (default: Llama-2-7b-chat)",
+    )
+    parser.add_argument(
+        "--guessmodel",
+        type=str,
+        default=None,
+        help="Draft model for speculative decoding (e.g., Qwen2.5-1.5B-Instruct)",
+    )
+    parser.add_argument(
+        "--num-speculative-tokens",
+        type=int,
+        default=5,
+        help=(
+            "Number of draft tokens for speculative decoding "
+            "(required by newer vLLM when --guessmodel is set, default: 5)"
+        ),
+    )
+    parser.add_argument(
+        "--draft-tensor-parallel-size",
+        type=int,
+        default=1,
+        help=(
+            "Tensor parallel size for draft model in speculative decoding "
+            "(default: 1, useful when draft model head count is not divisible by main TP size)"
+        ),
     )
     parser.add_argument(
         "--port",
@@ -77,6 +113,18 @@ def main():
 
     args = parser.parse_args()
 
+    try:
+        import vllm  # noqa: F401
+    except ImportError:
+        print(
+            "Error: vLLM is not installed in the current Python interpreter:\n"
+            f"  {sys.executable}\n"
+            "Use the interpreter/environment where vLLM is installed, or install it first."
+        )
+        sys.exit(1)
+
+    help_text = get_api_server_help_text()
+
     # Build command
     cmd = [
         sys.executable,
@@ -106,6 +154,23 @@ def main():
 
     if args.disable_log_requests:
         cmd.append("--disable-log-requests")
+    
+    if args.guessmodel is not None:
+        # vLLM >= 0.6 uses --speculative-config; older builds may still expose --guess-model.
+        if "--speculative-config" in help_text:
+            speculative_config = {
+                "model": args.guessmodel,
+                "num_speculative_tokens": args.num_speculative_tokens,
+                "draft_tensor_parallel_size": args.draft_tensor_parallel_size,
+            }
+            cmd.extend(["--speculative-config", json.dumps(speculative_config)])
+        elif "--guess-model" in help_text:
+            cmd.extend(["--guess-model", args.guessmodel])
+        else:
+            print(
+                "Error: This vLLM build supports neither --speculative-config nor --guess-model."
+            )
+            sys.exit(1)
 
     cmd.extend(["--seed", str(args.seed)])
 

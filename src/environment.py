@@ -34,11 +34,13 @@ class WikiEnv(gym.Env):
         self.num_searches = 0
         self.sim_obs = None
         self.guess_model_name = guess_model_name
+        guess_vllm_api_url = getattr(constants, "vllm_guess_api_url", None) or getattr(constants, "vllm_api_url", None)
         self.guess_llm = LLMClient(
             model_name=guess_model_name,
             temperature=constants.guess_temperature,
             max_tokens=constants.max_guess_output_tokens,
             top_p=constants.guess_top_p,
+            vllm_api_url=guess_vllm_api_url,
         )
 
     def _get_obs(self):
@@ -101,7 +103,36 @@ class WikiEnv(gym.Env):
         search_url = f"https://en.wikipedia.org/w/index.php?search={entity_}"
         old_time = time.time()
         requests_headers = {"User-Agent": "React/1.0"}
-        response_text = requests.get(search_url, headers=requests_headers).text
+        response_text = None
+        last_error = None
+        for _ in range(constants.wiki_max_retries + 1):
+            try:
+                response = requests.get(
+                    search_url,
+                    headers=requests_headers,
+                    timeout=constants.wiki_request_timeout,
+                )
+                response_text = response.text
+                break
+            except requests.exceptions.RequestException as e:
+                last_error = e
+
+        if response_text is None:
+            if getattr(constants, "wiki_fallback_to_guess", False):
+                self.guess_step(entity, simulate=False)
+                if getattr(constants, "wiki_fallback_notice", True):
+                    self.obs = (
+                        "[Fallback: local guess model due to Wikipedia request failure] "
+                        + self.obs
+                    )
+            else:
+                self.obs = (
+                    "Wikipedia request failed "
+                    f"({type(last_error).__name__ if last_error else 'UnknownError'}). "
+                    "Please try another action or check network access."
+                )
+            return
+
         self.search_time += time.time() - old_time
         self.num_searches += 1
         soup = BeautifulSoup(response_text, features="html.parser")

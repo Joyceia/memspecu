@@ -29,7 +29,9 @@ huggingface-cli download meta-llama/Llama-2-7b-chat-hf
 huggingface-cli download mistralai/Mistral-7B-Instruct-v0.1
 
 # 选项C: 使用Qwen 2 (支持中文)
-huggingface-cli download Qwen/Qwen2-7B-Instruct
+hf download Qwen/Qwen3-1.7B
+hf download Qwen/Qwen3-32B
+
 ```
 
 > **提示**: 如果需要下载需要认证的模型（如Llama 2），先运行 `huggingface-cli login`
@@ -40,7 +42,7 @@ huggingface-cli download Qwen/Qwen2-7B-Instruct
 
 ```bash
 # 启动vLLM服务器
-python start_vllm_server.py --model meta-llama/Llama-2-7b-chat-hf --port 8000
+python start_vllm_server.py --model /model/Qwen3-32B --port 8000
 ```
 
 你应该看到类似的输出:
@@ -56,6 +58,10 @@ INFO:     Uvicorn running on http://0.0.0.0:8000
 python run.py \
   --modelname "vllm:meta-llama/Llama-2-7b-chat-hf" \
   --guessmodelname "vllm:mistralai/Mistral-7B-Instruct-v0.1"
+
+  python run.py \
+  --modelname "vllm:/model/Qwen3-32B" \
+  --guessmodelname "vllm:/model/Qwen3-1.7B"
 ```
 
 完成！🎉
@@ -76,6 +82,8 @@ python start_vllm_server.py --model meta-llama/Llama-2-7b-chat-hf --quantization
 
 # 高性能配置
 python start_vllm_server.py --model meta-llama/Llama-2-7b-chat-hf --gpu-util 0.95
+
+python start_vllm_server.py --model /models/Qwen3-32B --tensor-parallel-size 3 --guessmodel /models/Qwen3-1.7B --port 8000
 ```
 
 ### 运行实验
@@ -86,8 +94,8 @@ python run.py
 
 # 指定模型
 python run.py \
-  --modelname "vllm:meta-llama/Llama-2-7b-chat-hf" \
-  --guessmodelname "vllm:mistralai/Mistral-7B-Instruct-v0.1"
+  --modelname "vllm:/models/Qwen3-14B" \
+  --guessmodelname "vllm:/models/Qwen3-1.7B"
 
 # 混合使用（本地+API）
 python run.py \

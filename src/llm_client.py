@@ -8,11 +8,12 @@ from . import constants
 class LLMClient:
     """Unified LLM client supporting Gemini, OpenAI, OpenRouter, and vLLM APIs."""
 
-    def __init__(self, model_name, temperature, max_tokens, top_p):
+    def __init__(self, model_name, temperature, max_tokens, top_p, vllm_api_url=None):
         self.model_name = model_name
         self.temperature = temperature
         self.max_tokens = max_tokens
         self.top_p = top_p
+        self.vllm_api_url = vllm_api_url if vllm_api_url else getattr(constants, "vllm_api_url", None)
         self.gemini_client = genai.Client(api_key=constants.gemini_api_key)
         self.openai_client = openai.OpenAI(api_key=constants.openai_api_key)
         self.openrouter_client = openai.OpenAI(
@@ -20,9 +21,9 @@ class LLMClient:
             api_key=constants.openrouter_api_key,
         )
         # vLLM client (OpenAI-compatible)
-        if hasattr(constants, 'vllm_api_url') and constants.vllm_api_url:
+        if self.vllm_api_url:
             self.vllm_client = openai.OpenAI(
-                base_url=constants.vllm_api_url,
+                base_url=self.vllm_api_url,
                 api_key=constants.vllm_api_key or "dummy-key",
             )
         else:

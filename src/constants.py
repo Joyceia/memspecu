@@ -11,6 +11,7 @@ gemini_api_key = "your-gemini-api-key"
 # vLLM configuration for local models
 vllm_model_name = None  # e.g., "meta-llama/Llama-2-7b-chat-hf" or "mistralai/Mistral-7B-Instruct-v0.1"
 vllm_api_url = "http://localhost:8000/v1"  # vLLM OpenAI-compatible API endpoint
+vllm_guess_api_url = "http://localhost:8001/v1"  # Optional second vLLM endpoint for guess model, e.g., "http://localhost:8001/v1"
 vllm_api_key = "dummy-key"  # vLLM doesn't require a real key for local servers
 
 prompts_folder = "./prompts/"
@@ -37,3 +38,9 @@ temperature = 1
 max_guess_output_tokens = 100
 guess_top_p = 0.9
 guess_temperature = 0.1
+
+# Wikipedia request settings
+wiki_request_timeout = 15
+wiki_max_retries = 2
+wiki_fallback_to_guess = True
+wiki_fallback_notice = True

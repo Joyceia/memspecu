@@ -141,9 +141,11 @@ class HotPotQAWrapper(gym.Wrapper):
         return (observation, info) if return_info else observation
 
     def _get_info(self):
+        steps = getattr(self.env, "steps", 0)
+        answer = getattr(self.env, "answer", None)
         return {
-            "steps": self.steps,
-            "answer": self.answer,
+            "steps": steps,
+            "answer": answer,
             "question": self.data[self.data_idx][0],
             "hotpot_split": self.split,
         }
@@ -207,9 +209,11 @@ class FeverWrapper(gym.Wrapper):
         return (observation, info) if return_info else observation
 
     def _get_info(self):
+        steps = getattr(self.env, "steps", 0)
+        answer = getattr(self.env, "answer", None)
         return {
-            "steps": self.steps,
-            "answer": self.answer,
+            "steps": steps,
+            "answer": answer,
             "question": self.data[self.data_idx][0],
             "fever_split": self.split,
         }
