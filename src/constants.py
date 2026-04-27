@@ -42,5 +42,5 @@ guess_temperature = 0.1
 # Wikipedia request settings
 wiki_request_timeout = 15
 wiki_max_retries = 2
-wiki_fallback_to_guess = False
-wiki_fallback_notice = False
+wiki_fallback_to_guess = True
+wiki_fallback_notice = True
