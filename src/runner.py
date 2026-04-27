@@ -303,9 +303,14 @@ class HotPotQARun:
             Utils.save_json(normal_observations_dict, join(current_dir_path, "normalobs.json"))
             Utils.save_json(sim_observations_dict, join(current_dir_path, "simobs.json"))
             try:
-                metric_dict = Metrics.get_action_metrics(
-                    normal_observations_dict, sim_observations_dict, sparse=False
-                )
+                metric_dict = {
+                    "top1_accuracy": Metrics.get_topk_action_accuracy(
+                        normal_observations_dict, sim_observations_dict, k=1
+                    ),
+                    "top3_accuracy": Metrics.get_topk_action_accuracy(
+                        normal_observations_dict, sim_observations_dict, k=3
+                    ),
+                }
             except ZeroDivisionError:
                 self.log("[WARN] ZeroDivisionError in metrics, skipping this sample", save_log=False)
                 Utils.delete_dir(current_dir_path, nested=True)

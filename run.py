@@ -36,7 +36,7 @@ def compute_metrics(runner, save=False):
             if not os.path.exists(runner.base_traj_path):
                 print(f"Path {runner.base_traj_path} does not exist. Skipping...")
                 continue
-            avg_metrics_dict, n_samples = Metrics.get_action_specific_avg_metric(
+            avg_metrics_dict, n_samples = Metrics.get_action_specific_avg_metric_top1_top3(
                 runner.base_traj_path, get_time=True
             )
             print(
