@@ -61,7 +61,12 @@ class HotPotQARun:
             start = time.perf_counter()
             obs, r, done, info = env.step(action, step_type="simulate")
             end = time.perf_counter()
-            return env.sim_obs, r, done, info, end - start
+            sim_obs = getattr(env, "sim_obs", None)
+            if sim_obs is None and hasattr(env, "unwrapped"):
+                sim_obs = getattr(env.unwrapped, "sim_obs", None)
+            if sim_obs is None:
+                sim_obs = obs
+            return sim_obs, r, done, info, end - start
 
         attempts = 0
         while attempts < 10:
