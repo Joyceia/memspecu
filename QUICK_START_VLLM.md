@@ -84,7 +84,7 @@ python start_vllm_server.py --model meta-llama/Llama-2-7b-chat-hf --quantization
 python start_vllm_server.py --model meta-llama/Llama-2-7b-chat-hf --gpu-util 0.95
 
 python start_vllm_server.py --model /models/Qwen3-14B --tensor-parallel-size 2 
-python start_vllm_server.py --model /models/Qwen3-1.7B --tensor-parallel-size 1 --port 8001
+python start_vllm_server.py --model ~/models/Qwen3-1.7B --tensor-parallel-size 1 --port 8001
 ```
 
 ### 运行实验
