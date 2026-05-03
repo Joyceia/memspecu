@@ -11,6 +11,7 @@ from .utils import Utils
 from .metrics import Metrics
 from .prompts import PromptTemplates
 from .llm_client import LLMClient
+from .memory import RawMemoryStore, InsightStore, InsightExtractor, MemoryAugmenter
 from . import environment
 from . import wrappers
 
@@ -30,6 +31,9 @@ class HotPotQARun:
         self.current_index = None
         self.base_traj_path = self.recalc_base_traj_path()
         self.to_print_output = to_print_output
+        self.raw_memory = RawMemoryStore()
+        self.insight_store = InsightStore()
+        self.current_question = None
 
     def recalc_base_traj_path(self):
         btp = (
@@ -131,8 +135,30 @@ class HotPotQARun:
     def generate_thought_actions(self, i, running_prompt, n_calls_badcalls, num_actions=1, max_retries=1):
         n_calls_badcalls[0] += 1
 
+        memory_hint = ""
+        if (constants.memory_enabled and num_actions > 1
+                and hasattr(self, 'raw_memory') and self.current_question):
+            prev_actions = self.env.normal_trajectory_dict.get("actions", [])
+            prev_action = prev_actions[-1] if prev_actions else None
+            prev_action_type = Metrics.get_action_name(prev_action) if prev_action else None
+
+            matched_insights = self.insight_store.match(
+                question=self.current_question, step=i,
+                prev_action_type=prev_action_type,
+                threshold=constants.insight_match_threshold,
+            )[:constants.insight_max_in_prompt]
+
+            succ, fail = self.raw_memory.retrieve(
+                question=self.current_question, step=i, prev_action=prev_action,
+                k_success=constants.memory_top_k_success,
+                k_failure=constants.memory_top_k_failure,
+            )
+
+            memory_hint = MemoryAugmenter.format_memory_hint(matched_insights, succ, fail)
+
+        augmented_prompt = running_prompt + memory_hint
         thought_action = self.llm.call(
-            running_prompt + PromptTemplates.ACTION_GUESS_PROMPT.format(i=i, num_guesses=num_actions),
+            augmented_prompt + PromptTemplates.ACTION_GUESS_PROMPT.format(i=i, num_guesses=num_actions),
             stop=None,
         )
         thought, actions = self.separate_thought_and_actions(i, thought_action)
@@ -159,6 +185,7 @@ class HotPotQARun:
         done = False
         running_prompt = prompt
         question = self.env.reset(idx=idx)
+        self.current_question = question
         running_prompt += question + "\n"
         self.env.normal_trajectory_dict["prompt"] = running_prompt
 
@@ -229,6 +256,63 @@ class HotPotQARun:
             self.log(f"\n  Result: em={info.get('em', 'N/A')}  f1={info.get('f1', 'N/A')}")
         info.update({'n_calls': n_calls_badcalls[0], 'n_badcalls': n_calls_badcalls[1], 'traj': running_prompt})
         return info
+
+    def _store_memories(self):
+        normal_actions = self.env.normal_trajectory_dict.get("actions", [])
+        sim_actions = self.env.sim_trajectory_dict.get("actions", [])
+        question = self.current_question or ""
+        entities = RawMemoryStore._extract_entities(question)
+
+        for step_idx in range(len(normal_actions)):
+            na = normal_actions[step_idx]
+            sa = sim_actions[step_idx] if step_idx < len(sim_actions) else []
+            if not isinstance(sa, list):
+                sa = [sa]
+
+            candidates = sa[:constants.guess_num_actions]
+            matched = any(Metrics.compare_action(na, c, sparse=False) for c in candidates)
+
+            if matched:
+                correct = next((c for c in candidates if Metrics.compare_action(na, c, sparse=False)), na)
+            else:
+                correct = na
+
+            prev_action = normal_actions[step_idx - 1] if step_idx > 0 else None
+            prev_action_type = Metrics.get_action_name(prev_action) if prev_action else None
+
+            self.raw_memory.add(
+                question=question,
+                step=step_idx + 1,
+                entities=entities,
+                success=matched,
+                predicted_candidates=candidates,
+                correct_action=correct,
+                action_type=Metrics.get_action_name(na),
+                prev_action=prev_action,
+                prev_action_type=prev_action_type,
+            )
+
+    def _maybe_extract_insights(self):
+        unanalyzed = self.raw_memory.get_unanalyzed()
+        if len(unanalyzed) < constants.insight_extraction_min_new:
+            return
+
+        extractor = InsightExtractor()
+        new_insights = extractor.extract(
+            raw_entries=unanalyzed,
+            existing_insights=self.insight_store.get_all(),
+            llm_client=self.llm,
+        )
+
+        if new_insights:
+            self.insight_store.add_insights(new_insights)
+            self.raw_memory.mark_analyzed([e.id for e in unanalyzed])
+            self.insight_store.save()
+            self.log(
+                f"[Memory] Extracted {len(new_insights)} new insights "
+                f"(total: {len(self.insight_store)})",
+                save_log=False,
+            )
 
     def run(self, webthink_simulate=False, skip_done=False):
         from google.genai.errors import ClientError, ServerError
@@ -318,4 +402,16 @@ class HotPotQARun:
             self.log(f"  [Metrics]  idx={self.current_index}  {metric_dict}", save_log=False)
             Utils.save_json(metric_dict, join(current_dir_path, "metrics.json"))
 
+            if constants.memory_enabled:
+                self._store_memories()
+
         self.env.write()
+        if constants.memory_enabled:
+            self._maybe_extract_insights()
+            self.raw_memory.save()
+            self.insight_store.save()
+            stats = self.raw_memory.get_stats()
+            self.log(
+                f"[Memory] Raw: {stats} | Insights: {len(self.insight_store)}",
+                save_log=False,
+            )

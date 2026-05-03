@@ -27,3 +27,28 @@ class PromptTemplates:
         """
 
     GUESS_STEP_PROMPT = "Give me information about {} in wikipedia style. If wikipedia information is not available still give me the information. Do not give me any error messages. Just give me the information and nothing else"
+
+    MEMORY_HINT_PROMPT = (
+        "## Action Prediction Guide\n\n"
+        "{insight_section}"
+        "{example_section}"
+        "Use these patterns and examples to inform your action candidates.\n"
+    )
+
+    INSIGHT_EXTRACTION_PROMPT = (
+        "You are analyzing action prediction patterns from a speculative execution agent "
+        "that uses Search, Lookup, and Finish actions to answer questions using Wikipedia.\n\n"
+        "## Recent Predictions (+ = success, - = failure):\n"
+        "{raw_entries}\n\n"
+        "## Existing Insights (avoid duplicates; refine if you have more data):\n"
+        "{existing_insights}\n\n"
+        "## Task\n"
+        "Extract 3-5 concise, actionable insights that capture recurring patterns. "
+        "Focus on patterns that are: (1) Actionable for action selection, "
+        "(2) Supported by multiple entries (>= 3), (3) Non-obvious "
+        "(not just 'step 1 is always Search').\n\n"
+        "Return ONLY a JSON array of objects with fields: "
+        "pattern, conditions (question_keywords, step, prev_action_type), "
+        "guidance, preferred_actions, avoid_actions, confidence, support_count.\n"
+        "No other text."
+    )

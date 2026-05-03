@@ -92,7 +92,11 @@ def main():
     parser.add_argument("--modelname", default=constants.openrouter_model_name, help="Agent model name")
     parser.add_argument("--guessmodelname", default=constants.openrouter_guess_model_name, help="Guess model name")
     parser.add_argument("--cleanuptrajs", action="store_true", help="Clean up incomplete trajectories")
+    parser.add_argument("--memoryoff", action="store_true", help="Disable memory mechanism")
     args = parser.parse_args()
+
+    if args.memoryoff:
+        constants.memory_enabled = False
 
     runner = HotPotQARun(
         model_name=args.modelname,

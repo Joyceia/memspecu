@@ -44,3 +44,21 @@ wiki_request_timeout = 15
 wiki_max_retries = 2
 wiki_fallback_to_guess = False
 wiki_fallback_notice = False
+
+# Memory mechanism configuration
+memory_enabled = True
+memory_store_path = "./data/memory_store.json"
+memory_insights_path = "./data/memory_insights.json"
+memory_max_entries = 5000
+memory_top_k_success = 1
+memory_top_k_failure = 1
+memory_entity_overlap_weight = 0.5
+memory_step_match_weight = 0.2
+memory_prev_action_match_weight = 0.15
+memory_action_type_match_weight = 0.15
+
+# Insight extraction configuration
+insight_extraction_min_new = 30
+insight_match_threshold = 0.4
+insight_max_in_prompt = 3
+insight_min_support = 3
