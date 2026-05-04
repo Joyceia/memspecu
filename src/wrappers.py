@@ -78,6 +78,14 @@ class HistoryWrapper(gym.Wrapper):
         self.sim_trajectory_dict = self.get_empty_traj_dict()
         return output
 
+    def write(self):
+        if hasattr(self.env, "write"):
+            return self.env.write()
+
+    def close(self):
+        if hasattr(self.env, "close"):
+            return self.env.close()
+
 
 def normalize_answer(s):
     def remove_articles(text):

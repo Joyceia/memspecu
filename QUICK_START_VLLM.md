@@ -83,8 +83,8 @@ python start_vllm_server.py --model meta-llama/Llama-2-7b-chat-hf --quantization
 # 高性能配置
 python start_vllm_server.py --model meta-llama/Llama-2-7b-chat-hf --gpu-util 0.95
 
-python start_vllm_server.py --model /models/Qwen3-14B --tensor-parallel-size 2 
-python start_vllm_server.py --model ~/models/Qwen3-1.7B --tensor-parallel-size 1 --port 8001
+CUDA_DEVICE_ORDER=PCI_BUS_ID CUDA_VISIBLE_DEVICES=5,6 python start_vllm_server.py --model ~/models/Qwen3-32B --tensor-parallel-size 2 
+CUDA_VISIBLE_DEVICES=4 python start_vllm_server.py --model ~/models/Qwen3-1.7B --tensor-parallel-size 1 --port 8001
 ```
 
 ### 运行实验
@@ -98,8 +98,8 @@ export http_proxy="http://127.0.0.1:7890"
 export https_proxy="http://127.0.0.1:7890"
 export no_proxy="localhost,127.0.0.1"
 python run.py \
-  --modelname "vllm:/models/Qwen3-14B" \
-  --guessmodelname "vllm:/models/Qwen3-1.7B"
+  --modelname "vllm:/data/jiangxiaoying/models/Qwen3-32B" \
+  --guessmodelname "vllm:/data/jiangxiaoying/models/Qwen3-1.7B"
 
 # 混合使用（本地+API）
 python run.py \
