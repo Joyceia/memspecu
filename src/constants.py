@@ -58,7 +58,7 @@ memory_prev_action_match_weight = 0.15
 memory_action_type_match_weight = 0.15
 
 # Insight extraction configuration
-insight_extraction_min_new = 30
+insight_extraction_min_new = 15
 insight_match_threshold = 0.4
 insight_max_in_prompt = 3
 insight_min_support = 3

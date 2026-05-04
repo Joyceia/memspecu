@@ -292,9 +292,90 @@ class HotPotQARun:
                 prev_action_type=prev_action_type,
             )
 
-    def _maybe_extract_insights(self):
+    def _backfill_memories(self):
+        import os as _os
+        traj_base = self.base_traj_path
+        if not _os.path.isdir(traj_base):
+            return
+
+        backfilled = 0
+        for dir_name in _os.listdir(traj_base):
+            dir_path = _os.path.join(traj_base, dir_name)
+            if not _os.path.isdir(dir_path):
+                continue
+
+            normal_path = _os.path.join(dir_path, "normalobs.json")
+            sim_path = _os.path.join(dir_path, "simobs.json")
+            if not _os.path.exists(normal_path) or not _os.path.exists(sim_path):
+                continue
+
+            try:
+                normal_dict = Utils.read_json(normal_path)
+                sim_dict = Utils.read_json(sim_path)
+            except Exception:
+                continue
+
+            prompt = normal_dict.get("prompt", "")
+            question = self._extract_question_from_prompt(prompt)
+            if not question:
+                continue
+
+            normal_actions = normal_dict.get("actions", [])
+            sim_actions = sim_dict.get("actions", [])
+            entities = RawMemoryStore._extract_entities(question)
+
+            for step_idx in range(min(len(normal_actions), len(sim_actions))):
+                na = normal_actions[step_idx]
+                sa = sim_actions[step_idx]
+                if not isinstance(sa, list):
+                    sa = [sa]
+
+                candidates = sa[:constants.guess_num_actions]
+                matched = any(Metrics.compare_action(na, c, sparse=False) for c in candidates)
+                if matched:
+                    correct = next((c for c in candidates if Metrics.compare_action(na, c, sparse=False)), na)
+                else:
+                    correct = na
+
+                prev_action = normal_actions[step_idx - 1] if step_idx > 0 else None
+                prev_action_type = Metrics.get_action_name(prev_action) if prev_action else None
+
+                added = self.raw_memory.add(
+                    question=question,
+                    step=step_idx + 1,
+                    entities=entities,
+                    success=matched,
+                    predicted_candidates=candidates,
+                    correct_action=correct,
+                    action_type=Metrics.get_action_name(na),
+                    prev_action=prev_action,
+                    prev_action_type=prev_action_type,
+                )
+                if added:
+                    backfilled += 1
+
+        if backfilled > 0:
+            self.log(f"[Memory] Backfilled {backfilled} entries from existing trajectories",
+                     save_log=False)
+
+    @staticmethod
+    def _extract_question_from_prompt(prompt):
+        idx = prompt.rfind("Question:")
+        if idx == -1:
+            return None
+        question = prompt[idx:].strip()
+        if "\n" in question:
+            question = question.split("\n")[0].strip()
+        return question
+
+    def _maybe_extract_insights(self, force=False):
         unanalyzed = self.raw_memory.get_unanalyzed()
-        if len(unanalyzed) < constants.insight_extraction_min_new:
+        threshold = constants.insight_extraction_min_new
+        min_entries = min(threshold, 10)
+
+        if force and len(unanalyzed) >= min_entries:
+            pass  # proceed with lower threshold
+        elif len(unanalyzed) < threshold:
             return
 
         extractor = InsightExtractor()
@@ -313,6 +394,9 @@ class HotPotQARun:
                 f"(total: {len(self.insight_store)})",
                 save_log=False,
             )
+        elif force and len(unanalyzed) >= min_entries:
+            # Mark as analyzed even if no insights returned, to avoid re-processing
+            self.raw_memory.mark_analyzed([e.id for e in unanalyzed])
 
     def run(self, webthink_simulate=False, skip_done=False):
         from google.genai.errors import ClientError, ServerError
@@ -330,6 +414,9 @@ class HotPotQARun:
         rewards = []
         infos = []
         old_time = time.time()
+
+        if constants.memory_enabled:
+            self._backfill_memories()
 
         for i in idxs[:constants.n_samples_to_run]:
             self.current_index = i
@@ -407,7 +494,10 @@ class HotPotQARun:
 
         self.env.write()
         if constants.memory_enabled:
-            self._maybe_extract_insights()
+            # Normal threshold check (triggered during run by accumulation)
+            self._maybe_extract_insights(force=False)
+            # Force extraction at end of run if >= 10 unanalyzed entries
+            self._maybe_extract_insights(force=True)
             self.raw_memory.save()
             self.insight_store.save()
             stats = self.raw_memory.get_stats()

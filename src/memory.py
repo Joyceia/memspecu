@@ -57,12 +57,18 @@ class RawMemoryStore:
         self.max_entries = max_entries or constants.memory_max_entries
         self.entries = []          # list of MemoryEntry
         self._next_id = 0
+        self._dedup_keys = set()   # set of (question, step, correct_action)
         self._load()
 
     # ---- public API -------------------------------------------------------
 
     def add(self, question, step, entities, success, predicted_candidates,
             correct_action, action_type, prev_action, prev_action_type):
+        dedup_key = (question.strip().lower(), step, correct_action.strip().lower())
+        if dedup_key in self._dedup_keys:
+            return False
+        self._dedup_keys.add(dedup_key)
+
         entry = _make_entry(
             eid=self._next_id,
             question=question,
@@ -78,6 +84,7 @@ class RawMemoryStore:
         self._next_id += 1
         self.entries.append(entry)
         self._prune()
+        return True
 
     def retrieve(self, question, step, prev_action=None,
                  k_success=None, k_failure=None):
@@ -154,9 +161,14 @@ class RawMemoryStore:
                 data = json.load(f)
             self._next_id = data.get("next_id", 0)
             self.entries = [MemoryEntry(**item) for item in data.get("entries", [])]
+            self._dedup_keys = set(
+                (e.question.strip().lower(), e.step, e.correct_action.strip().lower())
+                for e in self.entries
+            )
         except (json.JSONDecodeError, TypeError):
             self.entries = []
             self._next_id = 0
+            self._dedup_keys = set()
 
     @staticmethod
     def _extract_entities(text):
@@ -208,7 +220,11 @@ class RawMemoryStore:
     def _prune(self):
         while len(self.entries) > self.max_entries:
             self.entries.sort(key=lambda e: e.timestamp)
-            self.entries.pop(0)
+            removed = self.entries.pop(0)
+            self._dedup_keys.discard(
+                (removed.question.strip().lower(), removed.step,
+                 removed.correct_action.strip().lower())
+            )
 
 
 # ---------------------------------------------------------------------------
