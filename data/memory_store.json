@@ -1,0 +1,326 @@
+{
+  "next_id": 14,
+  "entries": [
+    {
+      "id": 0,
+      "question": "Question: In which city have Gary Ayres and Neil Craig both been head coach of the Crows?",
+      "step": 1,
+      "entities": [
+        "city",
+        "Neil Craig",
+        "Gary Ayres",
+        "Question",
+        "In",
+        "Crows",
+        "which"
+      ],
+      "success": true,
+      "predicted_candidates": [
+        "Search[Gary Ayres]",
+        "Search[Neil Craig]",
+        "Search[Adelaide Crows]"
+      ],
+      "correct_action": "Search[Gary Ayres]",
+      "action_type": "Search",
+      "prev_action": null,
+      "prev_action_type": null,
+      "analyzed": false,
+      "timestamp": 1777888569.312545
+    },
+    {
+      "id": 1,
+      "question": "Question: In which city have Gary Ayres and Neil Craig both been head coach of the Crows?",
+      "step": 2,
+      "entities": [
+        "city",
+        "Neil Craig",
+        "Gary Ayres",
+        "Question",
+        "In",
+        "Crows",
+        "which"
+      ],
+      "success": true,
+      "predicted_candidates": [
+        "Search[Gary Ayres]",
+        "Search[Neil Craig]",
+        "Search[Gary Ayres Adelaide Crows]"
+      ],
+      "correct_action": "Search[Neil Craig]",
+      "action_type": "Search",
+      "prev_action": "Search[Gary Ayres]",
+      "prev_action_type": "Search",
+      "analyzed": false,
+      "timestamp": 1777888569.312564
+    },
+    {
+      "id": 2,
+      "question": "Question: In which city have Gary Ayres and Neil Craig both been head coach of the Crows?",
+      "step": 3,
+      "entities": [
+        "city",
+        "Neil Craig",
+        "Gary Ayres",
+        "Question",
+        "In",
+        "Crows",
+        "which"
+      ],
+      "success": false,
+      "predicted_candidates": [
+        "Search[Adelaide Crows]",
+        "Search[Adelaide Football Club]",
+        "Lookup[Ayres Neil Craig]"
+      ],
+      "correct_action": "Finish[Adelaide]",
+      "action_type": "Finish",
+      "prev_action": "Search[Neil Craig]",
+      "prev_action_type": "Search",
+      "analyzed": false,
+      "timestamp": 1777888569.3125722
+    },
+    {
+      "id": 3,
+      "question": "Question: are Dee Dee Ramone and Alex Band both singers, songwriters and musicians?",
+      "step": 1,
+      "entities": [
+        "Alex Band",
+        "Question",
+        "Dee Dee Ramone"
+      ],
+      "success": true,
+      "predicted_candidates": [
+        "Search[Dee Dee Ramone]",
+        "Search[Alex Band]",
+        "Search[Dee Dee Ramone]"
+      ],
+      "correct_action": "Search[Dee Dee Ramone]",
+      "action_type": "Search",
+      "prev_action": null,
+      "prev_action_type": null,
+      "analyzed": false,
+      "timestamp": 1777888676.2957156
+    },
+    {
+      "id": 4,
+      "question": "Question: are Dee Dee Ramone and Alex Band both singers, songwriters and musicians?",
+      "step": 2,
+      "entities": [
+        "Alex Band",
+        "Question",
+        "Dee Dee Ramone"
+      ],
+      "success": true,
+      "predicted_candidates": [
+        "Search[Alex Band]",
+        "Search[Faith No More]",
+        "Search[Alex Band]"
+      ],
+      "correct_action": "Search[Alex Band]",
+      "action_type": "Search",
+      "prev_action": "Search[Dee Dee Ramone]",
+      "prev_action_type": "Search",
+      "analyzed": false,
+      "timestamp": 1777888676.2957647
+    },
+    {
+      "id": 5,
+      "question": "Question: are Dee Dee Ramone and Alex Band both singers, songwriters and musicians?",
+      "step": 3,
+      "entities": [
+        "Alex Band",
+        "Question",
+        "Dee Dee Ramone"
+      ],
+      "success": false,
+      "predicted_candidates": [
+        "Search[Alex Band The Meteors]",
+        "Search[The Meteors (band)]",
+        "Lookup[musician Alex Band]"
+      ],
+      "correct_action": "Finish[yes]",
+      "action_type": "Finish",
+      "prev_action": "Search[Alex Band]",
+      "prev_action_type": "Search",
+      "analyzed": false,
+      "timestamp": 1777888676.2957742
+    },
+    {
+      "id": 6,
+      "question": "Question: John ruskin named his album due to a removal of what?",
+      "step": 1,
+      "entities": [
+        "what",
+        "John",
+        "Question"
+      ],
+      "success": true,
+      "predicted_candidates": [
+        "Search[John Ruskin]",
+        "Search[John Ruskin removal]",
+        "Lookup[John Ruskin album]"
+      ],
+      "correct_action": "Search[John Ruskin]",
+      "action_type": "Search",
+      "prev_action": null,
+      "prev_action_type": null,
+      "analyzed": false,
+      "timestamp": 1777888819.8125887
+    },
+    {
+      "id": 7,
+      "question": "Question: John ruskin named his album due to a removal of what?",
+      "step": 2,
+      "entities": [
+        "what",
+        "John",
+        "Question"
+      ],
+      "success": false,
+      "predicted_candidates": [
+        "Search[John Ruskin album]",
+        "Search[John Ruskin (album)]",
+        "Lookup[removal]"
+      ],
+      "correct_action": "Lookup[album]",
+      "action_type": "Lookup",
+      "prev_action": "Search[John Ruskin]",
+      "prev_action_type": "Search",
+      "analyzed": false,
+      "timestamp": 1777888819.8126173
+    },
+    {
+      "id": 8,
+      "question": "Question: John ruskin named his album due to a removal of what?",
+      "step": 3,
+      "entities": [
+        "what",
+        "John",
+        "Question"
+      ],
+      "success": false,
+      "predicted_candidates": [
+        "Search[\"John Ruskin album\"]",
+        "Search[\"John Ruskin works named after removal\"]",
+        "Lookup[\"album removal\"]"
+      ],
+      "correct_action": "Search[John Ruskin album]",
+      "action_type": "Search",
+      "prev_action": "Lookup[album]",
+      "prev_action_type": "Lookup",
+      "analyzed": false,
+      "timestamp": 1777888819.8126318
+    },
+    {
+      "id": 9,
+      "question": "Question: John ruskin named his album due to a removal of what?",
+      "step": 4,
+      "entities": [
+        "what",
+        "John",
+        "Question"
+      ],
+      "success": false,
+      "predicted_candidates": [
+        "Search[John Ruskin illustrations]",
+        "Search[John Ruskin publications]",
+        "Search[album ruskin]"
+      ],
+      "correct_action": "Search[Ruskin album]",
+      "action_type": "Search",
+      "prev_action": "Search[John Ruskin album]",
+      "prev_action_type": "Search",
+      "analyzed": false,
+      "timestamp": 1777888819.8126438
+    },
+    {
+      "id": 10,
+      "question": "Question: John ruskin named his album due to a removal of what?",
+      "step": 5,
+      "entities": [
+        "what",
+        "John",
+        "Question"
+      ],
+      "success": false,
+      "predicted_candidates": [
+        "Finish[removal of red]"
+      ],
+      "correct_action": "Finish[removal of color (Latin \"albus\" for white, contrasting with \"rubric\" (red) in manuscript classification)]",
+      "action_type": "Finish",
+      "prev_action": "Search[Ruskin album]",
+      "prev_action_type": "Search",
+      "analyzed": false,
+      "timestamp": 1777888819.812654
+    },
+    {
+      "id": 11,
+      "question": "Question: What movie genre did Emmanuelle Vaugier play a supporting role in?",
+      "step": 1,
+      "entities": [
+        "what",
+        "Emmanuelle Vaugier",
+        "Question",
+        "What"
+      ],
+      "success": true,
+      "predicted_candidates": [
+        "Search[Emmanuelle Vaugier]",
+        "Search[Emmanuelle Vaugier]",
+        "Search[movie genres]"
+      ],
+      "correct_action": "Search[Emmanuelle Vaugier]",
+      "action_type": "Search",
+      "prev_action": null,
+      "prev_action_type": null,
+      "analyzed": false,
+      "timestamp": 1777888910.4709358
+    },
+    {
+      "id": 12,
+      "question": "Question: What movie genre did Emmanuelle Vaugier play a supporting role in?",
+      "step": 2,
+      "entities": [
+        "what",
+        "Emmanuelle Vaugier",
+        "Question",
+        "What"
+      ],
+      "success": false,
+      "predicted_candidates": [
+        "Search[Emmanuelle Vaugier filmography]",
+        "Search[Emmanuelle Vaugier film]",
+        "Search[Emmanuelle Vaugier acting]"
+      ],
+      "correct_action": "Search[\"40 Days and 40 Nights\"]",
+      "action_type": "Search",
+      "prev_action": "Search[Emmanuelle Vaugier]",
+      "prev_action_type": "Search",
+      "analyzed": false,
+      "timestamp": 1777888910.4709527
+    },
+    {
+      "id": 13,
+      "question": "Question: What movie genre did Emmanuelle Vaugier play a supporting role in?",
+      "step": 3,
+      "entities": [
+        "what",
+        "Emmanuelle Vaugier",
+        "Question",
+        "What"
+      ],
+      "success": false,
+      "predicted_candidates": [
+        "Search[\"40 Days and 40 Nights (film)\"]",
+        "Search[\"40 Days and 40 Nights Josh Hartnett\"]",
+        "Lookup[\"Josh Hartnett film\"]"
+      ],
+      "correct_action": "Finish[romantic comedy]",
+      "action_type": "Finish",
+      "prev_action": "Search[\"40 Days and 40 Nights\"]",
+      "prev_action_type": "Search",
+      "analyzed": false,
+      "timestamp": 1777888910.4709592
+    }
+  ]
+}
