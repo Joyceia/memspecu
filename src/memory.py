@@ -197,11 +197,6 @@ class RawMemoryStore:
         return None
 
     def _compute_score(self, query_entities, query_step, query_prev_type, entry):
-        w_entity = constants.memory_entity_overlap_weight
-        w_step = constants.memory_step_match_weight
-        w_prev = constants.memory_prev_action_match_weight
-        w_action = constants.memory_action_type_match_weight
-
         entry_entities = set(entry.entities)
         if not query_entities or not entry_entities:
             entity_score = 0.0
@@ -214,8 +209,8 @@ class RawMemoryStore:
         prev_score = 1.0 if (query_prev_type and query_prev_type == entry.prev_action_type) else 0.0
         action_score = 1.0 if (query_prev_type and query_prev_type == entry.action_type) else 0.0
 
-        return (w_entity * entity_score + w_step * step_score +
-                w_prev * prev_score + w_action * action_score)
+        return (0.5 * entity_score + 0.2 * step_score +
+                0.15 * prev_score + 0.15 * action_score)
 
     def _prune(self):
         while len(self.entries) > self.max_entries:
@@ -244,12 +239,12 @@ class InsightStore:
     def add_insights(self, new_insights):
         if not new_insights:
             return
-        existing_patterns = [i.get("pattern", "") for i in self.insights]
+        existing_patterns = [i.get("insight", "") for i in self.insights]
         for ni in new_insights:
-            if not self._is_duplicate(ni["pattern"], existing_patterns):
+            if not self._is_duplicate(ni.get("insight", ""), self.insights):
                 ni["timestamp"] = time.time()
                 self.insights.append(ni)
-                existing_patterns.append(ni["pattern"])
+                existing_patterns.append(ni.get("insight", ""))
 
     def match(self, question, step, prev_action_type, threshold=None):
         threshold = threshold or constants.insight_match_threshold
@@ -285,38 +280,36 @@ class InsightStore:
 
     def _compute_match_score(self, insight, question, step, prev_action_type):
         score = 0.0
-        conditions = insight.get("conditions", {})
-
-        keywords = conditions.get("question_keywords", [])
+        keywords = insight.get("keywords", [])
         if keywords:
             qlower = question.lower()
             hits = sum(1 for kw in keywords if kw.lower() in qlower)
             if hits > 0:
                 score += 0.5 * (hits / len(keywords))
 
-        cond_step = conditions.get("step")
-        if cond_step is not None and cond_step == step:
+        insight_text = insight.get("insight", "")
+        if f"step {step}" in insight_text.lower():
             score += 0.3
 
-        cond_prev = conditions.get("prev_action_type")
-        if cond_prev is not None and cond_prev == prev_action_type:
+        if prev_action_type and prev_action_type.lower() in insight_text.lower():
             score += 0.2
 
         return score
 
     @staticmethod
-    def _is_duplicate(new_pattern, existing_patterns):
-        """Simple overlap-based dedup. Two patterns are duplicates if their
+    def _is_duplicate(new_insight_text, existing_insights):
+        """Simple overlap-based dedup. Two insights are duplicates if their
         word sets have Jaccard > 0.7."""
-        new_words = set(new_pattern.lower().split())
+        new_words = set(new_insight_text.lower().split())
         if not new_words:
             return False
-        for ep in existing_patterns:
-            ep_words = set(ep.lower().split())
-            if not ep_words:
+        for ei in existing_insights:
+            ei_text = ei.get("insight", "")
+            ei_words = set(ei_text.lower().split())
+            if not ei_words:
                 continue
-            inter = len(new_words & ep_words)
-            union = len(new_words | ep_words)
+            inter = len(new_words & ei_words)
+            union = len(new_words | ei_words)
             if union > 0 and inter / union > 0.7:
                 return True
         return False
@@ -353,7 +346,10 @@ class InsightExtractor:
             lines.append(line)
 
         if existing_insights:
-            existing_str = json.dumps(existing_insights, indent=2)
+            existing_str = json.dumps(
+                [{"insight": i.get("insight", "")} for i in existing_insights],
+                indent=2,
+            )
         else:
             existing_str = "(none yet)"
 
@@ -402,19 +398,14 @@ class InsightExtractor:
         for ins in insights:
             if not isinstance(ins, dict):
                 continue
-            if not ins.get("pattern"):
+            if not ins.get("insight") or not isinstance(ins["insight"], str):
                 continue
-            if ins.get("support_count", 0) < constants.insight_min_support:
-                # Still accept but mark low confidence
-                ins["confidence"] = min(ins.get("confidence", 0.5), 0.5)
-            # Ensure required fields
-            ins.setdefault("conditions", {})
-            ins.setdefault("guidance", "")
-            ins.setdefault("preferred_actions", [])
-            ins.setdefault("avoid_actions", [])
-            ins.setdefault("confidence", 0.5)
-            ins.setdefault("support_count", 0)
-            valid.append(ins)
+            if not ins.get("keywords") or not isinstance(ins["keywords"], list):
+                continue
+            valid.append({
+                "insight": ins["insight"].strip(),
+                "keywords": [str(kw) for kw in ins["keywords"]],
+            })
         return valid
 
 
@@ -444,15 +435,9 @@ class MemoryAugmenter:
     def _format_insight_section(insights):
         if not insights:
             return ""
-        lines = ["### Relevant Patterns (learned from past experience):"]
+        lines = ["### Patterns learned from past experience:"]
         for i, ins in enumerate(insights, 1):
-            pref = ", ".join(ins.get("preferred_actions", [])) or "N/A"
-            avoid = ", ".join(ins.get("avoid_actions", [])) or "N/A"
-            guidance = ins.get("guidance", "")
-            lines.append(f"{i}. {ins['pattern']}")
-            if guidance:
-                lines.append(f"   Guidance: {guidance}")
-            lines.append(f"   -> Prefer: {pref} | Avoid: {avoid}")
+            lines.append(f"{i}. {ins['insight']}")
         return "\n".join(lines) + "\n\n"
 
     @staticmethod

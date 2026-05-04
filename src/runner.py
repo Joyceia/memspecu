@@ -368,35 +368,59 @@ class HotPotQARun:
             question = question.split("\n")[0].strip()
         return question
 
-    def _maybe_extract_insights(self, force=False):
+    def _maybe_extract_insights(self):
         unanalyzed = self.raw_memory.get_unanalyzed()
-        threshold = constants.insight_extraction_min_new
-        min_entries = min(threshold, 10)
-
-        if force and len(unanalyzed) >= min_entries:
-            pass  # proceed with lower threshold
-        elif len(unanalyzed) < threshold:
+        if len(unanalyzed) < constants.insight_extraction_min_new:
             return
 
-        extractor = InsightExtractor()
-        new_insights = extractor.extract(
-            raw_entries=unanalyzed,
-            existing_insights=self.insight_store.get_all(),
-            llm_client=self.llm,
+        # Build prompt inline (simpler than going through InsightExtractor)
+        existing_insights = self.insight_store.get_all()
+        lines = []
+        for e in unanalyzed:
+            marker = "+" if e.success else "-"
+            cand_str = ", ".join(e.predicted_candidates[:3])
+            if e.success:
+                line = (f"{marker} Q: \"{e.question[:120]}\" | "
+                        f"Step {e.step} | {e.correct_action}")
+            else:
+                line = (f"{marker} Q: \"{e.question[:120]}\" | "
+                        f"Step {e.step} | Predicted: {cand_str} | "
+                        f"Correct: {e.correct_action}")
+            lines.append(line)
+
+        existing_str = json.dumps(
+            [{"insight": i.get("insight", "")} for i in existing_insights],
+            indent=2,
+        ) if existing_insights else "(none yet)"
+
+        prompt = PromptTemplates.INSIGHT_EXTRACTION_PROMPT.format(
+            raw_entries="\n".join(lines),
+            existing_insights=existing_str,
         )
+
+        try:
+            response = self.llm.call(prompt, stop=None)
+        except Exception as e:
+            self.log(f"[Memory] Extraction LLM call failed: {e}", save_log=False)
+            return
+
+        self.log(
+            f"[Memory] Extraction response ({len(response)} chars): {response[:300]}...",
+            save_log=False,
+        )
+
+        new_insights = InsightExtractor._parse_insights(response)
 
         if new_insights:
             self.insight_store.add_insights(new_insights)
-            self.raw_memory.mark_analyzed([e.id for e in unanalyzed])
             self.insight_store.save()
             self.log(
                 f"[Memory] Extracted {len(new_insights)} new insights "
                 f"(total: {len(self.insight_store)})",
                 save_log=False,
             )
-        elif force and len(unanalyzed) >= min_entries:
-            # Mark as analyzed even if no insights returned, to avoid re-processing
-            self.raw_memory.mark_analyzed([e.id for e in unanalyzed])
+
+        self.raw_memory.mark_analyzed([e.id for e in unanalyzed])
 
     def run(self, webthink_simulate=False, skip_done=False):
         from google.genai.errors import ClientError, ServerError
@@ -494,10 +518,7 @@ class HotPotQARun:
 
         self.env.write()
         if constants.memory_enabled:
-            # Normal threshold check (triggered during run by accumulation)
-            self._maybe_extract_insights(force=False)
-            # Force extraction at end of run if >= 10 unanalyzed entries
-            self._maybe_extract_insights(force=True)
+            self._maybe_extract_insights()
             self.raw_memory.save()
             self.insight_store.save()
             stats = self.raw_memory.get_stats()

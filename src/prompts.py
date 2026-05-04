@@ -43,12 +43,15 @@ class PromptTemplates:
         "## Existing Insights (avoid duplicates; refine if you have more data):\n"
         "{existing_insights}\n\n"
         "## Task\n"
-        "Extract 3-5 concise, actionable insights that capture recurring patterns. "
-        "Focus on patterns that are: (1) Actionable for action selection, "
-        "(2) Supported by multiple entries (>= 3), (3) Non-obvious "
-        "(not just 'step 1 is always Search').\n\n"
-        "Return ONLY a JSON array of objects with fields: "
-        "pattern, conditions (question_keywords, step, prev_action_type), "
-        "guidance, preferred_actions, avoid_actions, confidence, support_count.\n"
+        "Analyze the above predictions and extract 3-5 concise, actionable insights "
+        "written in natural English (one or two sentences each). Each insight should:\n"
+        "1. Describe a recurring pattern in action selection\n"
+        "2. Be directly useful for guiding future action predictions\n"
+        "3. Be non-obvious (not just \"step 1 is always Search\")\n\n"
+        "For each insight, also provide 3-8 keywords that would help match this insight "
+        "to relevant questions.\n\n"
+        "Return ONLY a JSON array. Each element must have exactly two fields:\n"
+        '- "insight": the natural language insight (1-2 sentences)\n'
+        '- "keywords": array of relevant trigger words\n\n'
         "No other text."
     )
