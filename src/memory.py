@@ -299,18 +299,19 @@ class InsightStore:
     @staticmethod
     def _is_duplicate(new_insight_text, existing_insights):
         """Simple overlap-based dedup. Two insights are duplicates if their
-        word sets have Jaccard > 0.7."""
+        word sets have Jaccard > 0.5. Short insights (< 5 words) are never
+        deduped since Jaccard is unreliable on tiny sets."""
         new_words = set(new_insight_text.lower().split())
-        if not new_words:
+        if len(new_words) < 5:
             return False
         for ei in existing_insights:
             ei_text = ei.get("insight", "")
             ei_words = set(ei_text.lower().split())
-            if not ei_words:
+            if len(ei_words) < 5:
                 continue
             inter = len(new_words & ei_words)
             union = len(new_words | ei_words)
-            if union > 0 and inter / union > 0.7:
+            if union > 0 and inter / union > 0.5:
                 return True
         return False
 

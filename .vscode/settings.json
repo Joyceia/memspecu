@@ -1,0 +1,8 @@
+ {"claudeCode.environmentVariables": 
+    [
+        { "name": "ANTHROPIC_BASE_URL", "value": "https://api.deepseek.com/anthropic" },
+        { "name": "ANTHROPIC_AUTH_TOKEN", "value": "sk-446a0c1fa8354d1a820fd94c72b577e4" },
+    ],
+    "claudeCode.disableLoginPrompt": true,
+    "claudeCode.preferredLocation": "panel",
+}

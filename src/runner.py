@@ -136,7 +136,7 @@ class HotPotQARun:
         n_calls_badcalls[0] += 1
 
         memory_hint = ""
-        if (constants.memory_enabled and num_actions > 1
+        if (constants.memory_enabled
                 and hasattr(self, 'raw_memory') and self.current_question):
             prev_actions = self.env.normal_trajectory_dict.get("actions", [])
             prev_action = prev_actions[-1] if prev_actions else None
@@ -448,6 +448,7 @@ class HotPotQARun:
 
         if constants.memory_enabled:
             self._backfill_memories()
+            self._maybe_extract_insights()
 
         for i in idxs[:constants.n_samples_to_run]:
             self.current_index = i
@@ -522,6 +523,7 @@ class HotPotQARun:
 
             if constants.memory_enabled:
                 self._store_memories()
+                self._maybe_extract_insights()
 
         self.env.write()
         if constants.memory_enabled:
