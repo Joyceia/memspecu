@@ -1,266 +1,429 @@
 {
-  "next_id": 14,
+  "next_id": 217,
   "entries": [
     {
       "id": 0,
-      "question": "Question: In which city have Gary Ayres and Neil Craig both been head coach of the Crows?",
+      "question": "Question: Which company used a voice actor who also voiced He-Man?",
       "step": 1,
       "entities": [
-        "city",
-        "Neil Craig",
-        "Gary Ayres",
+        "Man",
+        "Which",
+        "He",
         "Question",
-        "In",
-        "Crows",
-        "which"
+        "which",
+        "who"
       ],
-      "success": true,
+      "success": false,
       "predicted_candidates": [
-        "Search[Gary Ayres]",
-        "Search[Neil Craig]",
-        "Search[Adelaide Crows]"
+        "Search[He-Man voice actor]",
+        "Search[Frank Langella]",
+        "Search[Alan Oppenheimer]"
       ],
-      "correct_action": "Search[Gary Ayres]",
+      "correct_action": "Search[He-Man]",
       "action_type": "Search",
       "prev_action": null,
       "prev_action_type": null,
-      "analyzed": false,
-      "timestamp": 1777888569.312545
+      "analyzed": true,
+      "timestamp": 1777894554.9594982
     },
     {
       "id": 1,
-      "question": "Question: In which city have Gary Ayres and Neil Craig both been head coach of the Crows?",
+      "question": "Question: Which company used a voice actor who also voiced He-Man?",
       "step": 2,
       "entities": [
-        "city",
-        "Neil Craig",
-        "Gary Ayres",
+        "Man",
+        "Which",
+        "He",
         "Question",
-        "In",
-        "Crows",
-        "which"
+        "which",
+        "who"
       ],
-      "success": true,
+      "success": false,
       "predicted_candidates": [
-        "Search[Gary Ayres]",
-        "Search[Neil Craig]",
-        "Search[Gary Ayres Adelaide Crows]"
+        "Search[He-Man voice actor]",
+        "Search[He-Man (1980s cartoon)]",
+        "Search[He-Man voice actor]"
       ],
-      "correct_action": "Search[Neil Craig]",
+      "correct_action": "Search[He-Man]",
       "action_type": "Search",
-      "prev_action": "Search[Gary Ayres]",
+      "prev_action": "Search[He-Man]",
       "prev_action_type": "Search",
-      "analyzed": false,
-      "timestamp": 1777888569.312564
+      "analyzed": true,
+      "timestamp": 1777894554.9595122
     },
     {
       "id": 2,
-      "question": "Question: In which city have Gary Ayres and Neil Craig both been head coach of the Crows?",
+      "question": "Question: Which company used a voice actor who also voiced He-Man?",
       "step": 3,
       "entities": [
-        "city",
-        "Neil Craig",
-        "Gary Ayres",
+        "Man",
+        "Which",
+        "He",
         "Question",
-        "In",
-        "Crows",
+        "which",
+        "who"
+      ],
+      "success": true,
+      "predicted_candidates": [
+        "Search[He-Man]",
+        "Search[He-Man voice actor]",
+        "Search[He-Man]"
+      ],
+      "correct_action": "Search[He-Man]",
+      "action_type": "Search",
+      "prev_action": "Search[He-Man]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777894554.9595242
+    },
+    {
+      "id": 3,
+      "question": "Question: Which company used a voice actor who also voiced He-Man?",
+      "step": 4,
+      "entities": [
+        "Man",
+        "Which",
+        "He",
+        "Question",
+        "which",
+        "who"
+      ],
+      "success": false,
+      "predicted_candidates": [
+        "Search[He-Man]",
+        "Search[He-Man]",
+        "Search[He-Man voice actor]"
+      ],
+      "correct_action": "Search[Prince Adam voice actor]",
+      "action_type": "Search",
+      "prev_action": "Search[He-Man]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777894554.959531
+    },
+    {
+      "id": 4,
+      "question": "Question: Which company used a voice actor who also voiced He-Man?",
+      "step": 5,
+      "entities": [
+        "Man",
+        "Which",
+        "He",
+        "Question",
+        "which",
+        "who"
+      ],
+      "success": false,
+      "predicted_candidates": [
+        "Search[Alan Oppenheimer]",
+        "Search[Alan Oppenheimer voice roles]",
+        "Search[Alan Oppenheimer career]"
+      ],
+      "correct_action": "Search[Adam Harrington (voice actor)]",
+      "action_type": "Search",
+      "prev_action": "Search[Prince Adam voice actor]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777894554.9595375
+    },
+    {
+      "id": 5,
+      "question": "Question: Which company used a voice actor who also voiced He-Man?",
+      "step": 6,
+      "entities": [
+        "Man",
+        "Which",
+        "He",
+        "Question",
+        "which",
+        "who"
+      ],
+      "success": false,
+      "predicted_candidates": [
+        "Search[Adam Harrington other roles]",
+        "Search[Adam Harrington companies]",
+        "Lookup[company]"
+      ],
+      "correct_action": "Finish[Telltale Games]",
+      "action_type": "Finish",
+      "prev_action": "Search[Adam Harrington (voice actor)]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777894554.9595432
+    },
+    {
+      "id": 6,
+      "question": "Question: Which movie came out first Muppet Treasure Island or Million Dollar Arm ?",
+      "step": 1,
+      "entities": [
+        "Which",
+        "Million Dollar Arm",
+        "Muppet Treasure Island",
+        "Question",
+        "which"
+      ],
+      "success": true,
+      "predicted_candidates": [
+        "Search[Muppet Treasure Island]",
+        "Search[Million Dollar Arm]",
+        "Search[Muppet Treasure Island]"
+      ],
+      "correct_action": "Search[Muppet Treasure Island]",
+      "action_type": "Search",
+      "prev_action": null,
+      "prev_action_type": null,
+      "analyzed": true,
+      "timestamp": 1777894554.9597332
+    },
+    {
+      "id": 7,
+      "question": "Question: Which movie came out first Muppet Treasure Island or Million Dollar Arm ?",
+      "step": 2,
+      "entities": [
+        "Which",
+        "Million Dollar Arm",
+        "Muppet Treasure Island",
+        "Question",
+        "which"
+      ],
+      "success": true,
+      "predicted_candidates": [
+        "Search[Million Dollar Arm]",
+        "Search[Arthur's Magazine]",
+        "Search[First for Women]"
+      ],
+      "correct_action": "Search[Million Dollar Arm]",
+      "action_type": "Search",
+      "prev_action": "Search[Muppet Treasure Island]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777894554.9597425
+    },
+    {
+      "id": 8,
+      "question": "Question: Which movie came out first Muppet Treasure Island or Million Dollar Arm ?",
+      "step": 3,
+      "entities": [
+        "Which",
+        "Million Dollar Arm",
+        "Muppet Treasure Island",
+        "Question",
         "which"
       ],
       "success": false,
       "predicted_candidates": [
-        "Search[Adelaide Crows]",
-        "Search[Adelaide Football Club]",
-        "Lookup[Ayres Neil Craig]"
+        "Search[Million Dollar Arm (2014)]",
+        "Search[Million Dollar Arm movie]",
+        "Lookup[2014]"
       ],
-      "correct_action": "Finish[Adelaide]",
+      "correct_action": "Finish[Muppet Treasure Island]",
       "action_type": "Finish",
-      "prev_action": "Search[Neil Craig]",
+      "prev_action": "Search[Million Dollar Arm]",
       "prev_action_type": "Search",
-      "analyzed": false,
-      "timestamp": 1777888569.3125722
-    },
-    {
-      "id": 3,
-      "question": "Question: are Dee Dee Ramone and Alex Band both singers, songwriters and musicians?",
-      "step": 1,
-      "entities": [
-        "Alex Band",
-        "Question",
-        "Dee Dee Ramone"
-      ],
-      "success": true,
-      "predicted_candidates": [
-        "Search[Dee Dee Ramone]",
-        "Search[Alex Band]",
-        "Search[Dee Dee Ramone]"
-      ],
-      "correct_action": "Search[Dee Dee Ramone]",
-      "action_type": "Search",
-      "prev_action": null,
-      "prev_action_type": null,
-      "analyzed": false,
-      "timestamp": 1777888676.2957156
-    },
-    {
-      "id": 4,
-      "question": "Question: are Dee Dee Ramone and Alex Band both singers, songwriters and musicians?",
-      "step": 2,
-      "entities": [
-        "Alex Band",
-        "Question",
-        "Dee Dee Ramone"
-      ],
-      "success": true,
-      "predicted_candidates": [
-        "Search[Alex Band]",
-        "Search[Faith No More]",
-        "Search[Alex Band]"
-      ],
-      "correct_action": "Search[Alex Band]",
-      "action_type": "Search",
-      "prev_action": "Search[Dee Dee Ramone]",
-      "prev_action_type": "Search",
-      "analyzed": false,
-      "timestamp": 1777888676.2957647
-    },
-    {
-      "id": 5,
-      "question": "Question: are Dee Dee Ramone and Alex Band both singers, songwriters and musicians?",
-      "step": 3,
-      "entities": [
-        "Alex Band",
-        "Question",
-        "Dee Dee Ramone"
-      ],
-      "success": false,
-      "predicted_candidates": [
-        "Search[Alex Band The Meteors]",
-        "Search[The Meteors (band)]",
-        "Lookup[musician Alex Band]"
-      ],
-      "correct_action": "Finish[yes]",
-      "action_type": "Finish",
-      "prev_action": "Search[Alex Band]",
-      "prev_action_type": "Search",
-      "analyzed": false,
-      "timestamp": 1777888676.2957742
-    },
-    {
-      "id": 6,
-      "question": "Question: John ruskin named his album due to a removal of what?",
-      "step": 1,
-      "entities": [
-        "what",
-        "John",
-        "Question"
-      ],
-      "success": true,
-      "predicted_candidates": [
-        "Search[John Ruskin]",
-        "Search[John Ruskin removal]",
-        "Lookup[John Ruskin album]"
-      ],
-      "correct_action": "Search[John Ruskin]",
-      "action_type": "Search",
-      "prev_action": null,
-      "prev_action_type": null,
-      "analyzed": false,
-      "timestamp": 1777888819.8125887
-    },
-    {
-      "id": 7,
-      "question": "Question: John ruskin named his album due to a removal of what?",
-      "step": 2,
-      "entities": [
-        "what",
-        "John",
-        "Question"
-      ],
-      "success": false,
-      "predicted_candidates": [
-        "Search[John Ruskin album]",
-        "Search[John Ruskin (album)]",
-        "Lookup[removal]"
-      ],
-      "correct_action": "Lookup[album]",
-      "action_type": "Lookup",
-      "prev_action": "Search[John Ruskin]",
-      "prev_action_type": "Search",
-      "analyzed": false,
-      "timestamp": 1777888819.8126173
-    },
-    {
-      "id": 8,
-      "question": "Question: John ruskin named his album due to a removal of what?",
-      "step": 3,
-      "entities": [
-        "what",
-        "John",
-        "Question"
-      ],
-      "success": false,
-      "predicted_candidates": [
-        "Search[\"John Ruskin album\"]",
-        "Search[\"John Ruskin works named after removal\"]",
-        "Lookup[\"album removal\"]"
-      ],
-      "correct_action": "Search[John Ruskin album]",
-      "action_type": "Search",
-      "prev_action": "Lookup[album]",
-      "prev_action_type": "Lookup",
-      "analyzed": false,
-      "timestamp": 1777888819.8126318
+      "analyzed": true,
+      "timestamp": 1777894554.9597485
     },
     {
       "id": 9,
-      "question": "Question: John ruskin named his album due to a removal of what?",
-      "step": 4,
+      "question": "Question: Which university is further North,  University of New Hampshire or Stony Brook University?",
+      "step": 1,
       "entities": [
-        "what",
-        "John",
-        "Question"
+        "Which",
+        "University",
+        "Question",
+        "New Hampshire",
+        "which",
+        "Stony Brook University",
+        "North"
       ],
-      "success": false,
+      "success": true,
       "predicted_candidates": [
-        "Search[John Ruskin illustrations]",
-        "Search[John Ruskin publications]",
-        "Search[album ruskin]"
+        "Search[University of New Hampshire]",
+        "Search[Stony Brook University]",
+        "Search[University of New Hampshire location]"
       ],
-      "correct_action": "Search[Ruskin album]",
+      "correct_action": "Search[University of New Hampshire]",
       "action_type": "Search",
-      "prev_action": "Search[John Ruskin album]",
-      "prev_action_type": "Search",
-      "analyzed": false,
-      "timestamp": 1777888819.8126438
+      "prev_action": null,
+      "prev_action_type": null,
+      "analyzed": true,
+      "timestamp": 1777894554.9599156
     },
     {
       "id": 10,
-      "question": "Question: John ruskin named his album due to a removal of what?",
-      "step": 5,
+      "question": "Question: Which university is further North,  University of New Hampshire or Stony Brook University?",
+      "step": 2,
       "entities": [
-        "what",
-        "John",
-        "Question"
+        "Which",
+        "University",
+        "Question",
+        "New Hampshire",
+        "which",
+        "Stony Brook University",
+        "North"
       ],
-      "success": false,
+      "success": true,
       "predicted_candidates": [
-        "Finish[removal of red]"
+        "Search[Stony Brook University]",
+        "Search[Stony Brook]",
+        "Lookup[University of New Hampshire]"
       ],
-      "correct_action": "Finish[removal of color (Latin \"albus\" for white, contrasting with \"rubric\" (red) in manuscript classification)]",
-      "action_type": "Finish",
-      "prev_action": "Search[Ruskin album]",
+      "correct_action": "Search[Stony Brook University]",
+      "action_type": "Search",
+      "prev_action": "Search[University of New Hampshire]",
       "prev_action_type": "Search",
-      "analyzed": false,
-      "timestamp": 1777888819.812654
+      "analyzed": true,
+      "timestamp": 1777894554.9599242
     },
     {
       "id": 11,
+      "question": "Question: Which university is further North,  University of New Hampshire or Stony Brook University?",
+      "step": 3,
+      "entities": [
+        "Which",
+        "University",
+        "Question",
+        "New Hampshire",
+        "which",
+        "Stony Brook University",
+        "North"
+      ],
+      "success": false,
+      "predicted_candidates": [
+        "Search[Stony Brook University location]",
+        "Search[Suffolk County]",
+        "Lookup[location]"
+      ],
+      "correct_action": "Finish[University of New Hampshire]",
+      "action_type": "Finish",
+      "prev_action": "Search[Stony Brook University]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777894554.9599307
+    },
+    {
+      "id": 12,
+      "question": "Question: The host of PokerFace is from where?",
+      "step": 1,
+      "entities": [
+        "where",
+        "Question",
+        "The"
+      ],
+      "success": true,
+      "predicted_candidates": [
+        "Search[PokerFace]",
+        "Search[Poker Face]",
+        "Search[host of PokerFace]"
+      ],
+      "correct_action": "Search[PokerFace]",
+      "action_type": "Search",
+      "prev_action": null,
+      "prev_action_type": null,
+      "analyzed": true,
+      "timestamp": 1777894554.9600852
+    },
+    {
+      "id": 13,
+      "question": "Question: The host of PokerFace is from where?",
+      "step": 2,
+      "entities": [
+        "where",
+        "Question",
+        "The"
+      ],
+      "success": false,
+      "predicted_candidates": [
+        "Search[PokerFace]",
+        "Finish[Russia]"
+      ],
+      "correct_action": "Search[Ant & Dec]",
+      "action_type": "Search",
+      "prev_action": "Search[PokerFace]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777894554.9600928
+    },
+    {
+      "id": 14,
+      "question": "Question: The host of PokerFace is from where?",
+      "step": 3,
+      "entities": [
+        "where",
+        "Question",
+        "The"
+      ],
+      "success": false,
+      "predicted_candidates": [
+        "Search[Ant & Dec]",
+        "Search[Ant and Dec]",
+        "Search[Ant Dec]"
+      ],
+      "correct_action": "Finish[United Kingdom]",
+      "action_type": "Finish",
+      "prev_action": "Search[Ant & Dec]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777894554.9600987
+    },
+    {
+      "id": 15,
+      "question": "Question: Which country in Florida is the airport associated with transportation in Jacksonville, Florida?",
+      "step": 1,
+      "entities": [
+        "Which",
+        "Jacksonville",
+        "Question",
+        "country",
+        "which",
+        "Florida"
+      ],
+      "success": true,
+      "predicted_candidates": [
+        "Search[Jacksonville International Airport]",
+        "Search[Jacksonville International Airport]",
+        "Search[Jacksonville Airport]"
+      ],
+      "correct_action": "Search[Jacksonville International Airport]",
+      "action_type": "Search",
+      "prev_action": null,
+      "prev_action_type": null,
+      "analyzed": true,
+      "timestamp": 1777894554.9602554
+    },
+    {
+      "id": 16,
+      "question": "Question: Which country in Florida is the airport associated with transportation in Jacksonville, Florida?",
+      "step": 2,
+      "entities": [
+        "Which",
+        "Jacksonville",
+        "Question",
+        "country",
+        "which",
+        "Florida"
+      ],
+      "success": false,
+      "predicted_candidates": [
+        "Search[Jacksonville International Airport]",
+        "Search[Jacksonville, Florida]",
+        "Lookup[Duvall County]"
+      ],
+      "correct_action": "Finish[Duval County]",
+      "action_type": "Finish",
+      "prev_action": "Search[Jacksonville International Airport]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777894554.9602633
+    },
+    {
+      "id": 17,
       "question": "Question: What movie genre did Emmanuelle Vaugier play a supporting role in?",
       "step": 1,
       "entities": [
         "what",
-        "Emmanuelle Vaugier",
         "Question",
+        "Emmanuelle Vaugier",
         "What"
       ],
       "success": true,
@@ -273,17 +436,17 @@
       "action_type": "Search",
       "prev_action": null,
       "prev_action_type": null,
-      "analyzed": false,
-      "timestamp": 1777888910.4709358
+      "analyzed": true,
+      "timestamp": 1777894554.9604287
     },
     {
-      "id": 12,
+      "id": 18,
       "question": "Question: What movie genre did Emmanuelle Vaugier play a supporting role in?",
       "step": 2,
       "entities": [
         "what",
-        "Emmanuelle Vaugier",
         "Question",
+        "Emmanuelle Vaugier",
         "What"
       ],
       "success": false,
@@ -296,17 +459,17 @@
       "action_type": "Search",
       "prev_action": "Search[Emmanuelle Vaugier]",
       "prev_action_type": "Search",
-      "analyzed": false,
-      "timestamp": 1777888910.4709527
+      "analyzed": true,
+      "timestamp": 1777894554.9604454
     },
     {
-      "id": 13,
+      "id": 19,
       "question": "Question: What movie genre did Emmanuelle Vaugier play a supporting role in?",
       "step": 3,
       "entities": [
         "what",
-        "Emmanuelle Vaugier",
         "Question",
+        "Emmanuelle Vaugier",
         "What"
       ],
       "success": false,
@@ -319,8 +482,4730 @@
       "action_type": "Finish",
       "prev_action": "Search[\"40 Days and 40 Nights\"]",
       "prev_action_type": "Search",
-      "analyzed": false,
-      "timestamp": 1777888910.4709592
+      "analyzed": true,
+      "timestamp": 1777894554.9604518
+    },
+    {
+      "id": 20,
+      "question": "Question: John ruskin named his album due to a removal of what?",
+      "step": 1,
+      "entities": [
+        "what",
+        "Question",
+        "John"
+      ],
+      "success": true,
+      "predicted_candidates": [
+        "Search[John Ruskin]",
+        "Search[John Ruskin removal]",
+        "Lookup[John Ruskin album]"
+      ],
+      "correct_action": "Search[John Ruskin]",
+      "action_type": "Search",
+      "prev_action": null,
+      "prev_action_type": null,
+      "analyzed": true,
+      "timestamp": 1777894554.9606328
+    },
+    {
+      "id": 21,
+      "question": "Question: John ruskin named his album due to a removal of what?",
+      "step": 2,
+      "entities": [
+        "what",
+        "Question",
+        "John"
+      ],
+      "success": false,
+      "predicted_candidates": [
+        "Search[John Ruskin album]",
+        "Search[John Ruskin (album)]",
+        "Lookup[removal]"
+      ],
+      "correct_action": "Lookup[album]",
+      "action_type": "Lookup",
+      "prev_action": "Search[John Ruskin]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777894554.9606407
+    },
+    {
+      "id": 22,
+      "question": "Question: John ruskin named his album due to a removal of what?",
+      "step": 3,
+      "entities": [
+        "what",
+        "Question",
+        "John"
+      ],
+      "success": false,
+      "predicted_candidates": [
+        "Search[\"John Ruskin album\"]",
+        "Search[\"John Ruskin works named after removal\"]",
+        "Lookup[\"album removal\"]"
+      ],
+      "correct_action": "Search[John Ruskin album]",
+      "action_type": "Search",
+      "prev_action": "Lookup[album]",
+      "prev_action_type": "Lookup",
+      "analyzed": true,
+      "timestamp": 1777894554.9606466
+    },
+    {
+      "id": 23,
+      "question": "Question: John ruskin named his album due to a removal of what?",
+      "step": 4,
+      "entities": [
+        "what",
+        "Question",
+        "John"
+      ],
+      "success": false,
+      "predicted_candidates": [
+        "Search[John Ruskin illustrations]",
+        "Search[John Ruskin publications]",
+        "Search[album ruskin]"
+      ],
+      "correct_action": "Search[Ruskin album]",
+      "action_type": "Search",
+      "prev_action": "Search[John Ruskin album]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777894554.9606524
+    },
+    {
+      "id": 24,
+      "question": "Question: John ruskin named his album due to a removal of what?",
+      "step": 5,
+      "entities": [
+        "what",
+        "Question",
+        "John"
+      ],
+      "success": false,
+      "predicted_candidates": [
+        "Finish[removal of red]"
+      ],
+      "correct_action": "Finish[removal of color (Latin \"albus\" for white, contrasting with \"rubric\" (red) in manuscript classification)]",
+      "action_type": "Finish",
+      "prev_action": "Search[Ruskin album]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777894554.9606576
+    },
+    {
+      "id": 25,
+      "question": "Question: Who played a more important role in the church George Albert Smith or Wong Jing?",
+      "step": 1,
+      "entities": [
+        "Wong Jing",
+        "Who",
+        "Question",
+        "George Albert Smith",
+        "who"
+      ],
+      "success": true,
+      "predicted_candidates": [
+        "Search[George Albert Smith]",
+        "Search[Wong Jing]",
+        "Lookup[church roles]"
+      ],
+      "correct_action": "Search[George Albert Smith]",
+      "action_type": "Search",
+      "prev_action": null,
+      "prev_action_type": null,
+      "analyzed": true,
+      "timestamp": 1777894554.9608185
+    },
+    {
+      "id": 26,
+      "question": "Question: Who played a more important role in the church George Albert Smith or Wong Jing?",
+      "step": 2,
+      "entities": [
+        "Wong Jing",
+        "Who",
+        "Question",
+        "George Albert Smith",
+        "who"
+      ],
+      "success": true,
+      "predicted_candidates": [
+        "Search[Wong Jing]",
+        "Lookup[church role]",
+        "Finish[George Albert Smith]"
+      ],
+      "correct_action": "Search[Wong Jing]",
+      "action_type": "Search",
+      "prev_action": "Search[George Albert Smith]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777894554.9608288
+    },
+    {
+      "id": 27,
+      "question": "Question: Who played a more important role in the church George Albert Smith or Wong Jing?",
+      "step": 3,
+      "entities": [
+        "Wong Jing",
+        "Who",
+        "Question",
+        "George Albert Smith",
+        "who"
+      ],
+      "success": false,
+      "predicted_candidates": [
+        "Search[Wong Jing church role]",
+        "Search[Wong Jing religion]",
+        "Search[Wong Jing church role]"
+      ],
+      "correct_action": "Finish[George Albert Smith]",
+      "action_type": "Finish",
+      "prev_action": "Search[Wong Jing]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777894554.960835
+    },
+    {
+      "id": 28,
+      "question": "Question: \"Heropanti\" star Kriti Sanon appears in the remix video for a song from what Bollywood film?",
+      "step": 1,
+      "entities": [
+        "what",
+        "Kriti Sanon",
+        "Heropanti",
+        "Question",
+        "Bollywood"
+      ],
+      "success": true,
+      "predicted_candidates": [
+        "Search[Kriti Sanon]",
+        "Search[Kriti Sanon]",
+        "Search[Heropanti]"
+      ],
+      "correct_action": "Search[Kriti Sanon]",
+      "action_type": "Search",
+      "prev_action": null,
+      "prev_action_type": null,
+      "analyzed": true,
+      "timestamp": 1777894554.961036
+    },
+    {
+      "id": 29,
+      "question": "Question: \"Heropanti\" star Kriti Sanon appears in the remix video for a song from what Bollywood film?",
+      "step": 2,
+      "entities": [
+        "what",
+        "Kriti Sanon",
+        "Heropanti",
+        "Question",
+        "Bollywood"
+      ],
+      "success": false,
+      "predicted_candidates": [
+        "Search[Dilwale Dulhania Le Jayenge]",
+        "Search[Kuch Kuch Hota Hai]",
+        "Search[remix video Kriti Sanon]"
+      ],
+      "correct_action": "Search[Kriti Sanon]",
+      "action_type": "Search",
+      "prev_action": "Search[Kriti Sanon]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777894554.9610443
+    },
+    {
+      "id": 30,
+      "question": "Question: \"Heropanti\" star Kriti Sanon appears in the remix video for a song from what Bollywood film?",
+      "step": 3,
+      "entities": [
+        "what",
+        "Kriti Sanon",
+        "Heropanti",
+        "Question",
+        "Bollywood"
+      ],
+      "success": false,
+      "predicted_candidates": [
+        "Finish[Heropanti]"
+      ],
+      "correct_action": "Search[Heropanti]",
+      "action_type": "Search",
+      "prev_action": "Search[Kriti Sanon]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777894554.9610496
+    },
+    {
+      "id": 31,
+      "question": "Question: \"Heropanti\" star Kriti Sanon appears in the remix video for a song from what Bollywood film?",
+      "step": 4,
+      "entities": [
+        "what",
+        "Kriti Sanon",
+        "Heropanti",
+        "Question",
+        "Bollywood"
+      ],
+      "success": false,
+      "predicted_candidates": [
+        "Search[Heropanti (film)]",
+        "Search[Heropanti song remix]",
+        "Lookup[Heropanti 2014 film]"
+      ],
+      "correct_action": "Search[\"Heropanti\" song remix]",
+      "action_type": "Search",
+      "prev_action": "Search[Heropanti]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777894554.9610555
+    },
+    {
+      "id": 32,
+      "question": "Question: \"Heropanti\" star Kriti Sanon appears in the remix video for a song from what Bollywood film?",
+      "step": 5,
+      "entities": [
+        "what",
+        "Kriti Sanon",
+        "Heropanti",
+        "Question",
+        "Bollywood"
+      ],
+      "success": false,
+      "predicted_candidates": [
+        "Search[Heropanti 2]",
+        "Search[Kriti Sanon remix video]",
+        "Finish[Heropanti 2]"
+      ],
+      "correct_action": "Search[Palat song]",
+      "action_type": "Search",
+      "prev_action": "Search[\"Heropanti\" song remix]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777894554.961061
+    },
+    {
+      "id": 33,
+      "question": "Question: \"Heropanti\" star Kriti Sanon appears in the remix video for a song from what Bollywood film?",
+      "step": 6,
+      "entities": [
+        "what",
+        "Kriti Sanon",
+        "Heropanti",
+        "Question",
+        "Bollywood"
+      ],
+      "success": false,
+      "predicted_candidates": [
+        "Finish[Heropanti]"
+      ],
+      "correct_action": "Search[Main Tera Hero]",
+      "action_type": "Search",
+      "prev_action": "Search[Palat song]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777894554.9610662
+    },
+    {
+      "id": 34,
+      "question": "Question: \"Heropanti\" star Kriti Sanon appears in the remix video for a song from what Bollywood film?",
+      "step": 7,
+      "entities": [
+        "what",
+        "Kriti Sanon",
+        "Heropanti",
+        "Question",
+        "Bollywood"
+      ],
+      "success": false,
+      "predicted_candidates": [
+        "Search[Main Tera Hero Kriti Sanon]",
+        "Search[\"Tera Hero Idhar Hai\" song]",
+        "Lookup[Main Tera Hero]"
+      ],
+      "correct_action": "Finish[Main Tera Hero]",
+      "action_type": "Finish",
+      "prev_action": "Search[Main Tera Hero]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777894554.961072
+    },
+    {
+      "id": 35,
+      "question": "Question: When did the man for whom St Vincents Hall, Grantham was built found his eponymous company?",
+      "step": 1,
+      "entities": [
+        "when",
+        "Question",
+        "When",
+        "Grantham",
+        "St Vincents Hall"
+      ],
+      "success": true,
+      "predicted_candidates": [
+        "Search[St Vincents Hall, Grantham]"
+      ],
+      "correct_action": "Search[St Vincents Hall, Grantham]",
+      "action_type": "Search",
+      "prev_action": null,
+      "prev_action_type": null,
+      "analyzed": true,
+      "timestamp": 1777894554.961232
+    },
+    {
+      "id": 36,
+      "question": "Question: When did the man for whom St Vincents Hall, Grantham was built found his eponymous company?",
+      "step": 2,
+      "entities": [
+        "when",
+        "Question",
+        "When",
+        "Grantham",
+        "St Vincents Hall"
+      ],
+      "success": false,
+      "predicted_candidates": [
+        "Search[St Vincents Hall, Grantham]",
+        "Search[St Vincents Hall Grantham history]",
+        "Search[St Vincent family Grantham company]"
+      ],
+      "correct_action": "Search[St Vincents Hall]",
+      "action_type": "Search",
+      "prev_action": "Search[St Vincents Hall, Grantham]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777894554.9612396
+    },
+    {
+      "id": 37,
+      "question": "Question: When did the man for whom St Vincents Hall, Grantham was built found his eponymous company?",
+      "step": 3,
+      "entities": [
+        "when",
+        "Question",
+        "When",
+        "Grantham",
+        "St Vincents Hall"
+      ],
+      "success": false,
+      "predicted_candidates": [
+        "Search[St Vincent]",
+        "Search[St Vincents Company]",
+        "Lookup[Grantham]"
+      ],
+      "correct_action": "Finish[1868]",
+      "action_type": "Finish",
+      "prev_action": "Search[St Vincents Hall]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777894554.9612458
+    },
+    {
+      "id": 38,
+      "question": "Question:  Charice is the first international studio album of a singer who rose to popularity through what?",
+      "step": 1,
+      "entities": [
+        "who",
+        "what",
+        "Question",
+        "Charice"
+      ],
+      "success": false,
+      "predicted_candidates": [
+        "Search[Charice]",
+        "Search[Charice album]",
+        "Search[Charice singer]"
+      ],
+      "correct_action": "Search[entity]",
+      "action_type": "Search",
+      "prev_action": null,
+      "prev_action_type": null,
+      "analyzed": true,
+      "timestamp": 1777894554.9614055
+    },
+    {
+      "id": 39,
+      "question": "Question:  Charice is the first international studio album of a singer who rose to popularity through what?",
+      "step": 2,
+      "entities": [
+        "who",
+        "what",
+        "Question",
+        "Charice"
+      ],
+      "success": false,
+      "predicted_candidates": [
+        "Search[Charice]"
+      ],
+      "correct_action": "Search[entity]",
+      "action_type": "Search",
+      "prev_action": "Search[entity]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777894554.961412
+    },
+    {
+      "id": 40,
+      "question": "Question:  Charice is the first international studio album of a singer who rose to popularity through what?",
+      "step": 3,
+      "entities": [
+        "who",
+        "what",
+        "Question",
+        "Charice"
+      ],
+      "success": false,
+      "predicted_candidates": [
+        "Search[Charice Pempengco]",
+        "Search[Charice debut album]",
+        "Lookup[first international studio album]"
+      ],
+      "correct_action": "Search[\"Charice\"]",
+      "action_type": "Search",
+      "prev_action": "Search[entity]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777894554.9614177
+    },
+    {
+      "id": 41,
+      "question": "Question:  Charice is the first international studio album of a singer who rose to popularity through what?",
+      "step": 4,
+      "entities": [
+        "who",
+        "what",
+        "Question",
+        "Charice"
+      ],
+      "success": false,
+      "predicted_candidates": [
+        "Search[\"Charice first album\"]",
+        "Search[\"Charice rise to fame\"]",
+        "Search[\"Charice international debut\"]"
+      ],
+      "correct_action": "Finish[singing competitions and television appearances]",
+      "action_type": "Finish",
+      "prev_action": "Search[\"Charice\"]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777894554.9614239
+    },
+    {
+      "id": 42,
+      "question": "Question: What company founded in 1886 has owned the K-Y brand?",
+      "step": 1,
+      "entities": [
+        "what",
+        "Question",
+        "founded",
+        "What"
+      ],
+      "success": true,
+      "predicted_candidates": [
+        "Search[K-Y brand]",
+        "Search[K-Y]",
+        "Lookup[K-Y]"
+      ],
+      "correct_action": "Search[K-Y brand]",
+      "action_type": "Search",
+      "prev_action": null,
+      "prev_action_type": null,
+      "analyzed": true,
+      "timestamp": 1777894554.9616115
+    },
+    {
+      "id": 43,
+      "question": "Question: What company founded in 1886 has owned the K-Y brand?",
+      "step": 2,
+      "entities": [
+        "what",
+        "Question",
+        "founded",
+        "What"
+      ],
+      "success": false,
+      "predicted_candidates": [
+        "Search[K-Y brand]",
+        "Finish[Church & Dwight Co., Inc.]"
+      ],
+      "correct_action": "Search[K-Y Jelly]",
+      "action_type": "Search",
+      "prev_action": "Search[K-Y brand]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777894554.9616187
+    },
+    {
+      "id": 44,
+      "question": "Question: What company founded in 1886 has owned the K-Y brand?",
+      "step": 3,
+      "entities": [
+        "what",
+        "Question",
+        "founded",
+        "What"
+      ],
+      "success": false,
+      "predicted_candidates": [
+        "Search[Johnson & Johnson]",
+        "Search[K-Y Jelly owner]",
+        "Search[Johnson & Johnson]"
+      ],
+      "correct_action": "Search[Reckitt Benckiser]",
+      "action_type": "Search",
+      "prev_action": "Search[K-Y Jelly]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777894554.9616249
+    },
+    {
+      "id": 45,
+      "question": "Question: What company founded in 1886 has owned the K-Y brand?",
+      "step": 4,
+      "entities": [
+        "what",
+        "Question",
+        "founded",
+        "What"
+      ],
+      "success": false,
+      "predicted_candidates": [
+        "Search[Johnson & Johnson]",
+        "Finish[Johnson & Johnson]"
+      ],
+      "correct_action": "Finish[Reckitt Benckiser]",
+      "action_type": "Finish",
+      "prev_action": "Search[Reckitt Benckiser]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777894554.9616299
+    },
+    {
+      "id": 46,
+      "question": "Question: What is the name of the studio album that the Miley Cyrus song, Who Owns My Heart is on?",
+      "step": 1,
+      "entities": [
+        "what",
+        "What",
+        "Question",
+        "name",
+        "who",
+        "Who Owns My Heart",
+        "Miley Cyrus"
+      ],
+      "success": true,
+      "predicted_candidates": [
+        "Search[\"Who Owns My Heart\" by Miley Cyrus]",
+        "Search[Who Owns My Heart]",
+        "Search[Miley Cyrus]"
+      ],
+      "correct_action": "Search[Who Owns My Heart]",
+      "action_type": "Search",
+      "prev_action": null,
+      "prev_action_type": null,
+      "analyzed": true,
+      "timestamp": 1777894554.96178
+    },
+    {
+      "id": 47,
+      "question": "Question: What is the name of the studio album that the Miley Cyrus song, Who Owns My Heart is on?",
+      "step": 2,
+      "entities": [
+        "what",
+        "What",
+        "Question",
+        "name",
+        "who",
+        "Who Owns My Heart",
+        "Miley Cyrus"
+      ],
+      "success": false,
+      "predicted_candidates": [
+        "Search[The Police Synchronicity]",
+        "Search[The Police's song Who Owns My Heart]",
+        "Lookup[studio album]"
+      ],
+      "correct_action": "Finish[Can't Be Tamed]",
+      "action_type": "Finish",
+      "prev_action": "Search[Who Owns My Heart]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777894554.9617875
+    },
+    {
+      "id": 48,
+      "question": "Question: Jos\u00e9 Baviera starred in the 1962 film by the filmmaker who worked in what countries?",
+      "step": 1,
+      "entities": [
+        "who",
+        "Baviera",
+        "Question",
+        "what"
+      ],
+      "success": false,
+      "predicted_candidates": [
+        "Search[Jos\u00e9 Baviera]",
+        "Search[1962 Jos\u00e9 Baviera film]",
+        "Search[Jos\u00e9 Baviera filmography]"
+      ],
+      "correct_action": "Search[Jose Baviera]",
+      "action_type": "Search",
+      "prev_action": null,
+      "prev_action_type": null,
+      "analyzed": true,
+      "timestamp": 1777894554.9619539
+    },
+    {
+      "id": 49,
+      "question": "Question: Jos\u00e9 Baviera starred in the 1962 film by the filmmaker who worked in what countries?",
+      "step": 2,
+      "entities": [
+        "who",
+        "Baviera",
+        "Question",
+        "what"
+      ],
+      "success": false,
+      "predicted_candidates": [
+        "Search[1962 Jos\u00e9 Baviera film]"
+      ],
+      "correct_action": "Search[Luis Bu\u00f1uel]",
+      "action_type": "Search",
+      "prev_action": "Search[Jose Baviera]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777894554.9619627
+    },
+    {
+      "id": 50,
+      "question": "Question: Jos\u00e9 Baviera starred in the 1962 film by the filmmaker who worked in what countries?",
+      "step": 3,
+      "entities": [
+        "who",
+        "Baviera",
+        "Question",
+        "what"
+      ],
+      "success": false,
+      "predicted_candidates": [
+        "Search[Luis Bu\u00f1uel countries worked]",
+        "Search[Luis Bu\u00f1uel France]",
+        "Search[Luis Bu\u00f1uel United States]"
+      ],
+      "correct_action": "Finish[France, Mexico, Spain]",
+      "action_type": "Finish",
+      "prev_action": "Search[Luis Bu\u00f1uel]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777894554.9619713
+    },
+    {
+      "id": 51,
+      "question": "Question: \"This Ole House\" topped the UK chart in 1981 in a recording by a platinum-selling British rock and roll singer whose recording and performing career began when?",
+      "step": 1,
+      "entities": [
+        "Question",
+        "British",
+        "when",
+        "This Ole House"
+      ],
+      "success": false,
+      "predicted_candidates": [
+        "Search[\"This Ole House 1981\"]",
+        "Search[UK chart 1981 This Ole House]",
+        "Search[platinum-selling British rock singer 1981]"
+      ],
+      "correct_action": "Search[\"This Ole House\"]",
+      "action_type": "Search",
+      "prev_action": null,
+      "prev_action_type": null,
+      "analyzed": true,
+      "timestamp": 1777894554.9621387
+    },
+    {
+      "id": 52,
+      "question": "Question: \"This Ole House\" topped the UK chart in 1981 in a recording by a platinum-selling British rock and roll singer whose recording and performing career began when?",
+      "step": 2,
+      "entities": [
+        "Question",
+        "British",
+        "when",
+        "This Ole House"
+      ],
+      "success": false,
+      "predicted_candidates": [
+        "Search[Rod Stewart]",
+        "Search[\"This Ole House\" UK chart 1981]",
+        "Lookup[UK chart 1981 \"This Ole House\"]"
+      ],
+      "correct_action": "Search[Shakin' Stevens]",
+      "action_type": "Search",
+      "prev_action": "Search[\"This Ole House\"]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777894554.9621465
+    },
+    {
+      "id": 53,
+      "question": "Question: \"This Ole House\" topped the UK chart in 1981 in a recording by a platinum-selling British rock and roll singer whose recording and performing career began when?",
+      "step": 3,
+      "entities": [
+        "Question",
+        "British",
+        "when",
+        "This Ole House"
+      ],
+      "success": false,
+      "predicted_candidates": [
+        "Search[Shakin' Stevens]",
+        "Search[Shakin Stevens]",
+        "Search[Shakin Stevens discography]"
+      ],
+      "correct_action": "Finish[\"late 1960s\"]",
+      "action_type": "Finish",
+      "prev_action": "Search[Shakin' Stevens]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777894554.962153
+    },
+    {
+      "id": 54,
+      "question": "Question: In which city have Gary Ayres and Neil Craig both been head coach of the Crows?",
+      "step": 1,
+      "entities": [
+        "Question",
+        "Crows",
+        "city",
+        "which",
+        "Gary Ayres",
+        "In",
+        "Neil Craig"
+      ],
+      "success": true,
+      "predicted_candidates": [
+        "Search[Gary Ayres]",
+        "Search[Neil Craig]",
+        "Search[Adelaide Crows]"
+      ],
+      "correct_action": "Search[Gary Ayres]",
+      "action_type": "Search",
+      "prev_action": null,
+      "prev_action_type": null,
+      "analyzed": true,
+      "timestamp": 1777894554.9623377
+    },
+    {
+      "id": 55,
+      "question": "Question: In which city have Gary Ayres and Neil Craig both been head coach of the Crows?",
+      "step": 2,
+      "entities": [
+        "Question",
+        "Crows",
+        "city",
+        "which",
+        "Gary Ayres",
+        "In",
+        "Neil Craig"
+      ],
+      "success": true,
+      "predicted_candidates": [
+        "Search[Gary Ayres]",
+        "Search[Neil Craig]",
+        "Search[Gary Ayres Adelaide Crows]"
+      ],
+      "correct_action": "Search[Neil Craig]",
+      "action_type": "Search",
+      "prev_action": "Search[Gary Ayres]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777894554.9623463
+    },
+    {
+      "id": 56,
+      "question": "Question: In which city have Gary Ayres and Neil Craig both been head coach of the Crows?",
+      "step": 3,
+      "entities": [
+        "Question",
+        "Crows",
+        "city",
+        "which",
+        "Gary Ayres",
+        "In",
+        "Neil Craig"
+      ],
+      "success": false,
+      "predicted_candidates": [
+        "Search[Adelaide Crows]",
+        "Search[Adelaide Football Club]",
+        "Lookup[Ayres Neil Craig]"
+      ],
+      "correct_action": "Finish[Adelaide]",
+      "action_type": "Finish",
+      "prev_action": "Search[Neil Craig]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777894554.962353
+    },
+    {
+      "id": 57,
+      "question": "Question: The not-for-profit company which owns a Mark VI monorail was assisted in bond financing by whom?",
+      "step": 1,
+      "entities": [
+        "which",
+        "Question",
+        "The",
+        "Mark"
+      ],
+      "success": true,
+      "predicted_candidates": [
+        "Search[Mark VI monorail]",
+        "Search[Mark VI]",
+        "Search[monorail ownership]"
+      ],
+      "correct_action": "Search[Mark VI monorail]",
+      "action_type": "Search",
+      "prev_action": null,
+      "prev_action_type": null,
+      "analyzed": true,
+      "timestamp": 1777894554.962544
+    },
+    {
+      "id": 58,
+      "question": "Question: The not-for-profit company which owns a Mark VI monorail was assisted in bond financing by whom?",
+      "step": 2,
+      "entities": [
+        "which",
+        "Question",
+        "The",
+        "Mark"
+      ],
+      "success": false,
+      "predicted_candidates": [
+        "Search[Mark VI monorail]",
+        "Search[Mark VI monorail owner]",
+        "Search[Alstom Mark VI customers]"
+      ],
+      "correct_action": "Search[Walt Disney World Monorail System]",
+      "action_type": "Search",
+      "prev_action": "Search[Mark VI monorail]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777894554.962552
+    },
+    {
+      "id": 59,
+      "question": "Question: The not-for-profit company which owns a Mark VI monorail was assisted in bond financing by whom?",
+      "step": 3,
+      "entities": [
+        "which",
+        "Question",
+        "The",
+        "Mark"
+      ],
+      "success": false,
+      "predicted_candidates": [
+        "Search[Walt Disney World Monorail System bond financing]",
+        "Search[Walt Disney World Monorail System owner]",
+        "Search[Walt Disney World Monorail System financing]"
+      ],
+      "correct_action": "Search[bond financing Walt Disney World Monorail System]",
+      "action_type": "Search",
+      "prev_action": "Search[Walt Disney World Monorail System]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777894554.9625587
+    },
+    {
+      "id": 60,
+      "question": "Question: The not-for-profit company which owns a Mark VI monorail was assisted in bond financing by whom?",
+      "step": 4,
+      "entities": [
+        "which",
+        "Question",
+        "The",
+        "Mark"
+      ],
+      "success": false,
+      "predicted_candidates": [
+        "Search[Florida Reinvestment Agreement]",
+        "Search[Florida Government assistance for Disney Monorail]",
+        "Search[Osceola County transportation financing]"
+      ],
+      "correct_action": "Search[Las Vegas Monorail]",
+      "action_type": "Search",
+      "prev_action": "Search[bond financing Walt Disney World Monorail System]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777894554.962565
+    },
+    {
+      "id": 61,
+      "question": "Question: The not-for-profit company which owns a Mark VI monorail was assisted in bond financing by whom?",
+      "step": 5,
+      "entities": [
+        "which",
+        "Question",
+        "The",
+        "Mark"
+      ],
+      "success": false,
+      "predicted_candidates": [
+        "Search[Las Vegas Monorail financing]",
+        "Search[Las Vegas Monorail bond financing assistance]",
+        "Search[Las Vegas Monorail ownership]"
+      ],
+      "correct_action": "Finish[The State of Nevada]",
+      "action_type": "Finish",
+      "prev_action": "Search[Las Vegas Monorail]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777894554.9625707
+    },
+    {
+      "id": 62,
+      "question": "Question: Are Portuguese Podengo and Russo-European Laika the same breed of dog?",
+      "step": 1,
+      "entities": [
+        "European Laika",
+        "Are Portuguese Podengo",
+        "Question",
+        "Russo"
+      ],
+      "success": true,
+      "predicted_candidates": [
+        "Search[Portuguese Podengo]",
+        "Search[Russo-European Laika]",
+        "Search[Portuguese Podengo]"
+      ],
+      "correct_action": "Search[Portuguese Podengo]",
+      "action_type": "Search",
+      "prev_action": null,
+      "prev_action_type": null,
+      "analyzed": true,
+      "timestamp": 1777894554.9627237
+    },
+    {
+      "id": 63,
+      "question": "Question: Are Portuguese Podengo and Russo-European Laika the same breed of dog?",
+      "step": 2,
+      "entities": [
+        "European Laika",
+        "Are Portuguese Podengo",
+        "Question",
+        "Russo"
+      ],
+      "success": true,
+      "predicted_candidates": [
+        "Search[Portuguese Podengo]",
+        "Search[Russo-European Laika]",
+        "Finish[No]"
+      ],
+      "correct_action": "Search[Russo-European Laika]",
+      "action_type": "Search",
+      "prev_action": "Search[Portuguese Podengo]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777894554.9627323
+    },
+    {
+      "id": 64,
+      "question": "Question: Are Portuguese Podengo and Russo-European Laika the same breed of dog?",
+      "step": 3,
+      "entities": [
+        "European Laika",
+        "Are Portuguese Podengo",
+        "Question",
+        "Russo"
+      ],
+      "success": true,
+      "predicted_candidates": [
+        "Finish[no]"
+      ],
+      "correct_action": "Finish[no]",
+      "action_type": "Finish",
+      "prev_action": "Search[Russo-European Laika]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777894554.962739
+    },
+    {
+      "id": 65,
+      "question": "Question: The Bart the Fink episode of The Simpsons aired in February of 1996, and involves the host of which kiddie show?",
+      "step": 1,
+      "entities": [
+        "Fink",
+        "Question",
+        "which",
+        "The Simpsons",
+        "The Bart",
+        "February"
+      ],
+      "success": true,
+      "predicted_candidates": [
+        "Search[Bart the Fink]",
+        "Search[kiddie show Bart the Fink]",
+        "Lookup[host]"
+      ],
+      "correct_action": "Search[Bart the Fink]",
+      "action_type": "Search",
+      "prev_action": null,
+      "prev_action_type": null,
+      "analyzed": true,
+      "timestamp": 1777894554.9628963
+    },
+    {
+      "id": 66,
+      "question": "Question: The Bart the Fink episode of The Simpsons aired in February of 1996, and involves the host of which kiddie show?",
+      "step": 2,
+      "entities": [
+        "Fink",
+        "Question",
+        "which",
+        "The Simpsons",
+        "The Bart",
+        "February"
+      ],
+      "success": false,
+      "predicted_candidates": [
+        "Search[Bart the Fink]",
+        "Search[Bart the Fink]",
+        "Search[Bart the Fink]"
+      ],
+      "correct_action": "Finish[Krusty the Clown]",
+      "action_type": "Finish",
+      "prev_action": "Search[Bart the Fink]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777894554.9629042
+    },
+    {
+      "id": 67,
+      "question": "Question: Which album was released first, \"Talk That Talk\" or \"Loud\"?",
+      "step": 1,
+      "entities": [
+        "Which",
+        "Loud",
+        "Question",
+        "which",
+        "Talk That Talk"
+      ],
+      "success": true,
+      "predicted_candidates": [
+        "Search[\"Talk That Talk\"]",
+        "Search[\"Loud\"]",
+        "Search[\"Talk That Talk\"]"
+      ],
+      "correct_action": "Search[\"Talk That Talk\"]",
+      "action_type": "Search",
+      "prev_action": null,
+      "prev_action_type": null,
+      "analyzed": true,
+      "timestamp": 1777894554.9630935
+    },
+    {
+      "id": 68,
+      "question": "Question: Which album was released first, \"Talk That Talk\" or \"Loud\"?",
+      "step": 2,
+      "entities": [
+        "Which",
+        "Loud",
+        "Question",
+        "which",
+        "Talk That Talk"
+      ],
+      "success": true,
+      "predicted_candidates": [
+        "Search[\"Talk That Talk\"]",
+        "Search[\"Loud\"]",
+        "Finish[\"Loud\"]"
+      ],
+      "correct_action": "Search[\"Loud\"]",
+      "action_type": "Search",
+      "prev_action": "Search[\"Talk That Talk\"]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777894554.9631026
+    },
+    {
+      "id": 69,
+      "question": "Question: Which album was released first, \"Talk That Talk\" or \"Loud\"?",
+      "step": 3,
+      "entities": [
+        "Which",
+        "Loud",
+        "Question",
+        "which",
+        "Talk That Talk"
+      ],
+      "success": false,
+      "predicted_candidates": [
+        "Search[\"Loud (album)\"]",
+        "Search[Rihanna \"Loud\"]",
+        "Lookup[release date]"
+      ],
+      "correct_action": "Search[\"Loud Rihanna\"]",
+      "action_type": "Search",
+      "prev_action": "Search[\"Loud\"]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777894554.9631088
+    },
+    {
+      "id": 70,
+      "question": "Question: Which album was released first, \"Talk That Talk\" or \"Loud\"?",
+      "step": 4,
+      "entities": [
+        "Which",
+        "Loud",
+        "Question",
+        "which",
+        "Talk That Talk"
+      ],
+      "success": false,
+      "predicted_candidates": [
+        "Search[\"Loud Rihanna\"]",
+        "Search[\"Loud album Rihanna\"]",
+        "Search[\"Loud (Rihanna album)\"]"
+      ],
+      "correct_action": "Finish[\"Loud\"]",
+      "action_type": "Finish",
+      "prev_action": "Search[\"Loud Rihanna\"]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777894554.9631147
+    },
+    {
+      "id": 71,
+      "question": "Question: What position did the current Leader of Fine Gael hold from 2016 until 2017?",
+      "step": 1,
+      "entities": [
+        "what",
+        "What",
+        "Leader",
+        "Fine Gael",
+        "Question"
+      ],
+      "success": false,
+      "predicted_candidates": [
+        "Search[Fine Gael leadership]",
+        "Search[Leo Varadkar]",
+        "Search[Fine Gael leader]"
+      ],
+      "correct_action": "Search[Fine Gael]",
+      "action_type": "Search",
+      "prev_action": null,
+      "prev_action_type": null,
+      "analyzed": true,
+      "timestamp": 1777894554.963301
+    },
+    {
+      "id": 72,
+      "question": "Question: What position did the current Leader of Fine Gael hold from 2016 until 2017?",
+      "step": 2,
+      "entities": [
+        "what",
+        "What",
+        "Leader",
+        "Fine Gael",
+        "Question"
+      ],
+      "success": false,
+      "predicted_candidates": [
+        "Search[Fine Gael]",
+        "Search[Fine Gael]"
+      ],
+      "correct_action": "Search[Leo Varadkar]",
+      "action_type": "Search",
+      "prev_action": "Search[Fine Gael]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777894554.9633083
+    },
+    {
+      "id": 73,
+      "question": "Question: What position did the current Leader of Fine Gael hold from 2016 until 2017?",
+      "step": 3,
+      "entities": [
+        "what",
+        "What",
+        "Leader",
+        "Fine Gael",
+        "Question"
+      ],
+      "success": false,
+      "predicted_candidates": [
+        "Search[Leo Varadkar political career]",
+        "Lookup[2016-2017]",
+        "Finish[Leader of Fine Gael]"
+      ],
+      "correct_action": "Lookup[ministerial positions]",
+      "action_type": "Lookup",
+      "prev_action": "Search[Leo Varadkar]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777894554.9633145
+    },
+    {
+      "id": 74,
+      "question": "Question: What position did the current Leader of Fine Gael hold from 2016 until 2017?",
+      "step": 4,
+      "entities": [
+        "what",
+        "What",
+        "Leader",
+        "Fine Gael",
+        "Question"
+      ],
+      "success": false,
+      "predicted_candidates": [
+        "Search[Minister for Health]",
+        "Search[Leo Varadkar career timeline]",
+        "Lookup[2016\u20132017 Leo Varadkar]"
+      ],
+      "correct_action": "Finish[Taoiseach]",
+      "action_type": "Finish",
+      "prev_action": "Lookup[ministerial positions]",
+      "prev_action_type": "Lookup",
+      "analyzed": true,
+      "timestamp": 1777894554.9633207
+    },
+    {
+      "id": 75,
+      "question": "Question: are Dee Dee Ramone and Alex Band both singers, songwriters and musicians?",
+      "step": 1,
+      "entities": [
+        "Question",
+        "Dee Dee Ramone",
+        "Alex Band"
+      ],
+      "success": true,
+      "predicted_candidates": [
+        "Search[Dee Dee Ramone]",
+        "Search[Alex Band]",
+        "Search[Dee Dee Ramone]"
+      ],
+      "correct_action": "Search[Dee Dee Ramone]",
+      "action_type": "Search",
+      "prev_action": null,
+      "prev_action_type": null,
+      "analyzed": true,
+      "timestamp": 1777894554.9634905
+    },
+    {
+      "id": 76,
+      "question": "Question: are Dee Dee Ramone and Alex Band both singers, songwriters and musicians?",
+      "step": 2,
+      "entities": [
+        "Question",
+        "Dee Dee Ramone",
+        "Alex Band"
+      ],
+      "success": true,
+      "predicted_candidates": [
+        "Search[Alex Band]",
+        "Search[Faith No More]",
+        "Search[Alex Band]"
+      ],
+      "correct_action": "Search[Alex Band]",
+      "action_type": "Search",
+      "prev_action": "Search[Dee Dee Ramone]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777894554.9634995
+    },
+    {
+      "id": 77,
+      "question": "Question: are Dee Dee Ramone and Alex Band both singers, songwriters and musicians?",
+      "step": 3,
+      "entities": [
+        "Question",
+        "Dee Dee Ramone",
+        "Alex Band"
+      ],
+      "success": false,
+      "predicted_candidates": [
+        "Search[Alex Band The Meteors]",
+        "Search[The Meteors (band)]",
+        "Lookup[musician Alex Band]"
+      ],
+      "correct_action": "Finish[yes]",
+      "action_type": "Finish",
+      "prev_action": "Search[Alex Band]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777894554.9635062
+    },
+    {
+      "id": 78,
+      "question": "Question: Which wrestler, who died in 2009, featured on the wrestling show Starrcade?",
+      "step": 1,
+      "entities": [
+        "died",
+        "Which",
+        "Question",
+        "which",
+        "Starrcade",
+        "who"
+      ],
+      "success": false,
+      "predicted_candidates": [
+        "Search[Wrestler died 2009 Starrcade]",
+        "Search[Starrcade 2009 wrestler]",
+        "Search[Wrestler on Starrcade who died 2009]"
+      ],
+      "correct_action": "Search[<dead wrestler 2009 wrestling>]",
+      "action_type": "Search",
+      "prev_action": null,
+      "prev_action_type": null,
+      "analyzed": true,
+      "timestamp": 1777894554.9636946
+    },
+    {
+      "id": 79,
+      "question": "Question: Which wrestler, who died in 2009, featured on the wrestling show Starrcade?",
+      "step": 2,
+      "entities": [
+        "died",
+        "Which",
+        "Question",
+        "which",
+        "Starrcade",
+        "who"
+      ],
+      "success": true,
+      "predicted_candidates": [
+        "Search[Starrcade]",
+        "Search[Dead Wrestler 2009]",
+        "Lookup[2009]"
+      ],
+      "correct_action": "Search[Starrcade]",
+      "action_type": "Search",
+      "prev_action": "Search[<dead wrestler 2009 wrestling>]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777894554.9637032
+    },
+    {
+      "id": 80,
+      "question": "Question: Which wrestler, who died in 2009, featured on the wrestling show Starrcade?",
+      "step": 3,
+      "entities": [
+        "died",
+        "Which",
+        "Question",
+        "which",
+        "Starrcade",
+        "who"
+      ],
+      "success": false,
+      "predicted_candidates": [
+        "Search[Starrcade (wrestling)]"
+      ],
+      "correct_action": "Search[Umaga (wrestler)]",
+      "action_type": "Search",
+      "prev_action": "Search[Starrcade]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777894554.9637084
+    },
+    {
+      "id": 81,
+      "question": "Question: Which wrestler, who died in 2009, featured on the wrestling show Starrcade?",
+      "step": 4,
+      "entities": [
+        "died",
+        "Which",
+        "Question",
+        "which",
+        "Starrcade",
+        "who"
+      ],
+      "success": false,
+      "predicted_candidates": [
+        "Search[entity]",
+        "Search[Starrcade]",
+        "Search[Starrcade participants 2009]"
+      ],
+      "correct_action": "Finish[Umaga]",
+      "action_type": "Finish",
+      "prev_action": "Search[Umaga (wrestler)]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777894554.9637141
+    },
+    {
+      "id": 82,
+      "question": "Question: Which case was decided first, Selle v. Gibb or Reynolds v. Sims?",
+      "step": 1,
+      "entities": [
+        "Which",
+        "Gibb",
+        "Reynolds",
+        "Question",
+        "Sims",
+        "which",
+        "Selle"
+      ],
+      "success": false,
+      "predicted_candidates": [
+        "Search[Selle v. Gibb]",
+        "Search[Gibb case]",
+        "Search[Selle v. Gibb]"
+      ],
+      "correct_action": "Search[Reynolds v. Sims]",
+      "action_type": "Search",
+      "prev_action": null,
+      "prev_action_type": null,
+      "analyzed": true,
+      "timestamp": 1777894554.963864
+    },
+    {
+      "id": 83,
+      "question": "Question: Which case was decided first, Selle v. Gibb or Reynolds v. Sims?",
+      "step": 2,
+      "entities": [
+        "Which",
+        "Gibb",
+        "Reynolds",
+        "Question",
+        "Sims",
+        "which",
+        "Selle"
+      ],
+      "success": false,
+      "predicted_candidates": [
+        "Search[Reynolds v. Sims]",
+        "Search[Reynolds v. Sims]",
+        "Search[Reynolds v. Sims]"
+      ],
+      "correct_action": "Search[Selle v. Gibb]",
+      "action_type": "Search",
+      "prev_action": "Search[Reynolds v. Sims]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777894554.963871
+    },
+    {
+      "id": 84,
+      "question": "Question: Which case was decided first, Selle v. Gibb or Reynolds v. Sims?",
+      "step": 3,
+      "entities": [
+        "Which",
+        "Gibb",
+        "Reynolds",
+        "Question",
+        "Sims",
+        "which",
+        "Selle"
+      ],
+      "success": false,
+      "predicted_candidates": [
+        "Search[Selle v. Gibb]",
+        "Search[Selle v. Gibb]",
+        "Search[Selle v. Gibb Supreme Court]"
+      ],
+      "correct_action": "Finish[Reynolds v. Sims]",
+      "action_type": "Finish",
+      "prev_action": "Search[Selle v. Gibb]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777894554.9638772
+    },
+    {
+      "id": 85,
+      "question": "Question: What school did the team, whose only sophomore starter went on to play eleven seasons with the Atlanta Falcons, represent in the 1963 college football season?",
+      "step": 1,
+      "entities": [
+        "what",
+        "Question",
+        "Atlanta Falcons",
+        "What"
+      ],
+      "success": false,
+      "predicted_candidates": [
+        "Search[Atlanta Falcons roster 1960s]",
+        "Search[College football 1963 starters]",
+        "Search[1963 College Football Players Atlanta Falcons]"
+      ],
+      "correct_action": "Search[\"1963 college football team sophomore starter Atlanta Falcons\"]",
+      "action_type": "Search",
+      "prev_action": null,
+      "prev_action_type": null,
+      "analyzed": true,
+      "timestamp": 1777894554.9640687
+    },
+    {
+      "id": 86,
+      "question": "Question: What school did the team, whose only sophomore starter went on to play eleven seasons with the Atlanta Falcons, represent in the 1963 college football season?",
+      "step": 2,
+      "entities": [
+        "what",
+        "Question",
+        "Atlanta Falcons",
+        "What"
+      ],
+      "success": true,
+      "predicted_candidates": [
+        "Search[Bill George]",
+        "Search[Falcons 1963 college players]",
+        "Search[University of Florida]"
+      ],
+      "correct_action": "Search[Bill George]",
+      "action_type": "Search",
+      "prev_action": "Search[\"1963 college football team sophomore starter Atlanta Falcons\"]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777894554.964077
+    },
+    {
+      "id": 87,
+      "question": "Question: What school did the team, whose only sophomore starter went on to play eleven seasons with the Atlanta Falcons, represent in the 1963 college football season?",
+      "step": 3,
+      "entities": [
+        "what",
+        "Question",
+        "Atlanta Falcons",
+        "What"
+      ],
+      "success": false,
+      "predicted_candidates": [
+        "Finish[University of Florida]"
+      ],
+      "correct_action": "Search[University of Florida 1963 football team]",
+      "action_type": "Search",
+      "prev_action": "Search[Bill George]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777894554.964083
+    },
+    {
+      "id": 88,
+      "question": "Question: What school did the team, whose only sophomore starter went on to play eleven seasons with the Atlanta Falcons, represent in the 1963 college football season?",
+      "step": 4,
+      "entities": [
+        "what",
+        "Question",
+        "Atlanta Falcons",
+        "What"
+      ],
+      "success": false,
+      "predicted_candidates": [
+        "Search[Bill George University of Florida]",
+        "Search[Atlanta Falcons longest-tenured player]",
+        "Lookup[University of Florida 1963]"
+      ],
+      "correct_action": "Finish[University of Florida]",
+      "action_type": "Finish",
+      "prev_action": "Search[University of Florida 1963 football team]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777894554.964091
+    },
+    {
+      "id": 89,
+      "question": "Question: What country of origin does Traveling Wilburys and Tom Petty have in common?",
+      "step": 1,
+      "entities": [
+        "what",
+        "What",
+        "Question",
+        "Traveling Wilburys",
+        "country",
+        "Tom Petty"
+      ],
+      "success": true,
+      "predicted_candidates": [
+        "Search[Traveling Wilburys]",
+        "Search[Tom Petty]",
+        "Finish[United States]"
+      ],
+      "correct_action": "Search[Traveling Wilburys]",
+      "action_type": "Search",
+      "prev_action": null,
+      "prev_action_type": null,
+      "analyzed": true,
+      "timestamp": 1777894554.9642496
+    },
+    {
+      "id": 90,
+      "question": "Question: What country of origin does Traveling Wilburys and Tom Petty have in common?",
+      "step": 2,
+      "entities": [
+        "what",
+        "What",
+        "Question",
+        "Traveling Wilburys",
+        "country",
+        "Tom Petty"
+      ],
+      "success": true,
+      "predicted_candidates": [
+        "Search[Traveling Wilburys]",
+        "Search[Tom Petty]"
+      ],
+      "correct_action": "Search[Tom Petty]",
+      "action_type": "Search",
+      "prev_action": "Search[Traveling Wilburys]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777894554.9642582
+    },
+    {
+      "id": 91,
+      "question": "Question: What country of origin does Traveling Wilburys and Tom Petty have in common?",
+      "step": 3,
+      "entities": [
+        "what",
+        "What",
+        "Question",
+        "Traveling Wilburys",
+        "country",
+        "Tom Petty"
+      ],
+      "success": false,
+      "predicted_candidates": [
+        "Search[Tom Petty country]",
+        "Search[Tom Petty origin]",
+        "Search[Tom Petty American]"
+      ],
+      "correct_action": "Finish[United States]",
+      "action_type": "Finish",
+      "prev_action": "Search[Tom Petty]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777894554.9642644
+    },
+    {
+      "id": 92,
+      "question": "Question: Which episode of SpongeBob SquarePants aired first, The Clash of Triton or To SquarePants or Not to SquarePants?\"",
+      "step": 1,
+      "entities": [
+        "To",
+        "Which",
+        "Question",
+        "Not",
+        "The Clash",
+        "which",
+        "Triton"
+      ],
+      "success": false,
+      "predicted_candidates": [
+        "Search[\"The Clash of Triton\"]",
+        "Search[\"To SquarePants or Not to SquarePants\"]",
+        "Search[\"The Clash of Triton\"]"
+      ],
+      "correct_action": "Search[entity]",
+      "action_type": "Search",
+      "prev_action": null,
+      "prev_action_type": null,
+      "analyzed": true,
+      "timestamp": 1777894554.964502
+    },
+    {
+      "id": 93,
+      "question": "Question: Which episode of SpongeBob SquarePants aired first, The Clash of Triton or To SquarePants or Not to SquarePants?\"",
+      "step": 2,
+      "entities": [
+        "To",
+        "Which",
+        "Question",
+        "Not",
+        "The Clash",
+        "which",
+        "Triton"
+      ],
+      "success": false,
+      "predicted_candidates": [
+        "Search[The Clash of Triton SpongeBob]",
+        "Search[To SquarePants or Not to SquarePants]",
+        "Search[SpongeBob SquarePants episodes]"
+      ],
+      "correct_action": "Search[The Clash of Triton SpongeBob SquarePants]",
+      "action_type": "Search",
+      "prev_action": "Search[entity]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777894554.9645107
+    },
+    {
+      "id": 94,
+      "question": "Question: Which episode of SpongeBob SquarePants aired first, The Clash of Triton or To SquarePants or Not to SquarePants?\"",
+      "step": 3,
+      "entities": [
+        "To",
+        "Which",
+        "Question",
+        "Not",
+        "The Clash",
+        "which",
+        "Triton"
+      ],
+      "success": true,
+      "predicted_candidates": [
+        "Search[To SquarePants or Not to SquarePants]",
+        "Search[Clash of Triton SpongeBob episode]",
+        "Lookup[SpongeBob SquarePants episode]"
+      ],
+      "correct_action": "Search[To SquarePants or Not to SquarePants]",
+      "action_type": "Search",
+      "prev_action": "Search[The Clash of Triton SpongeBob SquarePants]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777894554.9645183
+    },
+    {
+      "id": 95,
+      "question": "Question: Which episode of SpongeBob SquarePants aired first, The Clash of Triton or To SquarePants or Not to SquarePants?\"",
+      "step": 4,
+      "entities": [
+        "To",
+        "Which",
+        "Question",
+        "Not",
+        "The Clash",
+        "which",
+        "Triton"
+      ],
+      "success": false,
+      "predicted_candidates": [
+        "Search[The Clash of Triton SpongeBob episode]",
+        "Search[SpongeBob SquarePants air dates]",
+        "Lookup[\"To SquarePants or Not to SquarePants\"]"
+      ],
+      "correct_action": "Search[\"The Clash of Triton\" SpongeBob SquarePants episode]",
+      "action_type": "Search",
+      "prev_action": "Search[To SquarePants or Not to SquarePants]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777894554.9645243
+    },
+    {
+      "id": 96,
+      "question": "Question: Which episode of SpongeBob SquarePants aired first, The Clash of Triton or To SquarePants or Not to SquarePants?\"",
+      "step": 5,
+      "entities": [
+        "To",
+        "Which",
+        "Question",
+        "Not",
+        "The Clash",
+        "which",
+        "Triton"
+      ],
+      "success": false,
+      "predicted_candidates": [
+        "Search[\"The Clash of Triton\" SpongeBob SquarePants air date]",
+        "Search[SpongeBob SquarePants Season 6 episodes]",
+        "Lookup[SpongeBob SquarePants season 10 episode 12]"
+      ],
+      "correct_action": "Search[List of SpongeBob SquarePants episodes]",
+      "action_type": "Search",
+      "prev_action": "Search[\"The Clash of Triton\" SpongeBob SquarePants episode]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777894554.9645302
+    },
+    {
+      "id": 97,
+      "question": "Question: Which episode of SpongeBob SquarePants aired first, The Clash of Triton or To SquarePants or Not to SquarePants?\"",
+      "step": 6,
+      "entities": [
+        "To",
+        "Which",
+        "Question",
+        "Not",
+        "The Clash",
+        "which",
+        "Triton"
+      ],
+      "success": false,
+      "predicted_candidates": [
+        "Search[\"The Clash of Triton\" air date]",
+        "Search[\"The Clash of Triton\" season]",
+        "Lookup[\"To SquarePants or Not to SquarePants\"]"
+      ],
+      "correct_action": "Search[SpongeBob SquarePants season 6]",
+      "action_type": "Search",
+      "prev_action": "Search[List of SpongeBob SquarePants episodes]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777894554.9645357
+    },
+    {
+      "id": 98,
+      "question": "Question: Which episode of SpongeBob SquarePants aired first, The Clash of Triton or To SquarePants or Not to SquarePants?\"",
+      "step": 7,
+      "entities": [
+        "To",
+        "Which",
+        "Question",
+        "Not",
+        "The Clash",
+        "which",
+        "Triton"
+      ],
+      "success": false,
+      "predicted_candidates": [
+        "Search[\"The Clash of Triton\" SpongeBob SquarePants season 3]",
+        "Search[\"Clash of Triton\" episode]",
+        "Lookup[Clash of Triton]"
+      ],
+      "correct_action": "Lookup[\"Clash of Triton\"]",
+      "action_type": "Lookup",
+      "prev_action": "Search[SpongeBob SquarePants season 6]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777894554.9645412
+    },
+    {
+      "id": 99,
+      "question": "Question: What position in their bands did both Christopher Amott and Johnny Edwards have in common?",
+      "step": 1,
+      "entities": [
+        "what",
+        "What",
+        "Question",
+        "Johnny Edwards",
+        "Christopher Amott"
+      ],
+      "success": true,
+      "predicted_candidates": [
+        "Search[Christopher Amott]",
+        "Search[Christopher Amott]",
+        "Search[Johnny Edwards]"
+      ],
+      "correct_action": "Search[Christopher Amott]",
+      "action_type": "Search",
+      "prev_action": null,
+      "prev_action_type": null,
+      "analyzed": true,
+      "timestamp": 1777894554.9647121
+    },
+    {
+      "id": 100,
+      "question": "Question: What position in their bands did both Christopher Amott and Johnny Edwards have in common?",
+      "step": 2,
+      "entities": [
+        "what",
+        "What",
+        "Question",
+        "Johnny Edwards",
+        "Christopher Amott"
+      ],
+      "success": true,
+      "predicted_candidates": [
+        "Search[Johnny Edwards]",
+        "Search[Johnny Edwards]",
+        "Search[Christopher Amott musician]"
+      ],
+      "correct_action": "Search[Johnny Edwards]",
+      "action_type": "Search",
+      "prev_action": "Search[Christopher Amott]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777894554.9647195
+    },
+    {
+      "id": 101,
+      "question": "Question: What position in their bands did both Christopher Amott and Johnny Edwards have in common?",
+      "step": 3,
+      "entities": [
+        "what",
+        "What",
+        "Question",
+        "Johnny Edwards",
+        "Christopher Amott"
+      ],
+      "success": true,
+      "predicted_candidates": [
+        "Search[Johnny Edwards]",
+        "Search[Johnny Edwards]",
+        "Search[entity]"
+      ],
+      "correct_action": "Search[Johnny Edwards]",
+      "action_type": "Search",
+      "prev_action": "Search[Johnny Edwards]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777894554.9647257
+    },
+    {
+      "id": 102,
+      "question": "Question: What position in their bands did both Christopher Amott and Johnny Edwards have in common?",
+      "step": 4,
+      "entities": [
+        "what",
+        "What",
+        "Question",
+        "Johnny Edwards",
+        "Christopher Amott"
+      ],
+      "success": false,
+      "predicted_candidates": [
+        "Search[Johnny Edwards band position]",
+        "Search[Johnny Edwards as musician]",
+        "Search[Johnny Edwards band position]"
+      ],
+      "correct_action": "Finish[guitarist]",
+      "action_type": "Finish",
+      "prev_action": "Search[Johnny Edwards]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777894554.9647315
+    },
+    {
+      "id": 103,
+      "question": "Question: Eric Stark Maskin was a  teacher for which university, located in New Jersey?",
+      "step": 1,
+      "entities": [
+        "located",
+        "New Jersey",
+        "Question",
+        "which",
+        "Eric Stark Maskin"
+      ],
+      "success": true,
+      "predicted_candidates": [
+        "Search[Eric Stark Maskin]",
+        "Search[Eric Stark Maskin]",
+        "Search[Eric Maskin]"
+      ],
+      "correct_action": "Search[Eric Stark Maskin]",
+      "action_type": "Search",
+      "prev_action": null,
+      "prev_action_type": null,
+      "analyzed": true,
+      "timestamp": 1777894554.9648788
+    },
+    {
+      "id": 104,
+      "question": "Question: Eric Stark Maskin was a  teacher for which university, located in New Jersey?",
+      "step": 2,
+      "entities": [
+        "located",
+        "New Jersey",
+        "Question",
+        "which",
+        "Eric Stark Maskin"
+      ],
+      "success": false,
+      "predicted_candidates": [
+        "Search[Eric Stark Maskin]",
+        "Search[Eric Stark Maskin]",
+        "Search[Eric Maskin]"
+      ],
+      "correct_action": "Finish[Princeton University]",
+      "action_type": "Finish",
+      "prev_action": "Search[Eric Stark Maskin]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777894554.9648864
+    },
+    {
+      "id": 105,
+      "question": "Question: Who is younger, Billy Idol or Ray Wilson?",
+      "step": 1,
+      "entities": [
+        "Billy Idol",
+        "Who",
+        "Question",
+        "Ray Wilson",
+        "who"
+      ],
+      "success": true,
+      "predicted_candidates": [
+        "Search[Billy Idol]",
+        "Search[Ray Wilson]",
+        "Lookup[youngest]"
+      ],
+      "correct_action": "Search[Billy Idol]",
+      "action_type": "Search",
+      "prev_action": null,
+      "prev_action_type": null,
+      "analyzed": true,
+      "timestamp": 1777894554.9651434
+    },
+    {
+      "id": 106,
+      "question": "Question: Who is younger, Billy Idol or Ray Wilson?",
+      "step": 2,
+      "entities": [
+        "Billy Idol",
+        "Who",
+        "Question",
+        "Ray Wilson",
+        "who"
+      ],
+      "success": true,
+      "predicted_candidates": [
+        "Search[Ray Wilson]",
+        "Search[Ray Wilson]",
+        "Search[Ray Wilson (musician)]"
+      ],
+      "correct_action": "Search[Ray Wilson]",
+      "action_type": "Search",
+      "prev_action": "Search[Billy Idol]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777894554.9651563
+    },
+    {
+      "id": 107,
+      "question": "Question: Who is younger, Billy Idol or Ray Wilson?",
+      "step": 3,
+      "entities": [
+        "Billy Idol",
+        "Who",
+        "Question",
+        "Ray Wilson",
+        "who"
+      ],
+      "success": false,
+      "predicted_candidates": [
+        "Finish[Ray Wilson]"
+      ],
+      "correct_action": "Search[Ray Wilson (musician)]",
+      "action_type": "Search",
+      "prev_action": "Search[Ray Wilson]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777894554.9651625
+    },
+    {
+      "id": 108,
+      "question": "Question: Who is younger, Billy Idol or Ray Wilson?",
+      "step": 4,
+      "entities": [
+        "Billy Idol",
+        "Who",
+        "Question",
+        "Ray Wilson",
+        "who"
+      ],
+      "success": false,
+      "predicted_candidates": [
+        "Search[Ray Wilson birth year]",
+        "Search[Ray Wilson (musician) biography]",
+        "Lookup[The Police member Ray Wilson]"
+      ],
+      "correct_action": "Finish[Ray Wilson]",
+      "action_type": "Finish",
+      "prev_action": "Search[Ray Wilson (musician)]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777894554.9651685
+    },
+    {
+      "id": 109,
+      "question": "Question: The 2014\u201315 UEFA Champions League knockout phase lead to the final of the 23rd season since it was renamed from what?",
+      "step": 1,
+      "entities": [
+        "Champions League",
+        "The",
+        "Question",
+        "what"
+      ],
+      "success": true,
+      "predicted_candidates": [
+        "Search[UEFA Champions League]",
+        "Lookup[renamed]",
+        "Finish[European Cup]"
+      ],
+      "correct_action": "Search[UEFA Champions League]",
+      "action_type": "Search",
+      "prev_action": null,
+      "prev_action_type": null,
+      "analyzed": true,
+      "timestamp": 1777901987.879146
+    },
+    {
+      "id": 110,
+      "question": "Question: The 2014\u201315 UEFA Champions League knockout phase lead to the final of the 23rd season since it was renamed from what?",
+      "step": 2,
+      "entities": [
+        "Champions League",
+        "The",
+        "Question",
+        "what"
+      ],
+      "success": false,
+      "predicted_candidates": [
+        "Search[UEFA Champions League history]",
+        "Search[Europa League]",
+        "Search[UEFA Champions League history]"
+      ],
+      "correct_action": "Finish[European Cup]",
+      "action_type": "Finish",
+      "prev_action": "Search[UEFA Champions League]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777901987.8791652
+    },
+    {
+      "id": 111,
+      "question": "Question: Is The Moon-Spinners and Oceans both documentaries?",
+      "step": 1,
+      "entities": [
+        "Spinners",
+        "Is The Moon",
+        "Question",
+        "Oceans"
+      ],
+      "success": true,
+      "predicted_candidates": [
+        "Search[The Moon-Spinners]",
+        "Search[Oceans]",
+        "Search[The Moon-Spinners documentary]"
+      ],
+      "correct_action": "Search[The Moon-Spinners]",
+      "action_type": "Search",
+      "prev_action": null,
+      "prev_action_type": null,
+      "analyzed": true,
+      "timestamp": 1777902107.7075841
+    },
+    {
+      "id": 112,
+      "question": "Question: Is The Moon-Spinners and Oceans both documentaries?",
+      "step": 2,
+      "entities": [
+        "Spinners",
+        "Is The Moon",
+        "Question",
+        "Oceans"
+      ],
+      "success": true,
+      "predicted_candidates": [
+        "Search[Oceans]",
+        "Search[Oceans]",
+        "Finish[no]"
+      ],
+      "correct_action": "Search[Oceans]",
+      "action_type": "Search",
+      "prev_action": "Search[The Moon-Spinners]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777902107.7076037
+    },
+    {
+      "id": 113,
+      "question": "Question: Is The Moon-Spinners and Oceans both documentaries?",
+      "step": 3,
+      "entities": [
+        "Spinners",
+        "Is The Moon",
+        "Question",
+        "Oceans"
+      ],
+      "success": false,
+      "predicted_candidates": [
+        "Finish[No, Oceans is a documentary, while The Moon-Spinners is a mystery film]"
+      ],
+      "correct_action": "Search[Oceans]",
+      "action_type": "Search",
+      "prev_action": "Search[Oceans]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777902107.7076144
+    },
+    {
+      "id": 114,
+      "question": "Question: Is The Moon-Spinners and Oceans both documentaries?",
+      "step": 4,
+      "entities": [
+        "Spinners",
+        "Is The Moon",
+        "Question",
+        "Oceans"
+      ],
+      "success": false,
+      "predicted_candidates": [
+        "Search[Oceans (2009 film)]",
+        "Finish[no]"
+      ],
+      "correct_action": "Search[\"Oceans (film)\"]",
+      "action_type": "Search",
+      "prev_action": "Search[Oceans]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777902107.7076252
+    },
+    {
+      "id": 115,
+      "question": "Question: Is The Moon-Spinners and Oceans both documentaries?",
+      "step": 5,
+      "entities": [
+        "Spinners",
+        "Is The Moon",
+        "Question",
+        "Oceans"
+      ],
+      "success": true,
+      "predicted_candidates": [
+        "Search[Oceans (film)]",
+        "Finish[no]"
+      ],
+      "correct_action": "Finish[no]",
+      "action_type": "Finish",
+      "prev_action": "Search[\"Oceans (film)\"]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777902107.707636
+    },
+    {
+      "id": 116,
+      "question": "Question: The author of The Thing of It Is... is what Nationality?",
+      "step": 1,
+      "entities": [
+        "Nationality",
+        "The Thing",
+        "It Is",
+        "The",
+        "what",
+        "author",
+        "Question"
+      ],
+      "success": true,
+      "predicted_candidates": [
+        "Search[The Thing of It Is...]",
+        "Search[\"The Thing of It Is...\"]",
+        "Search[The Thing of It Is...]"
+      ],
+      "correct_action": "Search[The Thing of It Is...]",
+      "action_type": "Search",
+      "prev_action": null,
+      "prev_action_type": null,
+      "analyzed": true,
+      "timestamp": 1777902165.6088405
+    },
+    {
+      "id": 117,
+      "question": "Question: The author of The Thing of It Is... is what Nationality?",
+      "step": 2,
+      "entities": [
+        "Nationality",
+        "The Thing",
+        "It Is",
+        "The",
+        "what",
+        "author",
+        "Question"
+      ],
+      "success": false,
+      "predicted_candidates": [
+        "Search[The Thing of It Is... song]",
+        "Search[The Thing of It Is... book]",
+        "Lookup[The Thing of It Is...]"
+      ],
+      "correct_action": "Search[William Goldman]",
+      "action_type": "Search",
+      "prev_action": "Search[The Thing of It Is...]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777902165.6088562
+    },
+    {
+      "id": 118,
+      "question": "Question: The author of The Thing of It Is... is what Nationality?",
+      "step": 3,
+      "entities": [
+        "Nationality",
+        "The Thing",
+        "It Is",
+        "The",
+        "what",
+        "author",
+        "Question"
+      ],
+      "success": true,
+      "predicted_candidates": [
+        "Finish[American]"
+      ],
+      "correct_action": "Finish[American]",
+      "action_type": "Finish",
+      "prev_action": "Search[William Goldman]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777902165.6088665
+    },
+    {
+      "id": 119,
+      "question": "Question: The man, who the award in which \"Summer of the Monkeys\" won, was a spokesman for white sector of America?",
+      "step": 1,
+      "entities": [
+        "The",
+        "which",
+        "Monkeys",
+        "America",
+        "Summer",
+        "who",
+        "Question"
+      ],
+      "success": true,
+      "predicted_candidates": [
+        "Search[Summer of the Monkeys]",
+        "Search[Award Summer of the Monkeys]",
+        "Lookup[award]"
+      ],
+      "correct_action": "Search[Summer of the Monkeys]",
+      "action_type": "Search",
+      "prev_action": null,
+      "prev_action_type": null,
+      "analyzed": true,
+      "timestamp": 1777902282.2838953
+    },
+    {
+      "id": 120,
+      "question": "Question: The man, who the award in which \"Summer of the Monkeys\" won, was a spokesman for white sector of America?",
+      "step": 2,
+      "entities": [
+        "The",
+        "which",
+        "Monkeys",
+        "America",
+        "Summer",
+        "who",
+        "Question"
+      ],
+      "success": true,
+      "predicted_candidates": [
+        "Search[Summer of the Monkeys]"
+      ],
+      "correct_action": "Search[Summer of the Monkeys]",
+      "action_type": "Search",
+      "prev_action": "Search[Summer of the Monkeys]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777902282.283913
+    },
+    {
+      "id": 121,
+      "question": "Question: The man, who the award in which \"Summer of the Monkeys\" won, was a spokesman for white sector of America?",
+      "step": 3,
+      "entities": [
+        "The",
+        "which",
+        "Monkeys",
+        "America",
+        "Summer",
+        "who",
+        "Question"
+      ],
+      "success": true,
+      "predicted_candidates": [
+        "Search[William Allen White]",
+        "Lookup[spokesman]",
+        "Finish[no]"
+      ],
+      "correct_action": "Search[William Allen White]",
+      "action_type": "Search",
+      "prev_action": "Search[Summer of the Monkeys]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777902282.2839234
+    },
+    {
+      "id": 122,
+      "question": "Question: The man, who the award in which \"Summer of the Monkeys\" won, was a spokesman for white sector of America?",
+      "step": 4,
+      "entities": [
+        "The",
+        "which",
+        "Monkeys",
+        "America",
+        "Summer",
+        "who",
+        "Question"
+      ],
+      "success": false,
+      "predicted_candidates": [
+        "Search[William Allen White Progressive Era]",
+        "Search[Free Press and civil rights]",
+        "Search[William Allen White Progressive Era]"
+      ],
+      "correct_action": "Finish[yes]",
+      "action_type": "Finish",
+      "prev_action": "Search[William Allen White]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777902282.283933
+    },
+    {
+      "id": 123,
+      "question": "Question: What famous New York burglar and freelance writer was involved in a robbery for which a book was written about?",
+      "step": 1,
+      "entities": [
+        "famous",
+        "New York",
+        "what",
+        "Question",
+        "which",
+        "What"
+      ],
+      "success": false,
+      "predicted_candidates": [
+        "Search[New York burglar book]",
+        "Search[Freelance writer burglar robbery]",
+        "Search[Famous New York burglars]"
+      ],
+      "correct_action": "Search[famous New York burglar]",
+      "action_type": "Search",
+      "prev_action": null,
+      "prev_action_type": null,
+      "analyzed": true,
+      "timestamp": 1777902571.0758135
+    },
+    {
+      "id": 124,
+      "question": "Question: What famous New York burglar and freelance writer was involved in a robbery for which a book was written about?",
+      "step": 2,
+      "entities": [
+        "famous",
+        "New York",
+        "what",
+        "Question",
+        "which",
+        "What"
+      ],
+      "success": false,
+      "predicted_candidates": [
+        "Search[famous New York burglar]",
+        "Search[book about New York burglar]"
+      ],
+      "correct_action": "Search[The Love Burglar]",
+      "action_type": "Search",
+      "prev_action": "Search[famous New York burglar]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777902571.0758433
+    },
+    {
+      "id": 125,
+      "question": "Question: What famous New York burglar and freelance writer was involved in a robbery for which a book was written about?",
+      "step": 3,
+      "entities": [
+        "famous",
+        "New York",
+        "what",
+        "Question",
+        "which",
+        "What"
+      ],
+      "success": false,
+      "predicted_candidates": [
+        "Search[The Love Burglar book]",
+        "Search[The Love Burglar real person]",
+        "Search[The Love Burglar movie plot]"
+      ],
+      "correct_action": "Search[Famous New York burglar book]",
+      "action_type": "Search",
+      "prev_action": "Search[The Love Burglar]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777902571.0758588
+    },
+    {
+      "id": 126,
+      "question": "Question: What famous New York burglar and freelance writer was involved in a robbery for which a book was written about?",
+      "step": 4,
+      "entities": [
+        "famous",
+        "New York",
+        "what",
+        "Question",
+        "which",
+        "What"
+      ],
+      "success": false,
+      "predicted_candidates": [
+        "Search[freelance writer New York burglar book]",
+        "Search[New York burglar book]",
+        "Lookup[freelance writer]"
+      ],
+      "correct_action": "Search[Leon Gleckman]",
+      "action_type": "Search",
+      "prev_action": "Search[Famous New York burglar book]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777902571.0758717
+    },
+    {
+      "id": 127,
+      "question": "Question: What famous New York burglar and freelance writer was involved in a robbery for which a book was written about?",
+      "step": 5,
+      "entities": [
+        "famous",
+        "New York",
+        "what",
+        "Question",
+        "which",
+        "What"
+      ],
+      "success": false,
+      "predicted_candidates": [
+        "Search[Famous New York burglars book]",
+        "Search[New York burglar book]",
+        "Lookup[freelance writer burglar]"
+      ],
+      "correct_action": "Search[Jack Murphy burglar book]",
+      "action_type": "Search",
+      "prev_action": "Search[Leon Gleckman]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777902571.075884
+    },
+    {
+      "id": 128,
+      "question": "Question: What famous New York burglar and freelance writer was involved in a robbery for which a book was written about?",
+      "step": 6,
+      "entities": [
+        "famous",
+        "New York",
+        "what",
+        "Question",
+        "which",
+        "What"
+      ],
+      "success": false,
+      "predicted_candidates": [
+        "Search[Jack Murphy book robbery]",
+        "Lookup[Jack Murphy New York]",
+        "Finish[Jack Murphy]"
+      ],
+      "correct_action": "Search[Jack Murphy New York burglar book]",
+      "action_type": "Search",
+      "prev_action": "Search[Jack Murphy burglar book]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777902571.0758963
+    },
+    {
+      "id": 129,
+      "question": "Question: What famous New York burglar and freelance writer was involved in a robbery for which a book was written about?",
+      "step": 7,
+      "entities": [
+        "famous",
+        "New York",
+        "what",
+        "Question",
+        "which",
+        "What"
+      ],
+      "success": true,
+      "predicted_candidates": [
+        "Search[Jack Murphy]",
+        "Search[Book about Jack Murphy]",
+        "Finish[Jack Murphy]"
+      ],
+      "correct_action": "Finish[Jack Murphy]",
+      "action_type": "Finish",
+      "prev_action": "Search[Jack Murphy New York burglar book]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777902571.0759172
+    },
+    {
+      "id": 130,
+      "question": "Question: What Harry Potter actor strred in My Boy Jack?",
+      "step": 1,
+      "entities": [
+        "My Boy Jack",
+        "Question",
+        "What Harry Potter",
+        "what"
+      ],
+      "success": false,
+      "predicted_candidates": [
+        "Search[Harry Potter actor]",
+        "Search[My Boy Jack cast]",
+        "Search[Daniel Radcliffe]"
+      ],
+      "correct_action": "Search[\"My Boy Jack (film)\"]",
+      "action_type": "Search",
+      "prev_action": null,
+      "prev_action_type": null,
+      "analyzed": true,
+      "timestamp": 1777902647.5098042
+    },
+    {
+      "id": 131,
+      "question": "Question: What Harry Potter actor strred in My Boy Jack?",
+      "step": 2,
+      "entities": [
+        "My Boy Jack",
+        "Question",
+        "What Harry Potter",
+        "what"
+      ],
+      "success": false,
+      "predicted_candidates": [
+        "Search[entity]",
+        "Search[\"My Boy Jack (film)\"]",
+        "Search[Jeremy Irons]"
+      ],
+      "correct_action": "Finish[Daniel Radcliffe]",
+      "action_type": "Finish",
+      "prev_action": "Search[\"My Boy Jack (film)\"]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777902647.5098243
+    },
+    {
+      "id": 132,
+      "question": "Question: What stagecoach robber did Frederick John Fulton prosecute?",
+      "step": 1,
+      "entities": [
+        "Frederick John Fulton",
+        "What",
+        "Question",
+        "what"
+      ],
+      "success": true,
+      "predicted_candidates": [
+        "Search[Frederick John Fulton]",
+        "Search[Frederick John Fulton]",
+        "Search[Fulton]"
+      ],
+      "correct_action": "Search[Frederick John Fulton]",
+      "action_type": "Search",
+      "prev_action": null,
+      "prev_action_type": null,
+      "analyzed": true,
+      "timestamp": 1777902688.5853972
+    },
+    {
+      "id": 133,
+      "question": "Question: What stagecoach robber did Frederick John Fulton prosecute?",
+      "step": 2,
+      "entities": [
+        "Frederick John Fulton",
+        "What",
+        "Question",
+        "what"
+      ],
+      "success": false,
+      "predicted_candidates": [
+        "Search[stagecoach robbers prosecuted by Frederick John Fulton]",
+        "Search[Frederick John Fulton role]",
+        "Lookup[prosecuted]"
+      ],
+      "correct_action": "Finish[Bill Miner]",
+      "action_type": "Finish",
+      "prev_action": "Search[Frederick John Fulton]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777902688.5854273
+    },
+    {
+      "id": 134,
+      "question": "Question: In the 1970s, which group acquired this department store group in the United Kingdom whose co-founding director is the father of Lieutenant Colonel Donald Swain Lewis?",
+      "step": 1,
+      "entities": [
+        "United Kingdom",
+        "In",
+        "which",
+        "Lieutenant Colonel Donald Swain Lewis",
+        "director",
+        "Question"
+      ],
+      "success": true,
+      "predicted_candidates": [
+        "Search[Lieutenant Colonel Donald Swain Lewis]",
+        "Search[Donald Swain Lewis]",
+        "Lookup[Swain Lewis]"
+      ],
+      "correct_action": "Search[Donald Swain Lewis]",
+      "action_type": "Search",
+      "prev_action": null,
+      "prev_action_type": null,
+      "analyzed": true,
+      "timestamp": 1777902753.0457978
+    },
+    {
+      "id": 135,
+      "question": "Question: In the 1970s, which group acquired this department store group in the United Kingdom whose co-founding director is the father of Lieutenant Colonel Donald Swain Lewis?",
+      "step": 2,
+      "entities": [
+        "United Kingdom",
+        "In",
+        "which",
+        "Lieutenant Colonel Donald Swain Lewis",
+        "director",
+        "Question"
+      ],
+      "success": true,
+      "predicted_candidates": [
+        "Search[Donald Swain Lewis]",
+        "Search[Father's Name]",
+        "Search[Donald Swain Lewis]"
+      ],
+      "correct_action": "Search[Donald Swain Lewis]",
+      "action_type": "Search",
+      "prev_action": "Search[Donald Swain Lewis]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777902753.0458252
+    },
+    {
+      "id": 136,
+      "question": "Question: In the 1970s, which group acquired this department store group in the United Kingdom whose co-founding director is the father of Lieutenant Colonel Donald Swain Lewis?",
+      "step": 3,
+      "entities": [
+        "United Kingdom",
+        "In",
+        "which",
+        "Lieutenant Colonel Donald Swain Lewis",
+        "director",
+        "Question"
+      ],
+      "success": false,
+      "predicted_candidates": [
+        "Search[Army & Navy Stores]",
+        "Search[Army & Navy Stores]",
+        "Search[Army & Navy Stores acquisition history]"
+      ],
+      "correct_action": "Finish[John Lewis Partnership]",
+      "action_type": "Finish",
+      "prev_action": "Search[Donald Swain Lewis]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777902753.0458417
+    },
+    {
+      "id": 137,
+      "question": "Question: Are the Prince of Wales and Flaming beverage both non-alcoholic drinks?",
+      "step": 1,
+      "entities": [
+        "Prince",
+        "Are",
+        "Wales",
+        "Flaming",
+        "Question"
+      ],
+      "success": true,
+      "predicted_candidates": [
+        "Search[Prince of Wales]",
+        "Search[Flaming beverage]",
+        "Finish[unknown]"
+      ],
+      "correct_action": "Search[Prince of Wales]",
+      "action_type": "Search",
+      "prev_action": null,
+      "prev_action_type": null,
+      "analyzed": true,
+      "timestamp": 1777902816.2615728
+    },
+    {
+      "id": 138,
+      "question": "Question: Are the Prince of Wales and Flaming beverage both non-alcoholic drinks?",
+      "step": 2,
+      "entities": [
+        "Prince",
+        "Are",
+        "Wales",
+        "Flaming",
+        "Question"
+      ],
+      "success": false,
+      "predicted_candidates": [
+        "Finish[no]"
+      ],
+      "correct_action": "Search[Flaming beverage]",
+      "action_type": "Search",
+      "prev_action": "Search[Prince of Wales]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777902816.261587
+    },
+    {
+      "id": 139,
+      "question": "Question: Are the Prince of Wales and Flaming beverage both non-alcoholic drinks?",
+      "step": 3,
+      "entities": [
+        "Prince",
+        "Are",
+        "Wales",
+        "Flaming",
+        "Question"
+      ],
+      "success": false,
+      "predicted_candidates": [
+        "Search[Flaming drink]",
+        "Lookup[non-alcoholic]",
+        "Lookup[non-alcoholic]"
+      ],
+      "correct_action": "Finish[no]",
+      "action_type": "Finish",
+      "prev_action": "Search[Flaming beverage]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777902816.2615957
+    },
+    {
+      "id": 140,
+      "question": "Question: By what type of music was this English composer who collaborated with Ella Mary Leather on \"Twelve Traditional Carols from Herefordshire\" influenced strongly?",
+      "step": 1,
+      "entities": [
+        "By",
+        "what",
+        "Herefordshire",
+        "Ella Mary Leather",
+        "English",
+        "Twelve Traditional Carols",
+        "who",
+        "Question"
+      ],
+      "success": false,
+      "predicted_candidates": [
+        "Search[\"Twelve Traditional Carols from Herefordshire\"]",
+        "Search[...]",
+        "Search[...]"
+      ],
+      "correct_action": "Search[Ella Mary Leather]",
+      "action_type": "Search",
+      "prev_action": null,
+      "prev_action_type": null,
+      "analyzed": true,
+      "timestamp": 1777902880.4332056
+    },
+    {
+      "id": 141,
+      "question": "Question: By what type of music was this English composer who collaborated with Ella Mary Leather on \"Twelve Traditional Carols from Herefordshire\" influenced strongly?",
+      "step": 2,
+      "entities": [
+        "By",
+        "what",
+        "Herefordshire",
+        "Ella Mary Leather",
+        "English",
+        "Twelve Traditional Carols",
+        "who",
+        "Question"
+      ],
+      "success": true,
+      "predicted_candidates": [
+        "Search[Ella Mary Leather]",
+        "Search[Ralph Vaughan Williams]",
+        "Search[Ella Mary Leather collaboration]"
+      ],
+      "correct_action": "Search[Ralph Vaughan Williams]",
+      "action_type": "Search",
+      "prev_action": "Search[Ella Mary Leather]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777902880.4332337
+    },
+    {
+      "id": 142,
+      "question": "Question: By what type of music was this English composer who collaborated with Ella Mary Leather on \"Twelve Traditional Carols from Herefordshire\" influenced strongly?",
+      "step": 3,
+      "entities": [
+        "By",
+        "what",
+        "Herefordshire",
+        "Ella Mary Leather",
+        "English",
+        "Twelve Traditional Carols",
+        "who",
+        "Question"
+      ],
+      "success": false,
+      "predicted_candidates": [
+        "Search[Ralph Vaughan Williams]",
+        "Search[Ralph Vaughan Williams]",
+        "Search[English folk music]"
+      ],
+      "correct_action": "Finish[Tudor music and English folk-song]",
+      "action_type": "Finish",
+      "prev_action": "Search[Ralph Vaughan Williams]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777902880.4332442
+    },
+    {
+      "id": 143,
+      "question": "Question: Which tennis player is from a country closer to Canada, Ken Flach or Lucie \u0160af\u00e1\u0159ov\u00e1?",
+      "step": 1,
+      "entities": [
+        "which",
+        "Ken Flach",
+        "country",
+        "Lucie",
+        "Which",
+        "Question",
+        "Canada"
+      ],
+      "success": true,
+      "predicted_candidates": [
+        "Search[Ken Flach]",
+        "Search[Lucie \u0160af\u00e1\u0159ov\u00e1]",
+        "Search[another relevant name]"
+      ],
+      "correct_action": "Search[Ken Flach]",
+      "action_type": "Search",
+      "prev_action": null,
+      "prev_action_type": null,
+      "analyzed": true,
+      "timestamp": 1777902970.9879735
+    },
+    {
+      "id": 144,
+      "question": "Question: Which tennis player is from a country closer to Canada, Ken Flach or Lucie \u0160af\u00e1\u0159ov\u00e1?",
+      "step": 2,
+      "entities": [
+        "which",
+        "Ken Flach",
+        "country",
+        "Lucie",
+        "Which",
+        "Question",
+        "Canada"
+      ],
+      "success": true,
+      "predicted_candidates": [
+        "Search[Ken Flach]",
+        "Search[Lucie \u0160af\u00e1\u0159ov\u00e1]",
+        "Search[Ken Flach]"
+      ],
+      "correct_action": "Search[Lucie \u0160af\u00e1\u0159ov\u00e1]",
+      "action_type": "Search",
+      "prev_action": "Search[Ken Flach]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777902970.9879947
+    },
+    {
+      "id": 145,
+      "question": "Question: Which tennis player is from a country closer to Canada, Ken Flach or Lucie \u0160af\u00e1\u0159ov\u00e1?",
+      "step": 3,
+      "entities": [
+        "which",
+        "Ken Flach",
+        "country",
+        "Lucie",
+        "Which",
+        "Question",
+        "Canada"
+      ],
+      "success": true,
+      "predicted_candidates": [
+        "Search[Lucie \u0160af\u00e1\u0159ov\u00e1 Czech Republic]",
+        "Lookup[Czech]",
+        "Finish[Ken Flach]"
+      ],
+      "correct_action": "Finish[Ken Flach]",
+      "action_type": "Finish",
+      "prev_action": "Search[Lucie \u0160af\u00e1\u0159ov\u00e1]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777902970.9880087
+    },
+    {
+      "id": 146,
+      "question": "Question: Which member of Odd Future also had a guest appearance on the album too Cozy?",
+      "step": 1,
+      "entities": [
+        "Cozy",
+        "which",
+        "Odd Future",
+        "Which",
+        "Question"
+      ],
+      "success": false,
+      "predicted_candidates": [
+        "Search[Odd Future members]",
+        "Search[Odd Future group]",
+        "Search[Odd Future members]"
+      ],
+      "correct_action": "Search[Odd Future]",
+      "action_type": "Search",
+      "prev_action": null,
+      "prev_action_type": null,
+      "analyzed": true,
+      "timestamp": 1777903095.514234
+    },
+    {
+      "id": 147,
+      "question": "Question: Which member of Odd Future also had a guest appearance on the album too Cozy?",
+      "step": 2,
+      "entities": [
+        "Cozy",
+        "which",
+        "Odd Future",
+        "Which",
+        "Question"
+      ],
+      "success": true,
+      "predicted_candidates": [
+        "Search[too Cozy]",
+        "Search[too Cozy]",
+        "Search[too Cozy]"
+      ],
+      "correct_action": "Search[too Cozy]",
+      "action_type": "Search",
+      "prev_action": "Search[Odd Future]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777903095.5142543
+    },
+    {
+      "id": 148,
+      "question": "Question: Which member of Odd Future also had a guest appearance on the album too Cozy?",
+      "step": 3,
+      "entities": [
+        "Cozy",
+        "which",
+        "Odd Future",
+        "Which",
+        "Question"
+      ],
+      "success": false,
+      "predicted_candidates": [
+        "Search[Cozi Zuehlsdorff]",
+        "Lookup[\"odd future\" collaborations]",
+        "Finish[no information found]"
+      ],
+      "correct_action": "Search[Cozy Tapes Vol. 2: Too Cozy]",
+      "action_type": "Search",
+      "prev_action": "Search[too Cozy]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777903095.514265
+    },
+    {
+      "id": 149,
+      "question": "Question: Which member of Odd Future also had a guest appearance on the album too Cozy?",
+      "step": 4,
+      "entities": [
+        "Cozy",
+        "which",
+        "Odd Future",
+        "Which",
+        "Question"
+      ],
+      "success": false,
+      "predicted_candidates": [
+        "Search[Cozy Tapes Vol. 2: Too Cozy]",
+        "Search[ASAP Mob collaborators]",
+        "Lookup[guest appearance]"
+      ],
+      "correct_action": "Finish[Frank Ocean]",
+      "action_type": "Finish",
+      "prev_action": "Search[Cozy Tapes Vol. 2: Too Cozy]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777903095.5142748
+    },
+    {
+      "id": 150,
+      "question": "Question: Francisco Mela performed with which American Jazz bassist and singer born in 1984 ?",
+      "step": 1,
+      "entities": [
+        "born",
+        "Francisco Mela",
+        "which",
+        "Question",
+        "American Jazz"
+      ],
+      "success": true,
+      "predicted_candidates": [
+        "Search[Francisco Mela]",
+        "Search[Francisco Mela]",
+        "Search[Franco Mela]"
+      ],
+      "correct_action": "Search[Francisco Mela]",
+      "action_type": "Search",
+      "prev_action": null,
+      "prev_action_type": null,
+      "analyzed": true,
+      "timestamp": 1777903172.357609
+    },
+    {
+      "id": 151,
+      "question": "Question: Francisco Mela performed with which American Jazz bassist and singer born in 1984 ?",
+      "step": 2,
+      "entities": [
+        "born",
+        "Francisco Mela",
+        "which",
+        "Question",
+        "American Jazz"
+      ],
+      "success": false,
+      "predicted_candidates": [
+        "Search[Francisco Mela musician]",
+        "Search[Franco Mela]",
+        "Search[Francisco Mela jazz]"
+      ],
+      "correct_action": "Search[Esperanza Spalding]",
+      "action_type": "Search",
+      "prev_action": "Search[Francisco Mela]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777903172.3576286
+    },
+    {
+      "id": 152,
+      "question": "Question: Francisco Mela performed with which American Jazz bassist and singer born in 1984 ?",
+      "step": 3,
+      "entities": [
+        "born",
+        "Francisco Mela",
+        "which",
+        "Question",
+        "American Jazz"
+      ],
+      "success": true,
+      "predicted_candidates": [
+        "Search[Esperanza Spalding birth year]",
+        "Lookup[bassist singer]",
+        "Finish[Esperanza Spalding]"
+      ],
+      "correct_action": "Finish[Esperanza Spalding]",
+      "action_type": "Finish",
+      "prev_action": "Search[Esperanza Spalding]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777903172.3576424
+    },
+    {
+      "id": 153,
+      "question": "Question: What is the name of this White House Cheif of Staff, born in 1950, who assumed the role at the same time as Elaine Duke became Secretary of Homeland Security?",
+      "step": 1,
+      "entities": [
+        "White House Cheif",
+        "born",
+        "Homeland Security",
+        "name",
+        "Elaine Duke",
+        "Question",
+        "Staff",
+        "what",
+        "Secretary",
+        "who",
+        "What"
+      ],
+      "success": true,
+      "predicted_candidates": [
+        "Search[Elaine Duke]",
+        "Search[Secretary of Homeland Security Elaine Duke]",
+        "Search[Elaine Duke]"
+      ],
+      "correct_action": "Search[Elaine Duke]",
+      "action_type": "Search",
+      "prev_action": null,
+      "prev_action_type": null,
+      "analyzed": true,
+      "timestamp": 1777903248.5263011
+    },
+    {
+      "id": 154,
+      "question": "Question: What is the name of this White House Cheif of Staff, born in 1950, who assumed the role at the same time as Elaine Duke became Secretary of Homeland Security?",
+      "step": 2,
+      "entities": [
+        "White House Cheif",
+        "born",
+        "Homeland Security",
+        "name",
+        "Elaine Duke",
+        "Question",
+        "Staff",
+        "what",
+        "Secretary",
+        "who",
+        "What"
+      ],
+      "success": false,
+      "predicted_candidates": [
+        "Search[Elaine Duke United States]",
+        "Search[Elaine Duke Secretary of Homeland Security]",
+        "Search[Elaine Duke United States]"
+      ],
+      "correct_action": "Search[John F. Kelly]",
+      "action_type": "Search",
+      "prev_action": "Search[Elaine Duke]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777903248.5263171
+    },
+    {
+      "id": 155,
+      "question": "Question: What is the name of this White House Cheif of Staff, born in 1950, who assumed the role at the same time as Elaine Duke became Secretary of Homeland Security?",
+      "step": 3,
+      "entities": [
+        "White House Cheif",
+        "born",
+        "Homeland Security",
+        "name",
+        "Elaine Duke",
+        "Question",
+        "Staff",
+        "what",
+        "Secretary",
+        "who",
+        "What"
+      ],
+      "success": true,
+      "predicted_candidates": [
+        "Finish[John F. Kelly]"
+      ],
+      "correct_action": "Finish[John F. Kelly]",
+      "action_type": "Finish",
+      "prev_action": "Search[John F. Kelly]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777903248.526327
+    },
+    {
+      "id": 156,
+      "question": "Question: Who can play more instruments, Michael Monroe or Alison Goldfrapp?",
+      "step": 1,
+      "entities": [
+        "Michael Monroe",
+        "Alison Goldfrapp",
+        "Who",
+        "who",
+        "Question"
+      ],
+      "success": true,
+      "predicted_candidates": [
+        "Search[Michael Monroe]",
+        "Search[Alison Goldfrapp]",
+        "Search[Michael Monroe]"
+      ],
+      "correct_action": "Search[Michael Monroe]",
+      "action_type": "Search",
+      "prev_action": null,
+      "prev_action_type": null,
+      "analyzed": true,
+      "timestamp": 1777903317.8722363
+    },
+    {
+      "id": 157,
+      "question": "Question: Who can play more instruments, Michael Monroe or Alison Goldfrapp?",
+      "step": 2,
+      "entities": [
+        "Michael Monroe",
+        "Alison Goldfrapp",
+        "Who",
+        "who",
+        "Question"
+      ],
+      "success": true,
+      "predicted_candidates": [
+        "Search[Michael Monroe]",
+        "Search[Alison Goldfrapp]",
+        "Finish[Alison Goldfrapp]"
+      ],
+      "correct_action": "Search[Alison Goldfrapp]",
+      "action_type": "Search",
+      "prev_action": "Search[Michael Monroe]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777903317.872254
+    },
+    {
+      "id": 158,
+      "question": "Question: Who can play more instruments, Michael Monroe or Alison Goldfrapp?",
+      "step": 3,
+      "entities": [
+        "Michael Monroe",
+        "Alison Goldfrapp",
+        "Who",
+        "who",
+        "Question"
+      ],
+      "success": false,
+      "predicted_candidates": [
+        "Search[Michael Monroe]",
+        "Search[Alison Goldfrapp]",
+        "Search[Michael Monroe instruments]"
+      ],
+      "correct_action": "Finish[Alison Goldfrapp]",
+      "action_type": "Finish",
+      "prev_action": "Search[Alison Goldfrapp]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777903317.8722634
+    },
+    {
+      "id": 159,
+      "question": "Question: The 1st Alabama Siege Artillery Unit were massacred by Confederate troops under whose command?",
+      "step": 1,
+      "entities": [
+        "The",
+        "Question",
+        "Confederate",
+        "Alabama Siege Artillery Unit"
+      ],
+      "success": true,
+      "predicted_candidates": [
+        "Search[1st Alabama Siege Artillery Unit]",
+        "Search[1st Alabama Artillery]",
+        "Search[1st Alabama Siege Artillery massacre]"
+      ],
+      "correct_action": "Search[1st Alabama Siege Artillery Unit]",
+      "action_type": "Search",
+      "prev_action": null,
+      "prev_action_type": null,
+      "analyzed": true,
+      "timestamp": 1777903410.4348416
+    },
+    {
+      "id": 160,
+      "question": "Question: The 1st Alabama Siege Artillery Unit were massacred by Confederate troops under whose command?",
+      "step": 2,
+      "entities": [
+        "The",
+        "Question",
+        "Confederate",
+        "Alabama Siege Artillery Unit"
+      ],
+      "success": false,
+      "predicted_candidates": [
+        "Search[1st Alabama Heavy Artillery]",
+        "Search[Battle of Shiloh (1862)]",
+        "Lookup[Confederate commander]"
+      ],
+      "correct_action": "Search[1st Regiment Alabama Siege Artillery (African Descent)]",
+      "action_type": "Search",
+      "prev_action": "Search[1st Alabama Siege Artillery Unit]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777903410.4348664
+    },
+    {
+      "id": 161,
+      "question": "Question: The 1st Alabama Siege Artillery Unit were massacred by Confederate troops under whose command?",
+      "step": 3,
+      "entities": [
+        "The",
+        "Question",
+        "Confederate",
+        "Alabama Siege Artillery Unit"
+      ],
+      "success": false,
+      "predicted_candidates": [
+        "Search[Siege of Vicksburg Union units massacred]",
+        "Search[Confederate commander 1st Alabama Siege Artillery]",
+        "Search[1st Alabama Siege Artillery massacre incident]"
+      ],
+      "correct_action": "Search[Battle of Fort Pillow]",
+      "action_type": "Search",
+      "prev_action": "Search[1st Regiment Alabama Siege Artillery (African Descent)]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777903410.434878
+    },
+    {
+      "id": 162,
+      "question": "Question: The 1st Alabama Siege Artillery Unit were massacred by Confederate troops under whose command?",
+      "step": 4,
+      "entities": [
+        "The",
+        "Question",
+        "Confederate",
+        "Alabama Siege Artillery Unit"
+      ],
+      "success": false,
+      "predicted_candidates": [
+        "Search[Nathan Bedford Forrest]",
+        "Search[Nathan Bedford Forrest]",
+        "Search[Fort Pillow massacre commander]"
+      ],
+      "correct_action": "Finish[Nathan Bedford Forrest]",
+      "action_type": "Finish",
+      "prev_action": "Search[Battle of Fort Pillow]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777903410.4348872
+    },
+    {
+      "id": 163,
+      "question": "Question: What company did a man who hired Sioux Falls architect Wallace L. Dow to build a home in Worthing, Minnesota found?",
+      "step": 1,
+      "entities": [
+        "Wallace",
+        "Worthing",
+        "what",
+        "Sioux Falls",
+        "Question",
+        "Dow",
+        "Minnesota",
+        "who",
+        "What"
+      ],
+      "success": true,
+      "predicted_candidates": [
+        "Search[Wallace L. Dow]",
+        "Search[Wallace L. Dow architect]",
+        "Lookup[Worthing Minnesota]"
+      ],
+      "correct_action": "Search[Wallace L. Dow]",
+      "action_type": "Search",
+      "prev_action": null,
+      "prev_action_type": null,
+      "analyzed": true,
+      "timestamp": 1777903647.0765495
+    },
+    {
+      "id": 164,
+      "question": "Question: What company did a man who hired Sioux Falls architect Wallace L. Dow to build a home in Worthing, Minnesota found?",
+      "step": 2,
+      "entities": [
+        "Wallace",
+        "Worthing",
+        "what",
+        "Sioux Falls",
+        "Question",
+        "Dow",
+        "Minnesota",
+        "who",
+        "What"
+      ],
+      "success": false,
+      "predicted_candidates": [
+        "Search[Worthing Minnesota Wallace L. Dow]",
+        "Search[Wallace L. Dow Minnesota projects]",
+        "Lookup[Worthing Minnesota]"
+      ],
+      "correct_action": "Search[Worthing, Minnesota]",
+      "action_type": "Search",
+      "prev_action": "Search[Wallace L. Dow]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777903647.0765724
+    },
+    {
+      "id": 165,
+      "question": "Question: What company did a man who hired Sioux Falls architect Wallace L. Dow to build a home in Worthing, Minnesota found?",
+      "step": 3,
+      "entities": [
+        "Wallace",
+        "Worthing",
+        "what",
+        "Sioux Falls",
+        "Question",
+        "Dow",
+        "Minnesota",
+        "who",
+        "What"
+      ],
+      "success": false,
+      "predicted_candidates": [
+        "Search[Wallace L. Dow Worthing Minnesota home]",
+        "Search[Worthing Minnesota house architect]",
+        "Lookup[builder]"
+      ],
+      "correct_action": "Search[Worthing]",
+      "action_type": "Search",
+      "prev_action": "Search[Worthing, Minnesota]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777903647.076734
+    },
+    {
+      "id": 166,
+      "question": "Question: What company did a man who hired Sioux Falls architect Wallace L. Dow to build a home in Worthing, Minnesota found?",
+      "step": 4,
+      "entities": [
+        "Wallace",
+        "Worthing",
+        "what",
+        "Sioux Falls",
+        "Question",
+        "Dow",
+        "Minnesota",
+        "who",
+        "What"
+      ],
+      "success": false,
+      "predicted_candidates": [
+        "Search[Wallace L. Dow]",
+        "Search[Worthing, Minnesota]",
+        "Search[Worthing]"
+      ],
+      "correct_action": "Search[Wallace L. Dow clients]",
+      "action_type": "Search",
+      "prev_action": "Search[Worthing]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777903647.076743
+    },
+    {
+      "id": 167,
+      "question": "Question: What company did a man who hired Sioux Falls architect Wallace L. Dow to build a home in Worthing, Minnesota found?",
+      "step": 5,
+      "entities": [
+        "Wallace",
+        "Worthing",
+        "what",
+        "Sioux Falls",
+        "Question",
+        "Dow",
+        "Minnesota",
+        "who",
+        "What"
+      ],
+      "success": false,
+      "predicted_candidates": [
+        "Search[Wallace L. Dow Minnesota projects]",
+        "Search[Wallace L. Dow clients Minnesota]",
+        "Lookup[Wallace L. Dow Worthing]"
+      ],
+      "correct_action": "Lookup[Worthing]",
+      "action_type": "Lookup",
+      "prev_action": "Search[Wallace L. Dow clients]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777903647.0767498
+    },
+    {
+      "id": 168,
+      "question": "Question: What company did a man who hired Sioux Falls architect Wallace L. Dow to build a home in Worthing, Minnesota found?",
+      "step": 6,
+      "entities": [
+        "Wallace",
+        "Worthing",
+        "what",
+        "Sioux Falls",
+        "Question",
+        "Dow",
+        "Minnesota",
+        "who",
+        "What"
+      ],
+      "success": false,
+      "predicted_candidates": [
+        "Search[Wallace L. Dow Minnesota projects]",
+        "Search[Worthing Minnesota home architect]",
+        "Lookup[Wallace L. Dow clients]"
+      ],
+      "correct_action": "Search[Wallace L. Dow Worthing Minnesota home]",
+      "action_type": "Search",
+      "prev_action": "Lookup[Worthing]",
+      "prev_action_type": "Lookup",
+      "analyzed": true,
+      "timestamp": 1777903647.0767567
+    },
+    {
+      "id": 169,
+      "question": "Question: What company did a man who hired Sioux Falls architect Wallace L. Dow to build a home in Worthing, Minnesota found?",
+      "step": 7,
+      "entities": [
+        "Wallace",
+        "Worthing",
+        "what",
+        "Sioux Falls",
+        "Question",
+        "Dow",
+        "Minnesota",
+        "who",
+        "What"
+      ],
+      "success": false,
+      "predicted_candidates": [
+        "Search[Wallace L. Dow Worthing Minnesota home]",
+        "Search[Minneapolis businessmen]",
+        "Lookup[founded company]"
+      ],
+      "correct_action": "Search[Worthing Minnesota]",
+      "action_type": "Search",
+      "prev_action": "Search[Wallace L. Dow Worthing Minnesota home]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777903647.0767634
+    },
+    {
+      "id": 170,
+      "question": "Question: Sporobolus and Zea are in the same what?",
+      "step": 1,
+      "entities": [
+        "Sporobolus",
+        "Zea",
+        "Question",
+        "what"
+      ],
+      "success": true,
+      "predicted_candidates": [
+        "Search[Sporobolus]",
+        "Search[Sporobolus]",
+        "Search[Zea]"
+      ],
+      "correct_action": "Search[Sporobolus]",
+      "action_type": "Search",
+      "prev_action": null,
+      "prev_action_type": null,
+      "analyzed": true,
+      "timestamp": 1777903722.7771883
+    },
+    {
+      "id": 171,
+      "question": "Question: Sporobolus and Zea are in the same what?",
+      "step": 2,
+      "entities": [
+        "Sporobolus",
+        "Zea",
+        "Question",
+        "what"
+      ],
+      "success": true,
+      "predicted_candidates": [
+        "Search[Sporobolus]",
+        "Search[Sporobolus]",
+        "Search[Zea]"
+      ],
+      "correct_action": "Search[Zea]",
+      "action_type": "Search",
+      "prev_action": "Search[Sporobolus]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777903722.7772207
+    },
+    {
+      "id": 172,
+      "question": "Question: Sporobolus and Zea are in the same what?",
+      "step": 3,
+      "entities": [
+        "Sporobolus",
+        "Zea",
+        "Question",
+        "what"
+      ],
+      "success": true,
+      "predicted_candidates": [
+        "Finish[Poaceae family]"
+      ],
+      "correct_action": "Finish[Poaceae family]",
+      "action_type": "Finish",
+      "prev_action": "Search[Zea]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777903722.7772384
+    },
+    {
+      "id": 173,
+      "question": "Question: Travis McGee was a precursor to what contemporary mystery protagonist in a series that has been on multiple best seller lists?",
+      "step": 1,
+      "entities": [
+        "what",
+        "Question",
+        "Travis"
+      ],
+      "success": true,
+      "predicted_candidates": [
+        "Search[Travis McGee]",
+        "Search[best seller series]",
+        "Lookup[mystery protagonist]"
+      ],
+      "correct_action": "Search[Travis McGee]",
+      "action_type": "Search",
+      "prev_action": null,
+      "prev_action_type": null,
+      "analyzed": true,
+      "timestamp": 1777904246.4485269
+    },
+    {
+      "id": 174,
+      "question": "Question: Travis McGee was a precursor to what contemporary mystery protagonist in a series that has been on multiple best seller lists?",
+      "step": 2,
+      "entities": [
+        "what",
+        "Question",
+        "Travis"
+      ],
+      "success": true,
+      "predicted_candidates": [
+        "Search[Travis McGee]",
+        "Search[Travis McGee character]",
+        "Search[John D. Macdonald]"
+      ],
+      "correct_action": "Search[Travis McGee]",
+      "action_type": "Search",
+      "prev_action": "Search[Travis McGee]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777904246.448581
+    },
+    {
+      "id": 175,
+      "question": "Question: Travis McGee was a precursor to what contemporary mystery protagonist in a series that has been on multiple best seller lists?",
+      "step": 3,
+      "entities": [
+        "what",
+        "Question",
+        "Travis"
+      ],
+      "success": false,
+      "predicted_candidates": [
+        "Search[precursor to Travis McGee]",
+        "Search[contemporary mystery protagonists]",
+        "Lookup[precursor]"
+      ],
+      "correct_action": "Search[Travis McGee]",
+      "action_type": "Search",
+      "prev_action": "Search[Travis McGee]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777904246.4486043
+    },
+    {
+      "id": 176,
+      "question": "Question: Travis McGee was a precursor to what contemporary mystery protagonist in a series that has been on multiple best seller lists?",
+      "step": 4,
+      "entities": [
+        "what",
+        "Question",
+        "Travis"
+      ],
+      "success": false,
+      "predicted_candidates": [
+        "Search[John D. MacDonald]",
+        "Search[Harry Bosch]",
+        "Lookup[salvage consultant]"
+      ],
+      "correct_action": "Search[Travis McGee]",
+      "action_type": "Search",
+      "prev_action": "Search[Travis McGee]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777904246.4486265
+    },
+    {
+      "id": 177,
+      "question": "Question: Travis McGee was a precursor to what contemporary mystery protagonist in a series that has been on multiple best seller lists?",
+      "step": 5,
+      "entities": [
+        "what",
+        "Question",
+        "Travis"
+      ],
+      "success": false,
+      "predicted_candidates": [
+        "Lookup[precursor]"
+      ],
+      "correct_action": "Finish[Jack Reacher]",
+      "action_type": "Finish",
+      "prev_action": "Search[Travis McGee]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777904246.4486415
+    },
+    {
+      "id": 178,
+      "question": "Question: For which University did the quarterback featured on the cover of Madden NFL 06 play basketball ?",
+      "step": 1,
+      "entities": [
+        "Madden",
+        "which",
+        "For",
+        "Question",
+        "University"
+      ],
+      "success": true,
+      "predicted_candidates": [
+        "Search[Madden NFL 06]",
+        "Search[Eli Manning]",
+        "Search[Madden NFL 06 cover athlete]"
+      ],
+      "correct_action": "Search[Madden NFL 06]",
+      "action_type": "Search",
+      "prev_action": null,
+      "prev_action_type": null,
+      "analyzed": true,
+      "timestamp": 1777904332.36275
+    },
+    {
+      "id": 179,
+      "question": "Question: For which University did the quarterback featured on the cover of Madden NFL 06 play basketball ?",
+      "step": 2,
+      "entities": [
+        "Madden",
+        "which",
+        "For",
+        "Question",
+        "University"
+      ],
+      "success": false,
+      "predicted_candidates": [
+        "Search[Madden NFL 06 cover quarterback]",
+        "Search[Madden NFL 06 features]",
+        "Lookup[cover]"
+      ],
+      "correct_action": "Search[Donovan McNabb]",
+      "action_type": "Search",
+      "prev_action": "Search[Madden NFL 06]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777904332.3627746
+    },
+    {
+      "id": 180,
+      "question": "Question: For which University did the quarterback featured on the cover of Madden NFL 06 play basketball ?",
+      "step": 3,
+      "entities": [
+        "Madden",
+        "which",
+        "For",
+        "Question",
+        "University"
+      ],
+      "success": false,
+      "predicted_candidates": [
+        "Search[Donovan McNabb college]",
+        "Search[Donovan McNabb basketball]",
+        "Finish[University of Pennsylvania]"
+      ],
+      "correct_action": "Finish[Syracuse University]",
+      "action_type": "Finish",
+      "prev_action": "Search[Donovan McNabb]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777904332.3627846
+    },
+    {
+      "id": 181,
+      "question": "Question: Are Anja Salomonowitz and Rod Lurie both directors?",
+      "step": 1,
+      "entities": [
+        "Are Anja Salomonowitz",
+        "Rod Lurie",
+        "Question"
+      ],
+      "success": true,
+      "predicted_candidates": [
+        "Search[Anja Salomonowitz]",
+        "Search[Rod Lurie]",
+        "Search[Anja Salomonowitz director]"
+      ],
+      "correct_action": "Search[Anja Salomonowitz]",
+      "action_type": "Search",
+      "prev_action": null,
+      "prev_action_type": null,
+      "analyzed": true,
+      "timestamp": 1777904385.8422477
+    },
+    {
+      "id": 182,
+      "question": "Question: Are Anja Salomonowitz and Rod Lurie both directors?",
+      "step": 2,
+      "entities": [
+        "Are Anja Salomonowitz",
+        "Rod Lurie",
+        "Question"
+      ],
+      "success": true,
+      "predicted_candidates": [
+        "Search[Rod Lurie]",
+        "Lookup[director]",
+        "Finish[no]"
+      ],
+      "correct_action": "Search[Rod Lurie]",
+      "action_type": "Search",
+      "prev_action": "Search[Anja Salomonowitz]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777904385.8422692
+    },
+    {
+      "id": 183,
+      "question": "Question: Are Anja Salomonowitz and Rod Lurie both directors?",
+      "step": 3,
+      "entities": [
+        "Are Anja Salomonowitz",
+        "Rod Lurie",
+        "Question"
+      ],
+      "success": false,
+      "predicted_candidates": [
+        "Search[Rod Lurie director]",
+        "Search[Anja Salomonowitz Rod Lurie]",
+        "Lookup[director]"
+      ],
+      "correct_action": "Finish[yes]",
+      "action_type": "Finish",
+      "prev_action": "Search[Rod Lurie]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777904385.8422825
+    },
+    {
+      "id": 184,
+      "question": "Question: What was the name of the commander who captured all of the French ships that varied in size?",
+      "step": 1,
+      "entities": [
+        "name",
+        "French",
+        "what",
+        "Question",
+        "who",
+        "What"
+      ],
+      "success": true,
+      "predicted_candidates": [
+        "Search[\"captured French ships\"]",
+        "Search[\"French naval battles\"]",
+        "Search[\"French ship capture commander\"]"
+      ],
+      "correct_action": "Search[\"captured French ships\"]",
+      "action_type": "Search",
+      "prev_action": null,
+      "prev_action_type": null,
+      "analyzed": true,
+      "timestamp": 1777904559.4190857
+    },
+    {
+      "id": 185,
+      "question": "Question: What was the name of the commander who captured all of the French ships that varied in size?",
+      "step": 2,
+      "entities": [
+        "name",
+        "French",
+        "what",
+        "Question",
+        "who",
+        "What"
+      ],
+      "success": false,
+      "predicted_candidates": [
+        "Lookup[captured]",
+        "Finish[Horatio Nelson]"
+      ],
+      "correct_action": "Search[Thomas Graves, 1st Baron Graves]",
+      "action_type": "Search",
+      "prev_action": "Search[\"captured French ships\"]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777904559.4191148
+    },
+    {
+      "id": 186,
+      "question": "Question: What was the name of the commander who captured all of the French ships that varied in size?",
+      "step": 3,
+      "entities": [
+        "name",
+        "French",
+        "what",
+        "Question",
+        "who",
+        "What"
+      ],
+      "success": false,
+      "predicted_candidates": [
+        "Search[Thomas Graves naval battles]",
+        "Search[Thomas Graves, 1st Baron Graves career]",
+        "Search[Thomas Graves naval career]"
+      ],
+      "correct_action": "Search[Thomas Graves, 1st Baron Graves]",
+      "action_type": "Search",
+      "prev_action": "Search[Thomas Graves, 1st Baron Graves]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777904559.419129
+    },
+    {
+      "id": 187,
+      "question": "Question: What was the name of the commander who captured all of the French ships that varied in size?",
+      "step": 4,
+      "entities": [
+        "name",
+        "French",
+        "what",
+        "Question",
+        "who",
+        "What"
+      ],
+      "success": true,
+      "predicted_candidates": [
+        "Search[Thomas Graves, 1st Baron Graves]",
+        "Search[Battle of the Mona Passage]",
+        "Search[Capture of the galleon Lion Couronn\u00e9]"
+      ],
+      "correct_action": "Search[Battle of the Mona Passage]",
+      "action_type": "Search",
+      "prev_action": "Search[Thomas Graves, 1st Baron Graves]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777904559.4191415
+    },
+    {
+      "id": 188,
+      "question": "Question: What was the name of the commander who captured all of the French ships that varied in size?",
+      "step": 5,
+      "entities": [
+        "name",
+        "French",
+        "what",
+        "Question",
+        "who",
+        "What"
+      ],
+      "success": false,
+      "predicted_candidates": [
+        "Search[entity]",
+        "Search[Battle of the Mona Passage]",
+        "Search[Thomas Graves, 1st Baron Graves]"
+      ],
+      "correct_action": "Finish[Samuel Hood]",
+      "action_type": "Finish",
+      "prev_action": "Search[Battle of the Mona Passage]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777904559.419151
+    },
+    {
+      "id": 189,
+      "question": "Question: Kevin Alejandro was part of the cast of the 2015 American drama film written and directed by whom?",
+      "step": 1,
+      "entities": [
+        "American",
+        "Kevin Alejandro",
+        "Question"
+      ],
+      "success": true,
+      "predicted_candidates": [
+        "Search[entity]",
+        "Search[Kevin Alejandro]",
+        "Search[Kevin Alejandro]"
+      ],
+      "correct_action": "Search[Kevin Alejandro]",
+      "action_type": "Search",
+      "prev_action": null,
+      "prev_action_type": null,
+      "analyzed": true,
+      "timestamp": 1777904710.5111675
+    },
+    {
+      "id": 190,
+      "question": "Question: Kevin Alejandro was part of the cast of the 2015 American drama film written and directed by whom?",
+      "step": 2,
+      "entities": [
+        "American",
+        "Kevin Alejandro",
+        "Question"
+      ],
+      "success": false,
+      "predicted_candidates": [
+        "Search[Kevin Alejandro 2015 film]",
+        "Search[specific movie name]",
+        "Search[Kevin Alejandro 2015 film]"
+      ],
+      "correct_action": "Lookup[2015]",
+      "action_type": "Lookup",
+      "prev_action": "Search[Kevin Alejandro]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777904710.5111842
+    },
+    {
+      "id": 191,
+      "question": "Question: Kevin Alejandro was part of the cast of the 2015 American drama film written and directed by whom?",
+      "step": 3,
+      "entities": [
+        "American",
+        "Kevin Alejandro",
+        "Question"
+      ],
+      "success": true,
+      "predicted_candidates": [
+        "Search[Kevin Alejandro 2015 film]",
+        "Lookup[film]",
+        "Finish[unknown]"
+      ],
+      "correct_action": "Search[Kevin Alejandro 2015 film]",
+      "action_type": "Search",
+      "prev_action": "Lookup[2015]",
+      "prev_action_type": "Lookup",
+      "analyzed": true,
+      "timestamp": 1777904710.5111947
+    },
+    {
+      "id": 192,
+      "question": "Question: Kevin Alejandro was part of the cast of the 2015 American drama film written and directed by whom?",
+      "step": 4,
+      "entities": [
+        "American",
+        "Kevin Alejandro",
+        "Question"
+      ],
+      "success": false,
+      "predicted_candidates": [
+        "Search[2015 American drama film Kevin Alejandro]",
+        "Search[Kevin Alejandro filmography]",
+        "Lookup[drama film]"
+      ],
+      "correct_action": "Search[Sicario (2015 film)]",
+      "action_type": "Search",
+      "prev_action": "Search[Kevin Alejandro 2015 film]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777904710.511203
+    },
+    {
+      "id": 193,
+      "question": "Question: Kevin Alejandro was part of the cast of the 2015 American drama film written and directed by whom?",
+      "step": 5,
+      "entities": [
+        "American",
+        "Kevin Alejandro",
+        "Question"
+      ],
+      "success": false,
+      "predicted_candidates": [
+        "Finish[Alejandro Gonz\u00e1lez I\u00f1\u00e1rritu]"
+      ],
+      "correct_action": "Finish[Denis Villeneuve (director) and Taylor Sheridan (writer)]",
+      "action_type": "Finish",
+      "prev_action": "Search[Sicario (2015 film)]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777904710.5112107
+    },
+    {
+      "id": 194,
+      "question": "Question: Are Out Traveler and Reader's Digest both magazines?",
+      "step": 1,
+      "entities": [
+        "Reader",
+        "Digest",
+        "Question",
+        "Are Out Traveler"
+      ],
+      "success": true,
+      "predicted_candidates": [
+        "Search[Out Traveler]",
+        "Search[Reader's Digest]",
+        "Lookup[magazine]"
+      ],
+      "correct_action": "Search[Out Traveler]",
+      "action_type": "Search",
+      "prev_action": null,
+      "prev_action_type": null,
+      "analyzed": true,
+      "timestamp": 1777904756.6385512
+    },
+    {
+      "id": 195,
+      "question": "Question: Are Out Traveler and Reader's Digest both magazines?",
+      "step": 2,
+      "entities": [
+        "Reader",
+        "Digest",
+        "Question",
+        "Are Out Traveler"
+      ],
+      "success": true,
+      "predicted_candidates": [
+        "Search[Reader's Digest]",
+        "Search[Reader's Digest]",
+        "Search[Reader's Digest]"
+      ],
+      "correct_action": "Search[Reader's Digest]",
+      "action_type": "Search",
+      "prev_action": "Search[Out Traveler]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777904756.6385667
+    },
+    {
+      "id": 196,
+      "question": "Question: Are Out Traveler and Reader's Digest both magazines?",
+      "step": 3,
+      "entities": [
+        "Reader",
+        "Digest",
+        "Question",
+        "Are Out Traveler"
+      ],
+      "success": true,
+      "predicted_candidates": [
+        "Finish[yes]"
+      ],
+      "correct_action": "Finish[yes]",
+      "action_type": "Finish",
+      "prev_action": "Search[Reader's Digest]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777904756.6385753
+    },
+    {
+      "id": 197,
+      "question": "Question: Turner Field was originally built as what 85,000 seat main stadium of the 1996 Summer Olympic Games and the 1996 Summer Paralympic Games in Atlanta?",
+      "step": 1,
+      "entities": [
+        "Turner Field",
+        "Summer Paralympic Games",
+        "what",
+        "Atlanta",
+        "Summer Olympic Games",
+        "Question"
+      ],
+      "success": true,
+      "predicted_candidates": [
+        "Search[Turner Field]",
+        "Search[Turner Field]",
+        "Lookup[Turner Field 1996 Summer Olympics]"
+      ],
+      "correct_action": "Search[Turner Field]",
+      "action_type": "Search",
+      "prev_action": null,
+      "prev_action_type": null,
+      "analyzed": true,
+      "timestamp": 1777904802.4402957
+    },
+    {
+      "id": 198,
+      "question": "Question: Turner Field was originally built as what 85,000 seat main stadium of the 1996 Summer Olympic Games and the 1996 Summer Paralympic Games in Atlanta?",
+      "step": 2,
+      "entities": [
+        "Turner Field",
+        "Summer Paralympic Games",
+        "what",
+        "Atlanta",
+        "Summer Olympic Games",
+        "Question"
+      ],
+      "success": false,
+      "predicted_candidates": [
+        "Search[Turner Field Atlanta]",
+        "Search[1996 Summer Olympics main stadium]",
+        "Search[Georgia Turner Field]"
+      ],
+      "correct_action": "Finish[1996 Summer Olympic Games]",
+      "action_type": "Finish",
+      "prev_action": "Search[Turner Field]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777904802.4403126
+    },
+    {
+      "id": 199,
+      "question": "Question: Under which ring name does the wrestler who participated in a taser match with Bam Bam Bigelow, associate himself with in the World Wrestling Federation?",
+      "step": 1,
+      "entities": [
+        "Under",
+        "name",
+        "which",
+        "World Wrestling Federation",
+        "Bam Bam Bigelow",
+        "who",
+        "Question"
+      ],
+      "success": false,
+      "predicted_candidates": [
+        "Search[Bam Bam Bigelow]",
+        "Search[taser match]",
+        "Search[World Wrestling Federation]"
+      ],
+      "correct_action": "Search[\"Bam Bam Bigelow taser match\"]",
+      "action_type": "Search",
+      "prev_action": null,
+      "prev_action_type": null,
+      "analyzed": true,
+      "timestamp": 1777904980.7005157
+    },
+    {
+      "id": 200,
+      "question": "Question: Under which ring name does the wrestler who participated in a taser match with Bam Bam Bigelow, associate himself with in the World Wrestling Federation?",
+      "step": 2,
+      "entities": [
+        "Under",
+        "name",
+        "which",
+        "World Wrestling Federation",
+        "Bam Bam Bigelow",
+        "who",
+        "Question"
+      ],
+      "success": false,
+      "predicted_candidates": [
+        "Finish[Tazz]"
+      ],
+      "correct_action": "Search[Bam Bam Bigelow]",
+      "action_type": "Search",
+      "prev_action": "Search[\"Bam Bam Bigelow taser match\"]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777904980.700534
+    },
+    {
+      "id": 201,
+      "question": "Question: Under which ring name does the wrestler who participated in a taser match with Bam Bam Bigelow, associate himself with in the World Wrestling Federation?",
+      "step": 3,
+      "entities": [
+        "Under",
+        "name",
+        "which",
+        "World Wrestling Federation",
+        "Bam Bam Bigelow",
+        "who",
+        "Question"
+      ],
+      "success": false,
+      "predicted_candidates": [
+        "Search[\"Bam Bam Bigelow taser match\"]",
+        "Search[Bam Bam Bigelow]",
+        "Search[Bam Bam Bigelow taser opponent]"
+      ],
+      "correct_action": "Search[Tazz]",
+      "action_type": "Search",
+      "prev_action": "Search[Bam Bam Bigelow]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777904980.7005467
+    },
+    {
+      "id": 202,
+      "question": "Question: Under which ring name does the wrestler who participated in a taser match with Bam Bam Bigelow, associate himself with in the World Wrestling Federation?",
+      "step": 4,
+      "entities": [
+        "Under",
+        "name",
+        "which",
+        "World Wrestling Federation",
+        "Bam Bam Bigelow",
+        "who",
+        "Question"
+      ],
+      "success": false,
+      "predicted_candidates": [
+        "Search[Tazz]",
+        "Search[WWF taser match]",
+        "Search[Tazz vs Bam Bam Bigelow]"
+      ],
+      "correct_action": "Finish[Tazz]",
+      "action_type": "Finish",
+      "prev_action": "Search[Tazz]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777904980.7005553
+    },
+    {
+      "id": 203,
+      "question": "Question: A series of ministerial meetings and agreements between European countries and includes The Swedish higher education system is called what?",
+      "step": 1,
+      "entities": [
+        "what",
+        "The Swedish",
+        "Question",
+        "European"
+      ],
+      "success": true,
+      "predicted_candidates": [
+        "Search[Bologna Process]",
+        "Search[European Higher Education Agreement]",
+        "Search[Swedish EU Education Initiative]"
+      ],
+      "correct_action": "Search[Bologna Process]",
+      "action_type": "Search",
+      "prev_action": null,
+      "prev_action_type": null,
+      "analyzed": true,
+      "timestamp": 1777905015.5024004
+    },
+    {
+      "id": 204,
+      "question": "Question: A series of ministerial meetings and agreements between European countries and includes The Swedish higher education system is called what?",
+      "step": 2,
+      "entities": [
+        "what",
+        "The Swedish",
+        "Question",
+        "European"
+      ],
+      "success": true,
+      "predicted_candidates": [
+        "Finish[Bologna Process]"
+      ],
+      "correct_action": "Finish[Bologna Process]",
+      "action_type": "Finish",
+      "prev_action": "Search[Bologna Process]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777905015.5024188
+    },
+    {
+      "id": 205,
+      "question": "Question: What Irish county are the band that had a concert tour called the In Blue Tour?",
+      "step": 1,
+      "entities": [
+        "In Blue Tour",
+        "What Irish",
+        "Question",
+        "what"
+      ],
+      "success": true,
+      "predicted_candidates": [
+        "Search[In Blue Tour]",
+        "Search[U2]",
+        "Lookup[Irish county]"
+      ],
+      "correct_action": "Search[In Blue Tour]",
+      "action_type": "Search",
+      "prev_action": null,
+      "prev_action_type": null,
+      "analyzed": true,
+      "timestamp": 1777905062.650415
+    },
+    {
+      "id": 206,
+      "question": "Question: What Irish county are the band that had a concert tour called the In Blue Tour?",
+      "step": 2,
+      "entities": [
+        "In Blue Tour",
+        "What Irish",
+        "Question",
+        "what"
+      ],
+      "success": false,
+      "predicted_candidates": [
+        "Search[The Westing Game characters]",
+        "Search[The Westing Game In Blue Tour]",
+        "Lookup[In Blue Tour band]"
+      ],
+      "correct_action": "Search[the Corrs]",
+      "action_type": "Search",
+      "prev_action": "Search[In Blue Tour]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777905062.6504323
+    },
+    {
+      "id": 207,
+      "question": "Question: What Irish county are the band that had a concert tour called the In Blue Tour?",
+      "step": 3,
+      "entities": [
+        "In Blue Tour",
+        "What Irish",
+        "Question",
+        "what"
+      ],
+      "success": false,
+      "predicted_candidates": [
+        "Search[Corrs (band)]",
+        "Search[Corrs origin]",
+        "Lookup[Irish county]"
+      ],
+      "correct_action": "Finish[County Louth]",
+      "action_type": "Finish",
+      "prev_action": "Search[the Corrs]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777905062.6504405
+    },
+    {
+      "id": 208,
+      "question": "Question: Who won more academy awards,  Joseph L. Mankiewicz or Tony Kaye?",
+      "step": 1,
+      "entities": [
+        "Mankiewicz",
+        "Joseph",
+        "Tony Kaye",
+        "Who",
+        "who",
+        "Question"
+      ],
+      "success": true,
+      "predicted_candidates": [
+        "Search[Joseph L. Mankiewicz]",
+        "Search[Tony Kaye]",
+        "Lookup[Academy Awards]"
+      ],
+      "correct_action": "Search[Joseph L. Mankiewicz]",
+      "action_type": "Search",
+      "prev_action": null,
+      "prev_action_type": null,
+      "analyzed": true,
+      "timestamp": 1777905186.6211872
+    },
+    {
+      "id": 209,
+      "question": "Question: Who won more academy awards,  Joseph L. Mankiewicz or Tony Kaye?",
+      "step": 2,
+      "entities": [
+        "Mankiewicz",
+        "Joseph",
+        "Tony Kaye",
+        "Who",
+        "who",
+        "Question"
+      ],
+      "success": false,
+      "predicted_candidates": [
+        "Search[Tony Kaye]",
+        "Lookup[Award]",
+        "Finish[Joseph L. Mankiewicz]"
+      ],
+      "correct_action": "Search[Joseph L. Mankiewicz]",
+      "action_type": "Search",
+      "prev_action": "Search[Joseph L. Mankiewicz]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777905186.6212196
+    },
+    {
+      "id": 210,
+      "question": "Question: Who won more academy awards,  Joseph L. Mankiewicz or Tony Kaye?",
+      "step": 3,
+      "entities": [
+        "Mankiewicz",
+        "Joseph",
+        "Tony Kaye",
+        "Who",
+        "who",
+        "Question"
+      ],
+      "success": false,
+      "predicted_candidates": [
+        "Finish[Joseph L. Mankiewicz]"
+      ],
+      "correct_action": "Search[Tony Kaye]",
+      "action_type": "Search",
+      "prev_action": "Search[Joseph L. Mankiewicz]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777905186.6212356
+    },
+    {
+      "id": 211,
+      "question": "Question: Who won more academy awards,  Joseph L. Mankiewicz or Tony Kaye?",
+      "step": 4,
+      "entities": [
+        "Mankiewicz",
+        "Joseph",
+        "Tony Kaye",
+        "Who",
+        "who",
+        "Question"
+      ],
+      "success": true,
+      "predicted_candidates": [
+        "Search[Tony Kaye Academy Awards]",
+        "Search[Tony Kaye]",
+        "Search[Tony Kaye]"
+      ],
+      "correct_action": "Search[Tony Kaye]",
+      "action_type": "Search",
+      "prev_action": "Search[Tony Kaye]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777905186.6212547
+    },
+    {
+      "id": 212,
+      "question": "Question: Who won more academy awards,  Joseph L. Mankiewicz or Tony Kaye?",
+      "step": 5,
+      "entities": [
+        "Mankiewicz",
+        "Joseph",
+        "Tony Kaye",
+        "Who",
+        "who",
+        "Question"
+      ],
+      "success": true,
+      "predicted_candidates": [
+        "Finish[Joseph L. Mankiewicz]"
+      ],
+      "correct_action": "Finish[Joseph L. Mankiewicz]",
+      "action_type": "Finish",
+      "prev_action": "Search[Tony Kaye]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777905186.62127
+    },
+    {
+      "id": 213,
+      "question": "Question: What muffler repair shop owner inspired Andrey Zvyagintsev's film Leviathan?",
+      "step": 1,
+      "entities": [
+        "what",
+        "Question",
+        "Leviathan",
+        "Andrey Zvyagintsev",
+        "What"
+      ],
+      "success": false,
+      "predicted_candidates": [
+        "Search[Leviathan (film)]",
+        "Search[Andrey Zvyagintsev Leviathan inspiration]",
+        "Lookup[muffler repair shop]"
+      ],
+      "correct_action": "Search[Leviathan film]",
+      "action_type": "Search",
+      "prev_action": null,
+      "prev_action_type": null,
+      "analyzed": true,
+      "timestamp": 1777905272.4689074
+    },
+    {
+      "id": 214,
+      "question": "Question: What muffler repair shop owner inspired Andrey Zvyagintsev's film Leviathan?",
+      "step": 2,
+      "entities": [
+        "what",
+        "Question",
+        "Leviathan",
+        "Andrey Zvyagintsev",
+        "What"
+      ],
+      "success": true,
+      "predicted_candidates": [
+        "Search[Leviathan (2014 film)]",
+        "Search[Leviathan film (2014)]",
+        "Lookup[Leviathan (film) plot]"
+      ],
+      "correct_action": "Search[Leviathan (2014 film)]",
+      "action_type": "Search",
+      "prev_action": "Search[Leviathan film]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777905272.4689362
+    },
+    {
+      "id": 215,
+      "question": "Question: What muffler repair shop owner inspired Andrey Zvyagintsev's film Leviathan?",
+      "step": 3,
+      "entities": [
+        "what",
+        "Question",
+        "Leviathan",
+        "Andrey Zvyagintsev",
+        "What"
+      ],
+      "success": false,
+      "predicted_candidates": [
+        "Search[Leviathan 2014 film]",
+        "Search[Andrey Zvyagintsev Leviathan]",
+        "Lookup[muffler repair shop]"
+      ],
+      "correct_action": "Search[Marvin Heemeyer]",
+      "action_type": "Search",
+      "prev_action": "Search[Leviathan (2014 film)]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777905272.468947
+    },
+    {
+      "id": 216,
+      "question": "Question: What muffler repair shop owner inspired Andrey Zvyagintsev's film Leviathan?",
+      "step": 4,
+      "entities": [
+        "what",
+        "Question",
+        "Leviathan",
+        "Andrey Zvyagintsev",
+        "What"
+      ],
+      "success": true,
+      "predicted_candidates": [
+        "Finish[Marvin Heemeyer]"
+      ],
+      "correct_action": "Finish[Marvin Heemeyer]",
+      "action_type": "Finish",
+      "prev_action": "Search[Marvin Heemeyer]",
+      "prev_action_type": "Search",
+      "analyzed": true,
+      "timestamp": 1777905272.4689574
     }
   ]
 }

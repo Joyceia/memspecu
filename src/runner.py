@@ -156,6 +156,13 @@ class HotPotQARun:
 
             memory_hint = MemoryAugmenter.format_memory_hint(matched_insights, succ, fail)
 
+            if memory_hint:
+                self.log(
+                    f"[Memory] Injected hint: insights={len(matched_insights)} "
+                    f"successes={len(succ)} failures={len(fail)}",
+                    save_log=False,
+                )
+
         augmented_prompt = running_prompt + memory_hint
         thought_action = self.llm.call(
             augmented_prompt + PromptTemplates.ACTION_GUESS_PROMPT.format(i=i, num_guesses=num_actions),

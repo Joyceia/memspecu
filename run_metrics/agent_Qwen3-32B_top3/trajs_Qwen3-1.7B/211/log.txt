@@ -1,0 +1,50 @@
+============================================================
+
+Question [211]: Question: Turner Field was originally built as what 85,000 seat main stadium of the 1996 Summer Olympic Games and the 1996 Summer Paralympic Games in Atlanta?
+
+============================================================
+
+--- Step 1/7 ---
+
+[Normal]  Thought: I need to search Turner Field to find what event it was built as the main stadium for in 1996.  
+Action 1: Search[Turner Field]
+
+Action:  Search[Turner Field]
+
+Obs:     Turner Field was a baseball stadium located in Atlanta, Georgia. From 1997 to 2016, it served as the home ballpark to the Atlanta Braves of Major League Baseball (MLB). Originally built as Centennial ...
+
+Time:    1.091s
+
+[Sim]     Thought: I need to search Turner Field to find its original purpose as an 85,000-seat stadium for the 1996 Summer Olympics and Paralympics.  
+Action 1: Search[Turner Field], Lookup[Turner Field 1996 Summer Olympics], Finish[Georgia Dome]
+
+Actions: ['Search[Turner Field]', 'Search[Turner Field]', 'Lookup[Turner Field 1996 Summer Olympics]', 'Finish[Georgia Dome]']
+
+Obs:     <think>. Okay, the user wants information about Turner Field in Wikipedia style. Let me check if I can find that. Turner Field is a stadium in the United States, specifically in the state of Texas. It...
+
+Time:    0.725s
+
+--- Step 2/7 ---
+
+[Normal]  Thought: The search result states Turner Field was originally built as "Centennial Olympic Stadium" for the 1996 Summer Olympics. The answer is the 1996 Summer Olympic Games.  
+Action 2: Finish[1996 Summer Olympic Games]
+
+Action:  Finish[1996 Summer Olympic Games]
+
+Obs:     Episode finished, reward = 0
+
+Time:    0.000s
+
+[Sim]     Thought: The initial search suggests Turner Field is in Texas, but the question specifies it was built for the 1996 Atlanta Olympics/Paralympics, which contradicts. I need to clarify Turner Field's correct location and verify its Olympic connection.
+Action 2: Search[Turner Field Atlanta], Search[1996 Summer Olympics main stadium], Search[Georgia Turner Field]
+
+Actions: ['Search[Turner Field Atlanta]', 'Search[1996 Summer Olympics main stadium]', 'Search[Georgia Turner Field]']
+
+Obs:     <think>. Okay, the user wants information about Turner Field in Wikipedia style. Let me check if I can find that. Turner Field is a stadium in the United States, specifically in the state of Texas. It...
+
+Time:    0.000s
+
+Result: em=False  f1=0.28571428571428575
+
+[Progress] 25 samples done | Total reward: 11 | Avg reward: 0.4400 | Avg time/sample: 114.0s
+

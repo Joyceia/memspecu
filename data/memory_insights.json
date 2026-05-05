@@ -1,1 +1,40 @@
-[]
+[
+  {
+    "insight": "For questions involving comparisons, the agent typically needs to search for both candidates individually before determining the correct answer and using Finish.",
+    "keywords": [
+      "younger",
+      "first",
+      "vs",
+      "compared",
+      "older",
+      "earlier"
+    ],
+    "timestamp": 1777894570.8739414
+  },
+  {
+    "insight": "The agent often establishes a foundation by searching for major entities or categories first, then explores specific attributes or connections through subsequent searches before ending with Finish.",
+    "keywords": [
+      "company",
+      "university",
+      "album",
+      "movie",
+      "brand",
+      "country",
+      "city"
+    ],
+    "timestamp": 1777894570.8739676
+  },
+  {
+    "insight": "Complex questions requiring relationship analysis benefit from first identifying the central person or entity through search, then investigating their roles, connections, or attributes through subsequent steps.",
+    "keywords": [
+      "voice actor",
+      "host",
+      "teacher",
+      "wrestler",
+      "singer",
+      "player",
+      "founder"
+    ],
+    "timestamp": 1777894570.8739908
+  }
+]
