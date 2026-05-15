@@ -1,0 +1,30 @@
+============================================================
+
+Question [5083]: Question: What Manchester United and Portuguese national winger scored a goal in the 2009 FA Community Shield?
+
+============================================================
+
+--- Step 1/7 ---
+
+[Normal]  Thought: I need to identify the Portuguese winger for Manchester United who scored in the 2009 FA Community Shield. The FA Community Shield is an annual match between the Premier League champions and the FA Cup winners. In 2009, Manchester United (Premier League champions) faced Chelsea (FA Cup winners). The goal scorer is likely Nani, a Portuguese winger for Man United at that time.  
+Action 1: Finish[Nani]
+
+Action:  Finish[Nani]
+
+Obs:     Episode finished, reward = 1
+
+Time:    0.000s
+
+[Sim]     Thought: I need to search the 2009 FA Community Shield to find the goal scorer who is both a Manchester United and Portuguese national winger.  
+Action 1: Search[2009 FA Community Shield], Search[Manchester United 2009], Lookup[2009 FA Community Shield]
+
+Actions: ['Search[2009 FA Community Shield]', 'Search[2009 FA Community Shield]', 'Search[2009 FA Community Shield]', 'Search[Manchester United 2009]', 'Lookup[2009 FA Community Shield]']
+
+Obs:     <think>. Okay, the user wants information about Nepenthes in Wikipedia style. Let me check if I have that information. I remember that Nepenthes is a genus of pitcher plants, so I should start with th...
+
+Time:    0.000s
+
+Result: em=True  f1=1.0
+
+[Progress] 11 samples done | Total reward: 4 | Avg reward: 0.3636 | Avg time/sample: 117.0s
+

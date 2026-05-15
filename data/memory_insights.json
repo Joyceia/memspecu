@@ -1,40 +1,159 @@
 [
   {
-    "insight": "For questions involving comparisons, the agent typically needs to search for both candidates individually before determining the correct answer and using Finish.",
+    "insight": "When an entity's ownership hierarchy involves multiple layers (e.g., parent companies), Search should target the specific relationship ('manufacturer' or 'parent company') rather than generic terms to avoid redundant queries. Failing to do so leads to extended search steps before resolving the answer.",
     "keywords": [
-      "younger",
-      "first",
-      "vs",
-      "compared",
-      "older",
-      "earlier"
+      "ownership",
+      "manufacturer",
+      "parent company",
+      "brand"
     ],
-    "timestamp": 1777894570.8739414
+    "timestamp": 1778007689.8121927
   },
   {
-    "insight": "The agent often establishes a foundation by searching for major entities or categories first, then explores specific attributes or connections through subsequent searches before ending with Finish.",
+    "insight": "For compound questions involving two similarly named entities (e.g., 'M1919' vs 'M1 rifle'), completing Search on one entity first increases accuracy for the second entity's parallel Search when they share the same context. Skipping this step causes redundant searches.",
     "keywords": [
-      "company",
-      "university",
-      "album",
-      "movie",
-      "brand",
-      "country",
-      "city"
+      "parallel entities",
+      "compound question",
+      "shared context"
     ],
-    "timestamp": 1777894570.8739676
+    "timestamp": 1778007689.8122528
   },
   {
-    "insight": "Complex questions requiring relationship analysis benefit from first identifying the central person or entity through search, then investigating their roles, connections, or attributes through subsequent steps.",
+    "insight": "When encountering ambiguous entity names (e.g., 'M1' which could refer to vehicles, rifles, or other items), prioritizing 'Finish' after confirming the entity's category via focused Search prevents wasted steps on irrelevant results. Initial general Search should be augmented with disambiguation before committing.",
     "keywords": [
-      "voice actor",
-      "host",
-      "teacher",
-      "wrestler",
-      "singer",
-      "player",
-      "founder"
+      "ambiguous entity",
+      "disambiguation",
+      "category confirmation"
     ],
-    "timestamp": 1777894570.8739908
+    "timestamp": 1778007689.8123453
+  },
+  {
+    "insight": "After multiple consecutive Search failures on closely related terms (e.g., 'Babycham owner' followed by 'Babycham company'), transitioning to Finish requires synthesizing all contextual clues rather than adding new Search variations. Premature continuation deepens search dead-ends.",
+    "keywords": [
+      "consecutive search failure",
+      "context synthesis",
+      "search dead-end"
+    ],
+    "timestamp": 1778007689.8124697
+  },
+  {
+    "insight": "When working history spans multiple mediums (e.g., Ed Sullivan's news career vs TV career), finishing early requires confirming if all career contexts have been explored. Over-reliance on initial Search results can mislead Lookup actions before alternative career paths are considered.",
+    "keywords": [
+      "multimedia career",
+      "career paths",
+      "context exploration"
+    ],
+    "timestamp": 1778007689.812602
+  },
+  {
+    "insight": "When predicting the source of a nickname, using exact quoted phrases and explicitly referencing the relation (e.g., 'nickname origin') increases success, while general or ambiguous searches often fail.",
+    "keywords": [
+      "nickname",
+      "Buffalo Soldiers",
+      "quote search",
+      "relation specification",
+      "origin"
+    ],
+    "timestamp": 1778014840.073131
+  },
+  {
+    "insight": "For disambiguating ambiguous entities (e.g., actors in multiple projects), including contextual details like titles or roles in the search term helps avoid irrelevant results rather than relying on incomplete filmography associations.",
+    "keywords": [
+      "disambiguation",
+      "context",
+      "Julia Piaton",
+      "filmography overload",
+      "actor project"
+    ],
+    "timestamp": 1778014840.0731976
+  },
+  {
+    "insight": "When comparing media with overlapping or similar names (e.g., 'Polarity'), prioritizing release date specificity in searches resolves conflicts faster than sequential basic searches or speculative parallel searches.",
+    "keywords": [
+      "release date",
+      "media comparison",
+      "Polarity",
+      "The Farming Game",
+      "specificity"
+    ],
+    "timestamp": 1778014840.0732634
+  },
+  {
+    "insight": "Prematurely searching related but unrelated contexts (e.g., linking an actor to unrelated titles like 'The Big Lebowski') creates dead ends, suggesting that sticking to question-specified entities is more effective unless evidence for tangential links is strong.",
+    "keywords": [
+      "context drift",
+      "irrelevant search",
+      "The Big Lebowski",
+      "link overload",
+      "focus preservation"
+    ],
+    "timestamp": 1778014840.073334
+  },
+  {
+    "insight": "When failure sequences show incremental variations (e.g., adding '(game)' or '(book)'), shifting to a synthetic Finish using all gathered context is preferable to further speculative searches in the same pattern.",
+    "keywords": [
+      "pattern failure",
+      "speculative variations",
+      "synthetic Finish",
+      "search dead-end",
+      "context summarization"
+    ],
+    "timestamp": 1778014840.0734189
+  },
+  {
+    "insight": "For TV roles involving adaptations, including both the actor name and the specific title variant (e.g., 'North Star sitcom') increases precision over searches focused solely on role names or vague adaptations.",
+    "keywords": [
+      "TV adaptation",
+      "actor role",
+      "North Star",
+      "TV title specificity",
+      "adaptation context"
+    ],
+    "timestamp": 1778014840.0735106
+  },
+  {
+    "insight": "When the agent repeatedly searches for the same entity without success, it shows it's over-precise with its search terms. The agent should recognize when it's going in circles and either broaden the search or switch to a different approach.",
+    "keywords": [
+      "repeated search",
+      "search repetition",
+      "over-precision"
+    ],
+    "timestamp": 1778136816.864814
+  },
+  {
+    "insight": "When dealing with ambiguous or similarly named individuals, the agent should prioritize confirming the full name and context before finishing. This helps avoid finishing with incorrect information when there are multiple candidates.",
+    "keywords": [
+      "ambiguous names",
+      "name disambiguation",
+      "birth order"
+    ],
+    "timestamp": 1778136816.8649247
+  },
+  {
+    "insight": "The agent has a pattern of failing to properly follow up on intermediate search results. Rather than continuing to search about the main entity, it should directly follow with the specific query needed to answer the question.",
+    "keywords": [
+      "follow-up query",
+      "chaining results",
+      "distance query"
+    ],
+    "timestamp": 1778136816.8650398
+  },
+  {
+    "insight": "The agent should wait until it has gathered more specific historical context before finishing. Prematurely finishing based on assumptions about historical eras can lead to incorrect answers.",
+    "keywords": [
+      "premature finish",
+      "historical context",
+      "incorrect historical era"
+    ],
+    "timestamp": 1778136816.8651578
+  },
+  {
+    "insight": "When the agent switches from search to lookup without establishing clear context, it often fails. It's important to have solid search data showing the relationships and context before attempting a lookup action.",
+    "keywords": [
+      "search before lookup",
+      "context establishment",
+      "incorrect lookup"
+    ],
+    "timestamp": 1778136816.8652844
   }
 ]
